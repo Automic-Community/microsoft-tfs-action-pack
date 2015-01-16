@@ -7,25 +7,24 @@
 <OH_SubType/>
 </HEADER>
 <DOCU_Docu state="1" type="text">
-<DOC><![CDATA[These actions access Team Foundation Server repositories. Use the actions the check in/out files, create workspaces, add new files or to merge branches.
+<DOC><![CDATA[Retrieves a read-only copy of a file from the Team Foundation Server to the workspace and creates folders on disk to contain it.
 
-=Supported Systems=
+ =Supported Systems=
 
-The following version of Team Foundation Server are supported:
+ The following version of Team Foundation Server are supported:
 
-* TFS 2005
-* TFS 2008
-* TFS 2010
+ * TFS 2005
+ * TFS 2008
+ * TFS 2010
 
-=Setup=
+ =Setup=
 
-* the 'tf' utility is used by the action. Ensure, that the tf utility is available on the path and executable. The tf utility should be placed on the environment path variable so it can be run from everywhere
-* the tf utility comes with visual studio professional(+) or as a part of the team explorer. Both need to have the corresponding version (TFS 2005 - VS2005 - TE2005, etc.).
+ * the 'tf' utility is used by the action. Ensure, that the tf utility is available on the path and executable. The tf utility should be placed on the environment path variable so it can be run from everywhere
+ * the tf utility comes with visual studio professional(+) or as a part of the team explorer. Both need to have the corresponding version (TFS 2005 - VS2005 - TE2005, etc.).
 
-=Rollback=
+ =Rollback=
 
-The TFS actions do not support rollbacks yet.
-]]></DOC>
+ The TFS actions do not support rollbacks yet.]]></DOC>
 </DOCU_Docu>
 </DOCU>
 </uc-export>
