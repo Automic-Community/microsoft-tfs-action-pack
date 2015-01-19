@@ -1,4 +1,5 @@
-<?xml version="1.0" encoding="ISO-8859-15" standalone="no"?><uc-export clientvers="11.0.0">
+<?xml version="1.0" encoding="ISO-8859-15"?>
+<uc-export clientvers="11.0.0-sprint.20141111.1610+build.2828">
 <DOCU name="PCK.AUTOMIC_TFS.PUB.DOC">
 <HEADER state="1">
 <Title/>
@@ -7,24 +8,12 @@
 <OH_SubType/>
 </HEADER>
 <DOCU_Docu state="1" type="text">
-<DOC><![CDATA[Retrieves a read-only copy of a file from the Team Foundation Server to the workspace and creates folders on disk to contain it.
+<DOC><![CDATA[Contains actions to download files from TFS.
 
- =Supported Systems=
+# Setup
 
- The following version of Team Foundation Server are supported:
-
- * TFS 2005
- * TFS 2008
- * TFS 2010
-
- =Setup=
-
- * the 'tf' utility is used by the action. Ensure, that the tf utility is available on the path and executable. The tf utility should be placed on the environment path variable so it can be run from everywhere
- * the tf utility comes with visual studio professional(+) or as a part of the team explorer. Both need to have the corresponding version (TFS 2005 - VS2005 - TE2005, etc.).
-
- =Rollback=
-
- The TFS actions do not support rollbacks yet.]]></DOC>
+This package does not contain the tf binary by itself. Please make sure that the target host has the tf executable.
+]]></DOC>
 </DOCU_Docu>
 </DOCU>
 </uc-export>
