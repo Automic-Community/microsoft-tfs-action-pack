@@ -9,7 +9,8 @@
 <SCRIPT mode="1" state="1">
 <MSCRI><![CDATA[:IF &UC4RB_TFS_RECURSIVE# = "YES"
 :  SET &UC4RB_TFS_COMMAND# = STR_CAT(&UC4RB_TFS_COMMAND#, " /recursive")
-:ENDIF]]></MSCRI>
+:ENDIF
+]]></MSCRI>
 </SCRIPT>
 <DOCU_Docu state="1" type="text">
 <DOC/>

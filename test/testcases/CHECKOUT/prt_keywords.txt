@@ -1,0 +1,11 @@
+*** Keywords ***
+Set Default Valid Promptset
+    [Arguments]    ${TFS_UTIL_PATH}   ${TFS_WORKING_DIR}   ${TFS_ITEM}   ${TFS_RECURSIVE}   ${TFS_LOCK}   ${AGENT}   ${LOGIN}    
+        Action Set    ${PRT_CHECKOUT_TFS_UTIL_PATH}    ${TFS_UTIL_PATH}
+    Action Set    ${PRT_CHECKOUT_TFS_WORKING_DIR}    ${TFS_WORKING_DIR}
+    Action Set    ${PRT_CHECKOUT_TFS_ITEM}    ${TFS_ITEM}
+    Action Set    ${PRT_CHECKOUT_TFS_RECURSIVE}    ${TFS_RECURSIVE}
+    Action Set    ${PRT_CHECKOUT_TFS_LOCK}    ${TFS_LOCK}
+    Action Set    ${PRT_CHECKOUT_AGENT}    ${AGENT}
+    Action Set    ${PRT_CHECKOUT_LOGIN}    ${LOGIN}
+ 

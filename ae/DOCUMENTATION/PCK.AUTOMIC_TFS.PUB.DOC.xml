@@ -1,18 +1,16 @@
 <?xml version="1.0" encoding="ISO-8859-15" standalone="no"?><uc-export clientvers="11.0.0">
 <DOCU name="PCK.AUTOMIC_TFS.PUB.DOC">
 <HEADER state="1">
-<Title/>
+<Title>Package documentation</Title>
 <ArchiveKey1/>
 <ArchiveKey2/>
 <OH_SubType/>
 </HEADER>
 <DOCU_Docu state="1" type="text">
-<DOC><![CDATA[Contains actions to download files from TFS.
+<DOC><![CDATA[About Automic's Team Foundation Server Package
+==============================================
 
-# Setup
-
-This package does not contain the tf binary by itself. Please make sure that the target host has the tf executable.
-]]></DOC>
+This package contains actions to interact with a given TFS instance. It uses the tf utility provided by TFS.]]></DOC>
 </DOCU_Docu>
 </DOCU>
 </uc-export>

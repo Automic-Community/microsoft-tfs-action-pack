@@ -1,0 +1,11 @@
+*** Variables ***
+###-------------------------VVNTFS04--------------------###
+${VVNTFS04_AGENT}    VVNTFS04
+${VVNTFS04_DEFAULT_OUTPUT_DIR}    D:\\AT_output
+${VVNTFS04_DEFAULT_SOURCE_DIR}    D:\\AT_sources
+${VVNTFS04_TFS_UTILITY_PATH}    C:\\Program Files\\Microsoft Visual Studio 8\\Common7\\IDE\\tf.exe
+###-------------------------VVNTFS03--------------------###
+${VVNTFS03_AGENT}    VVNTFS03
+${VVNTFS03_DEFAULT_OUTPUT_DIR}    D:\\AT_output
+${VVNTFS03_DEFAULT_SOURCE_DIR}    D:\\AT_sources
+${VVNTFS03_TFS_UTILITY_PATH}    C:\\Program Files (x86)\\Microsoft Visual Studio 10.0\\Common7\\IDE\\tf.exe

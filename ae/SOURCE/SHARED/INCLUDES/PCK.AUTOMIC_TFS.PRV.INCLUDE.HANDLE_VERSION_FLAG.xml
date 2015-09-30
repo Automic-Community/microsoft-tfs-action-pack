@@ -7,9 +7,10 @@
 <OH_SubType/>
 </HEADER>
 <SCRIPT mode="1" state="1">
-<MSCRI><![CDATA[:IF &UC4RB_TFS_VERSION# = "YES"
+<MSCRI><![CDATA[:IF &UC4RB_TFS_VERSION# <> ""
 :  SET &UC4RB_TFS_COMMAND# = STR_CAT(&UC4RB_TFS_COMMAND#, " /version:&UC4RB_TFS_VERSION#")
-:ENDIF]]></MSCRI>
+:ENDIF
+]]></MSCRI>
 </SCRIPT>
 <DOCU_Docu state="1" type="text">
 <DOC/>

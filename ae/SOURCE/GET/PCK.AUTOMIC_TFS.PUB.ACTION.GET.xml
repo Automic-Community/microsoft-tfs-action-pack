@@ -13,7 +13,7 @@
 </SYNCREF>
 <ATTR_JOBP state="1">
 <Queue>CLIENT_QUEUE</Queue>
-<ChildQueue>*OWN</ChildQueue>
+<ChildQueue/>
 <StartType/>
 <ExtRepDef>1</ExtRepDef>
 <ExtRepAll>0</ExtRepAll>
@@ -55,13 +55,14 @@
 <node content="1" id="PCK.AUTOMIC_TFS.PRV.PROMPTSET.GET" name="PCK.AUTOMIC_TFS.PRV.PROMPTSET.GET" parent="PPRPTS" type="PPROMPTSET">
 <PROMPTSET name="PCK.AUTOMIC_TFS.PRV.PROMPTSET.GET">
 <PRPTBOX promptset="PCK.AUTOMIC_TFS.PRV.PROMPTSET.GET">
-<UC4RB_TFS_ALLs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_TFS_ALL#" promptsetname="PCK.AUTOMIC_TFS.PRV.PROMPTSET.GET">NO</UC4RB_TFS_ALLs.00>
-<UC4RB_TFS_ITEMs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_TFS_ITEM#" promptsetname="PCK.AUTOMIC_TFS.PRV.PROMPTSET.GET"/>
-<UC4RB_TFS_OVERWRITEs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_TFS_OVERWRITE#" promptsetname="PCK.AUTOMIC_TFS.PRV.PROMPTSET.GET">YES</UC4RB_TFS_OVERWRITEs.00>
-<UC4RB_TFS_RECURSIVEs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_TFS_RECURSIVE#" promptsetname="PCK.AUTOMIC_TFS.PRV.PROMPTSET.GET">NO</UC4RB_TFS_RECURSIVEs.00>
-<UC4RB_TFS_UTIL_PATHs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_TFS_UTIL_PATH#" promptsetname="PCK.AUTOMIC_TFS.PRV.PROMPTSET.GET"/>
-<UC4RB_TFS_VERSIONs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_TFS_VERSION#" promptsetname="PCK.AUTOMIC_TFS.PRV.PROMPTSET.GET"/>
-<UC4RB_TFS_WORKING_DIRs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_TFS_WORKING_DIR#" promptsetname="PCK.AUTOMIC_TFS.PRV.PROMPTSET.GET"/>
+<UC4RB_TFS_ALLs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_TFS_ALL#" promptsetname="PCK.AUTOMIC_TFS.PRV.PROMPTSET.GET">NO</UC4RB_TFS_ALLs.00>
+<UC4RB_TFS_FORCEs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_TFS_FORCE#" promptsetname="PCK.AUTOMIC_TFS.PRV.PROMPTSET.GET">NO</UC4RB_TFS_FORCEs.00>
+<UC4RB_TFS_ITEMs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_TFS_ITEM#" promptsetname="PCK.AUTOMIC_TFS.PRV.PROMPTSET.GET"/>
+<UC4RB_TFS_OVERWRITEs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_TFS_OVERWRITE#" promptsetname="PCK.AUTOMIC_TFS.PRV.PROMPTSET.GET">YES</UC4RB_TFS_OVERWRITEs.00>
+<UC4RB_TFS_RECURSIVEs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_TFS_RECURSIVE#" promptsetname="PCK.AUTOMIC_TFS.PRV.PROMPTSET.GET">YES</UC4RB_TFS_RECURSIVEs.00>
+<UC4RB_TFS_UTIL_PATHs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_TFS_UTIL_PATH#" promptsetname="PCK.AUTOMIC_TFS.PRV.PROMPTSET.GET"/>
+<UC4RB_TFS_VERSIONs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_TFS_VERSION#" promptsetname="PCK.AUTOMIC_TFS.PRV.PROMPTSET.GET"/>
+<UC4RB_TFS_WORKING_DIRs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_TFS_WORKING_DIR#" promptsetname="PCK.AUTOMIC_TFS.PRV.PROMPTSET.GET"/>
 </PRPTBOX>
 </PROMPTSET>
 </node>
@@ -116,13 +117,14 @@
 <node content="1" id="PCK.AUTOMIC_TFS.PRV.PROMPTSET.GET" name="PCK.AUTOMIC_TFS.PRV.PROMPTSET.GET" parent="PPRPTS" type="PPROMPTSET">
 <PROMPTSET name="PCK.AUTOMIC_TFS.PRV.PROMPTSET.GET">
 <PRPTBOX promptset="PCK.AUTOMIC_TFS.PRV.PROMPTSET.GET">
-<UC4RB_TFS_ALLs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_TFS_ALL#" promptsetname="PCK.AUTOMIC_TFS.PRV.PROMPTSET.GET">NO</UC4RB_TFS_ALLs.00>
-<UC4RB_TFS_ITEMs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_TFS_ITEM#" promptsetname="PCK.AUTOMIC_TFS.PRV.PROMPTSET.GET"/>
-<UC4RB_TFS_OVERWRITEs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_TFS_OVERWRITE#" promptsetname="PCK.AUTOMIC_TFS.PRV.PROMPTSET.GET">YES</UC4RB_TFS_OVERWRITEs.00>
-<UC4RB_TFS_RECURSIVEs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_TFS_RECURSIVE#" promptsetname="PCK.AUTOMIC_TFS.PRV.PROMPTSET.GET">NO</UC4RB_TFS_RECURSIVEs.00>
-<UC4RB_TFS_UTIL_PATHs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_TFS_UTIL_PATH#" promptsetname="PCK.AUTOMIC_TFS.PRV.PROMPTSET.GET"/>
-<UC4RB_TFS_VERSIONs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_TFS_VERSION#" promptsetname="PCK.AUTOMIC_TFS.PRV.PROMPTSET.GET"/>
-<UC4RB_TFS_WORKING_DIRs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_TFS_WORKING_DIR#" promptsetname="PCK.AUTOMIC_TFS.PRV.PROMPTSET.GET"/>
+<UC4RB_TFS_ALLs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_TFS_ALL#" promptsetname="PCK.AUTOMIC_TFS.PRV.PROMPTSET.GET">NO</UC4RB_TFS_ALLs.00>
+<UC4RB_TFS_FORCEs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_TFS_FORCE#" promptsetname="PCK.AUTOMIC_TFS.PRV.PROMPTSET.GET">NO</UC4RB_TFS_FORCEs.00>
+<UC4RB_TFS_ITEMs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_TFS_ITEM#" promptsetname="PCK.AUTOMIC_TFS.PRV.PROMPTSET.GET"/>
+<UC4RB_TFS_OVERWRITEs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_TFS_OVERWRITE#" promptsetname="PCK.AUTOMIC_TFS.PRV.PROMPTSET.GET">YES</UC4RB_TFS_OVERWRITEs.00>
+<UC4RB_TFS_RECURSIVEs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_TFS_RECURSIVE#" promptsetname="PCK.AUTOMIC_TFS.PRV.PROMPTSET.GET">YES</UC4RB_TFS_RECURSIVEs.00>
+<UC4RB_TFS_UTIL_PATHs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_TFS_UTIL_PATH#" promptsetname="PCK.AUTOMIC_TFS.PRV.PROMPTSET.GET"/>
+<UC4RB_TFS_VERSIONs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_TFS_VERSION#" promptsetname="PCK.AUTOMIC_TFS.PRV.PROMPTSET.GET"/>
+<UC4RB_TFS_WORKING_DIRs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_TFS_WORKING_DIR#" promptsetname="PCK.AUTOMIC_TFS.PRV.PROMPTSET.GET"/>
 </PRPTBOX>
 </PROMPTSET>
 </node>
@@ -163,13 +165,14 @@
 <node content="1" id="PCK.AUTOMIC_TFS.PRV.PROMPTSET.GET" name="PCK.AUTOMIC_TFS.PRV.PROMPTSET.GET" parent="PPRPTS" type="PPROMPTSET">
 <PROMPTSET name="PCK.AUTOMIC_TFS.PRV.PROMPTSET.GET">
 <PRPTBOX promptset="PCK.AUTOMIC_TFS.PRV.PROMPTSET.GET">
-<UC4RB_TFS_ALLs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_TFS_ALL#" promptsetname="PCK.AUTOMIC_TFS.PRV.PROMPTSET.GET">NO</UC4RB_TFS_ALLs.00>
-<UC4RB_TFS_ITEMs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_TFS_ITEM#" promptsetname="PCK.AUTOMIC_TFS.PRV.PROMPTSET.GET"/>
-<UC4RB_TFS_OVERWRITEs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_TFS_OVERWRITE#" promptsetname="PCK.AUTOMIC_TFS.PRV.PROMPTSET.GET">YES</UC4RB_TFS_OVERWRITEs.00>
-<UC4RB_TFS_RECURSIVEs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_TFS_RECURSIVE#" promptsetname="PCK.AUTOMIC_TFS.PRV.PROMPTSET.GET">NO</UC4RB_TFS_RECURSIVEs.00>
-<UC4RB_TFS_UTIL_PATHs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_TFS_UTIL_PATH#" promptsetname="PCK.AUTOMIC_TFS.PRV.PROMPTSET.GET"/>
-<UC4RB_TFS_VERSIONs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_TFS_VERSION#" promptsetname="PCK.AUTOMIC_TFS.PRV.PROMPTSET.GET"/>
-<UC4RB_TFS_WORKING_DIRs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_TFS_WORKING_DIR#" promptsetname="PCK.AUTOMIC_TFS.PRV.PROMPTSET.GET"/>
+<UC4RB_TFS_ALLs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_TFS_ALL#" promptsetname="PCK.AUTOMIC_TFS.PRV.PROMPTSET.GET">NO</UC4RB_TFS_ALLs.00>
+<UC4RB_TFS_FORCEs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_TFS_FORCE#" promptsetname="PCK.AUTOMIC_TFS.PRV.PROMPTSET.GET">NO</UC4RB_TFS_FORCEs.00>
+<UC4RB_TFS_ITEMs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_TFS_ITEM#" promptsetname="PCK.AUTOMIC_TFS.PRV.PROMPTSET.GET"/>
+<UC4RB_TFS_OVERWRITEs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_TFS_OVERWRITE#" promptsetname="PCK.AUTOMIC_TFS.PRV.PROMPTSET.GET">YES</UC4RB_TFS_OVERWRITEs.00>
+<UC4RB_TFS_RECURSIVEs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_TFS_RECURSIVE#" promptsetname="PCK.AUTOMIC_TFS.PRV.PROMPTSET.GET">YES</UC4RB_TFS_RECURSIVEs.00>
+<UC4RB_TFS_UTIL_PATHs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_TFS_UTIL_PATH#" promptsetname="PCK.AUTOMIC_TFS.PRV.PROMPTSET.GET"/>
+<UC4RB_TFS_VERSIONs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_TFS_VERSION#" promptsetname="PCK.AUTOMIC_TFS.PRV.PROMPTSET.GET"/>
+<UC4RB_TFS_WORKING_DIRs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_TFS_WORKING_DIR#" promptsetname="PCK.AUTOMIC_TFS.PRV.PROMPTSET.GET"/>
 </PRPTBOX>
 </PROMPTSET>
 </node>
@@ -238,15 +241,7 @@
 </node>
 <node content="1" id="PCK.AUTOMIC_TFS.PRV.PROMPTSET.GET" name="PCK.AUTOMIC_TFS.PRV.PROMPTSET.GET" parent="PRPTS" type="PROMPTSET">
 <PROMPTSET name="PCK.AUTOMIC_TFS.PRV.PROMPTSET.GET" ontop="1">
-<PRPTBOX promptset="PCK.AUTOMIC_TFS.PRV.PROMPTSET.GET" prptmode="1">
-<UC4RB_TFS_UTIL_PATHs.00 altview="0" haslist="0"/>
-<UC4RB_TFS_VERSIONs.00 altview="0" haslist="0"/>
-<UC4RB_TFS_ITEMs.00 altview="0" haslist="0"/>
-<UC4RB_TFS_RECURSIVEs.00 altview="0" haslist="0">NO</UC4RB_TFS_RECURSIVEs.00>
-<UC4RB_TFS_WORKING_DIRs.00 altview="0" haslist="0"/>
-<UC4RB_TFS_OVERWRITEs.00 altview="0" haslist="0">YES</UC4RB_TFS_OVERWRITEs.00>
-<UC4RB_TFS_ALLs.00 altview="0" haslist="0">NO</UC4RB_TFS_ALLs.00>
-</PRPTBOX>
+<PRPTBOX promptset="PCK.AUTOMIC_TFS.PRV.PROMPTSET.GET" prptmode="1"/>
 </PROMPTSET>
 </node>
 <node content="1" id="PCK.ITPA_SHARED.PRV.PROMPTSET.OVERWRITE_AGENT" name="PCK.ITPA_SHARED.PRV.PROMPTSET.OVERWRITE_AGENT" parent="PRPTS" type="PROMPTSET">
@@ -276,7 +271,28 @@
 <MSCRI/>
 </SCRIPT>
 <DOCU_Docu state="1" type="text">
-<DOC><![CDATA[Retrieves a read-only copy of a file from the Team Foundation Server to the workspace and creates folders on disk to contain it.]]></DOC>
+<DOC><![CDATA[= RB name =
+PCK.AUTOMIC_TFS.PUB.ACTION.GET
+= General description =
+Retrieves a read-only copy of a file from the Team Foundation Server to the workspace and creates folders on disk to contain it.
+  = Inputs =
+* TF Utility Path: Path to the tf.exe utility which will be used to communicate with Team Foundation Server. If no path was specified, the default value (C:/Program Files/Microsoft Visual Studio 9.0/Common7/IDE/Tf) will be assumed.
+* Workspace: Path to working copy.
+* Item: Identifies the file or folder to delete from the Team Foundation source control server. 
+* Version: Optional version specification. The versionspec is the version of the item you want to retrieve.
+* All: Forces all files to be retrieved, not just those that are out-of-date.
+* Overwrite: Overwrites writable files that are not checked out.
+* Force: Implies All and Overwrite.
+* Recursive: Adds all items in the specified directory and any subdirectories.
+= Behavior =
+= Outputs =
+* Return code is 0 if success
+* Return code is 1 if not success.
+= Rollback =
+(none)
+= Logging =
+(none)
+= Example =]]></DOC>
 </DOCU_Docu>
 </JOBP>
 </uc-export>

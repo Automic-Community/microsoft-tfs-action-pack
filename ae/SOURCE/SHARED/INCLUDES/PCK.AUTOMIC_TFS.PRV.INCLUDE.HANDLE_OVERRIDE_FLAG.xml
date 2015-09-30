@@ -8,8 +8,10 @@
 </HEADER>
 <SCRIPT mode="1" state="1">
 <MSCRI><![CDATA[:IF &UC4RB_TFS_OVERRIDE# = "YES"
-:  SET &UC4RB_TFS_COMMAND# = STR_CAT(&UC4RB_TFS_COMMAND#, " /override")
-:ENDIF]]></MSCRI>
+:  SET &UC4RB_TFS_COMMAND# = STR_CAT(&UC4RB_TFS_COMMAND#, ' /override:"&UC4RB_TFS_REASON#"')
+:ENDIF
+
+]]></MSCRI>
 </SCRIPT>
 <DOCU_Docu state="1" type="text">
 <DOC/>

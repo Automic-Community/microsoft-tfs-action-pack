@@ -9,7 +9,15 @@
 <SCRIPT mode="1" state="1">
 <MSCRI><![CDATA[:IF &UC4RB_TFS_UTIL_PATH# = ""
 :  SET &UC4RB_TFS_UTIL_PATH# = "C:\Program Files\Microsoft Visual Studio 9.0\Common7\IDE\Tf"
-:ENDIF]]></MSCRI>
+:ENDIF
+
+:SET &VAR_LC# = STR_LC(&UC4RB_TFS_UTIL_PATH#)
+:SET &CHECK# = STR_ENDS_WITH(&UC4RB_TFS_UTIL_PATH#, ".exe")
+:IF &CHECK# EQ "N"
+:  SET &UC4RB_TFS_UTIL_PATH# = STR_CAT(&UC4RB_TFS_UTIL_PATH#, ".exe")
+:ENDIF
+
+]]></MSCRI>
 </SCRIPT>
 <DOCU_Docu state="1" type="text">
 <DOC/>
