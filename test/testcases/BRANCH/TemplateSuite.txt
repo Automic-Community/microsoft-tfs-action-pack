@@ -19,7 +19,7 @@ Resource          prt_keywords.txt
                       NOK       ${_TFS_UTIL_PATH}    C:\\Projectswrong    MyProject    MyProject    T          NONE    NO        0              ${ENDED_NOK}     ${EMPTY}
 
 04_Fail Branch Using wrong version
-                      NOK       ${_TFS_UTIL_PATH}    C:\\Projects         MyProject    MyProject    T          NONE    NO        0              ${ENDED_NOK}     ${EMPTY}
+                      NOK       ${_TFS_UTIL_PATH}    C:\\Projects         MyProject    MyProject    Llabel     NONE    NO        0              ${ENDED_NOK}     ${EMPTY}
 
 *** Keywords ***
 Branch Template
