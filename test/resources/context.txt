@@ -36,9 +36,9 @@ Init VVNTFS04 Agent
     Set Global Variable    ${/}    \\
     Set Global Variable    ${_OS}    WIN
     Vm Connect    @{VM}
-    Vm Revert    VVNTFS04    WIN_AGENT_TFS_2008
+    #    Vm Revert    VVNTFS04    WIN_AGENT_TFS_2008
     Log    Wait for agent up...
-    Sleep    5 minutes
+    #    Sleep    5 minutes
     Log    Agent might be up :D
     Set Global Variable    ${_AGENT}    ${VVNTFS04_AGENT}
     Set Global Variable    ${_LOGIN}    ${LOGIN.ALL}
@@ -51,9 +51,9 @@ Init VVNTFS03 Agent
     Set Global Variable    ${/}    \\
     Set Global Variable    ${_OS}    WIN
     Vm Connect    @{VM}
-    Vm Revert    VVNTFS03    WIN_AGENT_TFS_2010
+    #    Vm Revert    VVNTFS03    WIN_AGENT_TFS_2010
     Log    Wait for agent up...
-    Sleep    5 minutes
+    #    Sleep    5 minutes
     Log    Agent might be up :D
     Set Global Variable    ${_AGENT}    ${VVNTFS03_AGENT}
     Set Global Variable    ${_LOGIN}    ${LOGIN.ALL}
