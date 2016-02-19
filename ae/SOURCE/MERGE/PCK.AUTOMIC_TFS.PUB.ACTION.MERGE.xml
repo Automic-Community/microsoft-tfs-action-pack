@@ -19,9 +19,9 @@
 <ExtRepAll>0</ExtRepAll>
 <ExtRepNone>0</ExtRepNone>
 <IntAccount/>
-<AutoDeactNo>1</AutoDeactNo>
+<AutoDeactNo>0</AutoDeactNo>
 <AutoDeact1ErrorFree>0</AutoDeact1ErrorFree>
-<AutoDeactErrorFree>0</AutoDeactErrorFree>
+<AutoDeactErrorFree>1</AutoDeactErrorFree>
 <DeactWhen/>
 <AutoDeactAlways>0</AutoDeactAlways>
 <DeactDelay>0</DeactDelay>
@@ -61,7 +61,7 @@
 <UC4RB_TFS_DISCARDs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_TFS_DISCARD#" promptsetname="PCK.AUTOMIC_TFS.PRV.PROMPTSET.MERGE">NO</UC4RB_TFS_DISCARDs.00>
 <UC4RB_TFS_FORCEs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_TFS_FORCE#" promptsetname="PCK.AUTOMIC_TFS.PRV.PROMPTSET.MERGE">YES</UC4RB_TFS_FORCEs.00>
 <UC4RB_TFS_LOCKs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_TFS_LOCK#" promptsetname="PCK.AUTOMIC_TFS.PRV.PROMPTSET.MERGE">NONE</UC4RB_TFS_LOCKs.00>
-<UC4RB_TFS_RECURSIVEs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_TFS_RECURSIVE#" promptsetname="PCK.AUTOMIC_TFS.PRV.PROMPTSET.MERGE"/>
+<UC4RB_TFS_RECURSIVEs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_TFS_RECURSIVE#" promptsetname="PCK.AUTOMIC_TFS.PRV.PROMPTSET.MERGE">YES</UC4RB_TFS_RECURSIVEs.00>
 <UC4RB_TFS_SOURCEs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_TFS_SOURCE#" promptsetname="PCK.AUTOMIC_TFS.PRV.PROMPTSET.MERGE"/>
 <UC4RB_TFS_UTIL_PATHs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_TFS_UTIL_PATH#" promptsetname="PCK.AUTOMIC_TFS.PRV.PROMPTSET.MERGE"/>
 <UC4RB_TFS_VERSIONs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_TFS_VERSION#" promptsetname="PCK.AUTOMIC_TFS.PRV.PROMPTSET.MERGE"/>
@@ -125,7 +125,7 @@
 <UC4RB_TFS_DISCARDs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_TFS_DISCARD#" promptsetname="PCK.AUTOMIC_TFS.PRV.PROMPTSET.MERGE">NO</UC4RB_TFS_DISCARDs.00>
 <UC4RB_TFS_FORCEs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_TFS_FORCE#" promptsetname="PCK.AUTOMIC_TFS.PRV.PROMPTSET.MERGE">YES</UC4RB_TFS_FORCEs.00>
 <UC4RB_TFS_LOCKs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_TFS_LOCK#" promptsetname="PCK.AUTOMIC_TFS.PRV.PROMPTSET.MERGE">NONE</UC4RB_TFS_LOCKs.00>
-<UC4RB_TFS_RECURSIVEs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_TFS_RECURSIVE#" promptsetname="PCK.AUTOMIC_TFS.PRV.PROMPTSET.MERGE"/>
+<UC4RB_TFS_RECURSIVEs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_TFS_RECURSIVE#" promptsetname="PCK.AUTOMIC_TFS.PRV.PROMPTSET.MERGE">YES</UC4RB_TFS_RECURSIVEs.00>
 <UC4RB_TFS_SOURCEs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_TFS_SOURCE#" promptsetname="PCK.AUTOMIC_TFS.PRV.PROMPTSET.MERGE"/>
 <UC4RB_TFS_UTIL_PATHs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_TFS_UTIL_PATH#" promptsetname="PCK.AUTOMIC_TFS.PRV.PROMPTSET.MERGE"/>
 <UC4RB_TFS_VERSIONs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_TFS_VERSION#" promptsetname="PCK.AUTOMIC_TFS.PRV.PROMPTSET.MERGE"/>
@@ -175,7 +175,7 @@
 <UC4RB_TFS_DISCARDs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_TFS_DISCARD#" promptsetname="PCK.AUTOMIC_TFS.PRV.PROMPTSET.MERGE">NO</UC4RB_TFS_DISCARDs.00>
 <UC4RB_TFS_FORCEs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_TFS_FORCE#" promptsetname="PCK.AUTOMIC_TFS.PRV.PROMPTSET.MERGE">YES</UC4RB_TFS_FORCEs.00>
 <UC4RB_TFS_LOCKs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_TFS_LOCK#" promptsetname="PCK.AUTOMIC_TFS.PRV.PROMPTSET.MERGE">NONE</UC4RB_TFS_LOCKs.00>
-<UC4RB_TFS_RECURSIVEs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_TFS_RECURSIVE#" promptsetname="PCK.AUTOMIC_TFS.PRV.PROMPTSET.MERGE"/>
+<UC4RB_TFS_RECURSIVEs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_TFS_RECURSIVE#" promptsetname="PCK.AUTOMIC_TFS.PRV.PROMPTSET.MERGE">YES</UC4RB_TFS_RECURSIVEs.00>
 <UC4RB_TFS_SOURCEs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_TFS_SOURCE#" promptsetname="PCK.AUTOMIC_TFS.PRV.PROMPTSET.MERGE"/>
 <UC4RB_TFS_UTIL_PATHs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_TFS_UTIL_PATH#" promptsetname="PCK.AUTOMIC_TFS.PRV.PROMPTSET.MERGE"/>
 <UC4RB_TFS_VERSIONs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_TFS_VERSION#" promptsetname="PCK.AUTOMIC_TFS.PRV.PROMPTSET.MERGE"/>
@@ -207,7 +207,7 @@
 <MaxRetCode>0</MaxRetCode>
 <MrcExecute/>
 <MrcElseE>0</MrcElseE>
-<FcstStatus>0|U00000000 ??? ""</FcstStatus>
+<FcstStatus>0| |</FcstStatus>
 
 <ErtMethodDef>1</ErtMethodDef>
 <ErtMethodFix>0</ErtMethodFix>
@@ -277,8 +277,31 @@
 <MSCRI/>
 </SCRIPT>
 <DOCU_Docu state="1" type="text">
-<DOC><![CDATA[Merges a branch into an other.
-
+<DOC><![CDATA[= RB name =
+PCK.AUTOMIC_TFS.PUB.ACTION.MERGE
+= General description =
+Merges a branch into an other.
+= Inputs =
+* TF Utility Path: Path to the tf.exe utility which will be used to communicate with Team Foundation Server. If no path was specified, the default value (C:/Program Files/Microsoft Visual Studio 9.0/Common7/IDE/Tf) will be assumed.
+* Version: Optional version specification.
+* Source: Specifies the file or folder to act as the source of the merge.
+* Destination: Specifies the file or folder to act as the destination of the merge.
+* Recursive: Matches the source item specification in the current directory and any subfolders.
+* Lock: Specifies a lock type or removes a lock from an item.
+* Force: Ignores the merge history and merges the specified changes from the source into the destination, even if some or all these changes have been merged before.
+* Discard: Does not perform the merge operation, but updates the merge history to track that the merge occurred.
+* Baseless: Performs a merge without a basis version. That is, allows the user to merge files and folders that do not have a merge relationship. After a baseless merge, a merge relationship exists and future merges do not have to be baseless.
+* Candidate: Prints a list of all changesets in the source that have not yet been merged into the destination. The list should include the changeset ID that has not been merged and other basic information about that changeset.
+= Behavior =
+= Outputs =
+* Return code is 0 if success
+* Return code is not 0 if not success.
+= Rollback =
+(none)
+= Logging =
+(none)
+= Example =
+(none)
 ]]></DOC>
 </DOCU_Docu>
 </JOBP>
