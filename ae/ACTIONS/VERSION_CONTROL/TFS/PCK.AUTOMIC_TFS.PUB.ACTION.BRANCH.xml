@@ -268,7 +268,28 @@
 <MSCRI/>
 </SCRIPT>
 <DOCU_Docu state="1" type="text">
-<DOC><![CDATA[The branch command copies an item or set of items, including metadata and source control history, from one location to another in the Team Foundation source control server and in the local workspace.]]></DOC>
+<DOC><![CDATA[= RB name =
+PCK.AUTOMIC_TFS.PUB.ACTION.BRANCH
+= General description =
+The branch command copies an item or set of items, including metadata and source control history, from one location to another in the Team Foundation source control server and in the local workspace.
+= Inputs =
+* TF Utility Path: Path to the tf.exe utility which will be used to communicate with Team Foundation Server. If no path was specified, the default value (C:/Program Files/Microsoft Visual Studio 9.0/Common7/IDE/Tf) will be assumed.
+* Workspace: Path to working directory.
+* Old Item: Specifies the name of the source file or folder being branched. The olditem may also contain version information in the format item;version.
+* New Item: Specifies the name of the destination file or folder or the parent folder for the destination.
+* Version: The version of the item at which you want to create the branch.
+* Lock: Prevents other users from checking in or checking out items until you check in your pending branch and associated changes.
+* No Get: If this option is specified, local copies of the files and folders in the new branch are not created in the local workspace.
+= Behavior =
+= Outputs =
+* Return code is 0 if success
+* Return code is not 0 if not success.
+= Rollback =
+(none)
+= Logging =
+(none)
+= Example =
+(none)]]></DOC>
 </DOCU_Docu>
 </JOBP>
 </uc-export>
