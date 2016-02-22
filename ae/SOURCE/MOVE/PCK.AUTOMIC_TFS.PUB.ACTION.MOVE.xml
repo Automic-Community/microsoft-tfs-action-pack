@@ -19,9 +19,9 @@
 <ExtRepAll>0</ExtRepAll>
 <ExtRepNone>0</ExtRepNone>
 <IntAccount/>
-<AutoDeactNo>1</AutoDeactNo>
+<AutoDeactNo>0</AutoDeactNo>
 <AutoDeact1ErrorFree>0</AutoDeact1ErrorFree>
-<AutoDeactErrorFree>0</AutoDeactErrorFree>
+<AutoDeactErrorFree>1</AutoDeactErrorFree>
 <DeactWhen/>
 <AutoDeactAlways>0</AutoDeactAlways>
 <DeactDelay>0</DeactDelay>
@@ -59,6 +59,7 @@
 <UC4RB_TFS_NEWITEMs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_TFS_NEWITEM#" promptsetname="PCK.AUTOMIC_TFS.PRV.PROMPTSET.MOVE"/>
 <UC4RB_TFS_OLDITEMs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_TFS_OLDITEM#" promptsetname="PCK.AUTOMIC_TFS.PRV.PROMPTSET.MOVE"/>
 <UC4RB_TFS_UTIL_PATHs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_TFS_UTIL_PATH#" promptsetname="PCK.AUTOMIC_TFS.PRV.PROMPTSET.MOVE"/>
+<UC4RB_TFS_WORKING_DIRs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_TFS_WORKING_DIR#" promptsetname="PCK.AUTOMIC_TFS.PRV.PROMPTSET.MOVE"/>
 </PRPTBOX>
 </PROMPTSET>
 </node>
@@ -117,6 +118,7 @@
 <UC4RB_TFS_NEWITEMs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_TFS_NEWITEM#" promptsetname="PCK.AUTOMIC_TFS.PRV.PROMPTSET.MOVE"/>
 <UC4RB_TFS_OLDITEMs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_TFS_OLDITEM#" promptsetname="PCK.AUTOMIC_TFS.PRV.PROMPTSET.MOVE"/>
 <UC4RB_TFS_UTIL_PATHs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_TFS_UTIL_PATH#" promptsetname="PCK.AUTOMIC_TFS.PRV.PROMPTSET.MOVE"/>
+<UC4RB_TFS_WORKING_DIRs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_TFS_WORKING_DIR#" promptsetname="PCK.AUTOMIC_TFS.PRV.PROMPTSET.MOVE"/>
 </PRPTBOX>
 </PROMPTSET>
 </node>
@@ -161,6 +163,7 @@
 <UC4RB_TFS_NEWITEMs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_TFS_NEWITEM#" promptsetname="PCK.AUTOMIC_TFS.PRV.PROMPTSET.MOVE"/>
 <UC4RB_TFS_OLDITEMs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_TFS_OLDITEM#" promptsetname="PCK.AUTOMIC_TFS.PRV.PROMPTSET.MOVE"/>
 <UC4RB_TFS_UTIL_PATHs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_TFS_UTIL_PATH#" promptsetname="PCK.AUTOMIC_TFS.PRV.PROMPTSET.MOVE"/>
+<UC4RB_TFS_WORKING_DIRs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_TFS_WORKING_DIR#" promptsetname="PCK.AUTOMIC_TFS.PRV.PROMPTSET.MOVE"/>
 </PRPTBOX>
 </PROMPTSET>
 </node>
@@ -266,6 +269,7 @@ Changes the name or the path of a file or folder.
 You can use the rename command or the alias move, to move a file or folder to a new location.
 = Inputs =
 * TF Utility Path: Path to the tf.exe utility which will be used to communicate with Team Foundation Server. If no path was specified, the default value (C:/Program Files/Microsoft Visual Studio 9.0/Common7/IDE/Tf) will be assumed.
+* Workspace: Path to working directory
 * Old Item: The original name and path of the file or folder that is to be renamed.
 * New Item: The new name of the file or folder.
 * Lock: Include this option to prevent other users from checking in or checking out the specified items.

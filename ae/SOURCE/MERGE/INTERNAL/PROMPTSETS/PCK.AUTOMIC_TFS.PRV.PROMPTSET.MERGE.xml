@@ -38,7 +38,34 @@
             <entry name="onchangereset"/>
             <entry name="resetable">1</entry>
          </properties>
-      </text><text alt="1" enabled="1" fill="b" focus="0" id="UC4RB_TFS_VERSIONs.00" inputassistance="0" len="" multiline="0" multilineIcon="0" nl="1" regex="" required="0" separator=";" showaspassword="0" text="Version" tooltip="Optional version specification." upper="0"><oninputassistant><command request="_internal" target="_view" targetaction="setAttribute" targetparam="promptname|@id"/><command request="_internal" target="_view" targetaction="setAttribute" targetparam="promptvalue|@value"/><command owner="_promptsetcontainer" owneraction="getData" request="getpromptinputassistance" target="_chainwindow"/></oninputassistant>
+      </text><text alt="1" enabled="1" fill="b" focus="0" id="UC4RB_TFS_WORKING_DIRs.00" inputassistance="0" len="" multiline="0" multilineIcon="0" nl="1" regex="" separator=";" showaspassword="0" text="Workspace" tooltip="Path to working directory" upper="0" required="0"><oninputassistant><command request="_internal" target="_view" targetaction="setAttribute" targetparam="promptname|@id"/><command request="_internal" target="_view" targetaction="setAttribute" targetparam="promptvalue|@value"/><command owner="_promptsetcontainer" owneraction="getData" request="getpromptinputassistance" target="_chainwindow"/></oninputassistant>
+      
+      <properties>
+        <entry listparam="C,N" name="reference" reftype="STATIC">UC_DATATYPE_STRING</entry>
+        <entry name="xmlkey"/>
+        <entry name="xmlpath"/>
+        <entry name="text">Workspace</entry>
+        <entry name="multiline">0</entry>
+        <entry name="multilineIcon">0</entry>
+        <entry name="multiselect">0</entry>
+        <entry name="separator">;</entry>
+        <entry name="len"/>
+        <entry name="quotes"/>
+        <entry name="id">UC4RB_TFS_WORKING_DIRs.00</entry>
+        <entry name="regex"/>
+        <entry name="inputassistance">0</entry>
+        <entry name="enabled">0</entry>
+        <entry name="required">1</entry>
+        <entry name="upper">0</entry>
+        <entry name="focus">0</entry>
+        <entry name="showaspassword">0</entry>
+        <entry name="tooltip">Path to working directory</entry>
+        <entry name="modifiable">1</entry>
+        <entry name="customfield"/>
+        <entry name="onchangereset"/>
+        <entry name="resetable">1</entry>
+      <entry name="initvalue"/></properties>
+    </text><text alt="1" enabled="1" fill="b" focus="0" id="UC4RB_TFS_VERSIONs.00" inputassistance="0" len="" multiline="0" multilineIcon="0" nl="1" regex="" required="0" separator=";" showaspassword="0" text="Version" tooltip="Optional version specification." upper="0"><oninputassistant><command request="_internal" target="_view" targetaction="setAttribute" targetparam="promptname|@id"/><command request="_internal" target="_view" targetaction="setAttribute" targetparam="promptvalue|@value"/><command owner="_promptsetcontainer" owneraction="getData" request="getpromptinputassistance" target="_chainwindow"/></oninputassistant>
          
          <properties>
             <entry listparam="C" name="reference" reftype="STATIC">UC_DATATYPE_STRING</entry>
@@ -221,7 +248,7 @@
       </dynradiogroup></readpanel></dialog>]]></XUIEDITOR>
 </PROMPTSETXUI>
 <PROMPTSETDATA state="1">
-<DATAEDITOR><![CDATA[<PRPTS ontop="1"><PRPTBOX><UC4RB_TFS_UTIL_PATHs.00 haslist="0" msgnr="-1" msginsert="" altview="0" promptname="UC4RB_TFS_UTIL_PATH#" ReadFromTable="OPSE"></UC4RB_TFS_UTIL_PATHs.00><UC4RB_TFS_VERSIONs.00 haslist="0" msgnr="-1" msginsert="" altview="0" promptname="UC4RB_TFS_VERSION#" ReadFromTable="OPSE"></UC4RB_TFS_VERSIONs.00><UC4RB_TFS_SOURCEs.00 haslist="0" msgnr="-1" msginsert="" altview="0" promptname="UC4RB_TFS_SOURCE#" ReadFromTable="OPSE"></UC4RB_TFS_SOURCEs.00><UC4RB_TFS_DESTINATIONs.00 haslist="0" msgnr="-1" msginsert="" altview="0" promptname="UC4RB_TFS_DESTINATION#" ReadFromTable="OPSE"></UC4RB_TFS_DESTINATIONs.00><UC4RB_TFS_RECURSIVEs.00 haslist="0" msgnr="-1" msginsert="" altview="0" promptname="UC4RB_TFS_RECURSIVE#" ReadFromTable="OPSE">YES</UC4RB_TFS_RECURSIVEs.00><UC4RB_TFS_LOCKs.00 haslist="0" msgnr="-1" msginsert="" altview="0" promptname="UC4RB_TFS_LOCK#" ReadFromTable="OPSE">NONE</UC4RB_TFS_LOCKs.00><UC4RB_TFS_FORCEs.00 haslist="0" msgnr="-1" msginsert="" altview="0" promptname="UC4RB_TFS_FORCE#" ReadFromTable="OPSE">YES</UC4RB_TFS_FORCEs.00><UC4RB_TFS_DISCARDs.00 haslist="0" msgnr="-1" msginsert="" altview="0" promptname="UC4RB_TFS_DISCARD#" ReadFromTable="OPSE">NO</UC4RB_TFS_DISCARDs.00><UC4RB_TFS_BASELESSs.00 haslist="0" msgnr="-1" msginsert="" altview="0" promptname="UC4RB_TFS_BASELESS#" ReadFromTable="OPSE">NO</UC4RB_TFS_BASELESSs.00><UC4RB_TFS_CANDIDATEs.00 haslist="0" msgnr="-1" msginsert="" altview="0" promptname="UC4RB_TFS_CANDIDATE#" ReadFromTable="OPSE">NO</UC4RB_TFS_CANDIDATEs.00></PRPTBOX></PRPTS>]]></DATAEDITOR>
+<DATAEDITOR><![CDATA[<PRPTS ontop="1"><PRPTBOX><UC4RB_TFS_UTIL_PATHs.00 haslist="0" msgnr="-1" msginsert="" altview="0" promptname="UC4RB_TFS_UTIL_PATH#" ReadFromTable="OPSE"></UC4RB_TFS_UTIL_PATHs.00><UC4RB_TFS_WORKING_DIRs.00 haslist="0" msgnr="-1" msginsert="" altview="0" promptname="UC4RB_TFS_WORKING_DIR#" ReadFromTable="OPSE"></UC4RB_TFS_WORKING_DIRs.00><UC4RB_TFS_VERSIONs.00 haslist="0" msgnr="-1" msginsert="" altview="0" promptname="UC4RB_TFS_VERSION#" ReadFromTable="OPSE"></UC4RB_TFS_VERSIONs.00><UC4RB_TFS_SOURCEs.00 haslist="0" msgnr="-1" msginsert="" altview="0" promptname="UC4RB_TFS_SOURCE#" ReadFromTable="OPSE"></UC4RB_TFS_SOURCEs.00><UC4RB_TFS_DESTINATIONs.00 haslist="0" msgnr="-1" msginsert="" altview="0" promptname="UC4RB_TFS_DESTINATION#" ReadFromTable="OPSE"></UC4RB_TFS_DESTINATIONs.00><UC4RB_TFS_RECURSIVEs.00 haslist="0" msgnr="-1" msginsert="" altview="0" promptname="UC4RB_TFS_RECURSIVE#" ReadFromTable="OPSE">YES</UC4RB_TFS_RECURSIVEs.00><UC4RB_TFS_LOCKs.00 haslist="0" msgnr="-1" msginsert="" altview="0" promptname="UC4RB_TFS_LOCK#" ReadFromTable="OPSE">NONE</UC4RB_TFS_LOCKs.00><UC4RB_TFS_FORCEs.00 haslist="0" msgnr="-1" msginsert="" altview="0" promptname="UC4RB_TFS_FORCE#" ReadFromTable="OPSE">YES</UC4RB_TFS_FORCEs.00><UC4RB_TFS_DISCARDs.00 haslist="0" msgnr="-1" msginsert="" altview="0" promptname="UC4RB_TFS_DISCARD#" ReadFromTable="OPSE">NO</UC4RB_TFS_DISCARDs.00><UC4RB_TFS_BASELESSs.00 haslist="0" msgnr="-1" msginsert="" altview="0" promptname="UC4RB_TFS_BASELESS#" ReadFromTable="OPSE">NO</UC4RB_TFS_BASELESSs.00><UC4RB_TFS_CANDIDATEs.00 haslist="0" msgnr="-1" msginsert="" altview="0" promptname="UC4RB_TFS_CANDIDATE#" ReadFromTable="OPSE">NO</UC4RB_TFS_CANDIDATEs.00></PRPTBOX></PRPTS>]]></DATAEDITOR>
 </PROMPTSETDATA>
 <DOCU_Docu state="1" type="text">
 <DOC/>

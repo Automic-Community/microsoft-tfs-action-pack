@@ -65,6 +65,7 @@
 <UC4RB_TFS_SOURCEs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_TFS_SOURCE#" promptsetname="PCK.AUTOMIC_TFS.PRV.PROMPTSET.MERGE"/>
 <UC4RB_TFS_UTIL_PATHs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_TFS_UTIL_PATH#" promptsetname="PCK.AUTOMIC_TFS.PRV.PROMPTSET.MERGE"/>
 <UC4RB_TFS_VERSIONs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_TFS_VERSION#" promptsetname="PCK.AUTOMIC_TFS.PRV.PROMPTSET.MERGE"/>
+<UC4RB_TFS_WORKING_DIRs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_TFS_WORKING_DIR#" promptsetname="PCK.AUTOMIC_TFS.PRV.PROMPTSET.MERGE"/>
 </PRPTBOX>
 </PROMPTSET>
 </node>
@@ -129,6 +130,7 @@
 <UC4RB_TFS_SOURCEs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_TFS_SOURCE#" promptsetname="PCK.AUTOMIC_TFS.PRV.PROMPTSET.MERGE"/>
 <UC4RB_TFS_UTIL_PATHs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_TFS_UTIL_PATH#" promptsetname="PCK.AUTOMIC_TFS.PRV.PROMPTSET.MERGE"/>
 <UC4RB_TFS_VERSIONs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_TFS_VERSION#" promptsetname="PCK.AUTOMIC_TFS.PRV.PROMPTSET.MERGE"/>
+<UC4RB_TFS_WORKING_DIRs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_TFS_WORKING_DIR#" promptsetname="PCK.AUTOMIC_TFS.PRV.PROMPTSET.MERGE"/>
 </PRPTBOX>
 </PROMPTSET>
 </node>
@@ -179,6 +181,7 @@
 <UC4RB_TFS_SOURCEs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_TFS_SOURCE#" promptsetname="PCK.AUTOMIC_TFS.PRV.PROMPTSET.MERGE"/>
 <UC4RB_TFS_UTIL_PATHs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_TFS_UTIL_PATH#" promptsetname="PCK.AUTOMIC_TFS.PRV.PROMPTSET.MERGE"/>
 <UC4RB_TFS_VERSIONs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_TFS_VERSION#" promptsetname="PCK.AUTOMIC_TFS.PRV.PROMPTSET.MERGE"/>
+<UC4RB_TFS_WORKING_DIRs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_TFS_WORKING_DIR#" promptsetname="PCK.AUTOMIC_TFS.PRV.PROMPTSET.MERGE"/>
 </PRPTBOX>
 </PROMPTSET>
 </node>
@@ -283,6 +286,7 @@ PCK.AUTOMIC_TFS.PUB.ACTION.MERGE
 Merges a branch into an other.
 = Inputs =
 * TF Utility Path: Path to the tf.exe utility which will be used to communicate with Team Foundation Server. If no path was specified, the default value (C:/Program Files/Microsoft Visual Studio 9.0/Common7/IDE/Tf) will be assumed.
+* Workspace: Path to working directory
 * Version: Optional version specification.
 * Source: Specifies the file or folder to act as the source of the merge.
 * Destination: Specifies the file or folder to act as the destination of the merge.
