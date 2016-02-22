@@ -4,13 +4,189 @@
 <Title/>
 <ArchiveKey1/>
 <ArchiveKey2/>
-<OH_SubType>STATIC</OH_SubType>
+<OH_SubType/>
 </HEADER>
 <PROMPTDESIGNER state="1">
 <DESIGNER/>
 </PROMPTDESIGNER>
 <PROMPTSETXUI state="1">
-<XUIEDITOR><![CDATA[<dialog height="506" icon="PRPT" id="PRPTS" left="279" top="4" width="420"><readpanel fill="b" id="PRPTBOX" nl="1" scroll="v" text="Parameters"><properties><entry name="text">Parameters</entry><entry name="modifiable">0</entry></properties><text enabled="1" fill="b" focus="0" id="UC4RB_TFS_UTIL_PATHs.00" inputassistance="0" len="" nl="1" regex="" required="0" separator=";" showaspassword="0" text="TF Utility Path" tooltip="Path to the tf.exe utility which will be used to communicate with Team Foundation Server." upper="0" alt="1" multiline="0" multilineIcon="0"><oninputassistant><command request="_internal" target="_view" targetaction="setAttribute" targetparam="promptname|@id"/><command request="_internal" target="_view" targetaction="setAttribute" targetparam="promptvalue|@value"/><command owner="_promptsetcontainer" owneraction="getData" request="getpromptinputassistance" target="_chainwindow"/></oninputassistant><properties><entry listparam="C" name="reference" reftype="STATIC">UC_DATATYPE_STRING</entry><entry name="text">TF Utility Path</entry><entry name="multiselect">0</entry><entry name="separator">;</entry><entry name="len"/><entry name="quotes"/><entry name="id">UC4RB_TFS_UTIL_PATHs.00</entry><entry name="inputassistance">0</entry><entry name="enabled">0</entry><entry name="upper">0</entry><entry name="focus">0</entry><entry name="showaspassword">0</entry><entry name="tooltip">Path to the tf.exe utility which will be used to communicate with Team Foundation Server.</entry><entry name="modifiable">1</entry><entry name="regex"/><entry name="required">0</entry><entry name="initvalue"/><entry name="xmlkey"/><entry name="xmlpath"/><entry name="multiline">0</entry><entry name="multilineIcon">0</entry><entry name="customfield"/><entry name="onchangereset"/><entry name="resetable">1</entry></properties></text><text enabled="1" fill="b" focus="0" id="UC4RB_TFS_WORKING_DIRs.00" inputassistance="0" len="" nl="1" regex="" separator=";" showaspassword="0" text="Workspace" tooltip="Path to working directory." upper="0" required="0" alt="1" multiline="0" multilineIcon="0"><oninputassistant><command request="_internal" target="_view" targetaction="setAttribute" targetparam="promptname|@id"/><command request="_internal" target="_view" targetaction="setAttribute" targetparam="promptvalue|@value"/><command owner="_promptsetcontainer" owneraction="getData" request="getpromptinputassistance" target="_chainwindow"/></oninputassistant><properties><entry listparam="C" name="reference" reftype="STATIC">UC_DATATYPE_STRING</entry><entry name="text">Workspace</entry><entry name="multiselect">0</entry><entry name="separator">;</entry><entry name="len"/><entry name="quotes"/><entry name="id">UC4RB_TFS_WORKING_DIRs.00</entry><entry name="inputassistance">0</entry><entry name="enabled">0</entry><entry name="upper">0</entry><entry name="focus">0</entry><entry name="showaspassword">0</entry><entry name="tooltip">Path to working directory.</entry><entry name="modifiable">1</entry><entry name="regex"/><entry name="required">1</entry><entry name="initvalue"/><entry name="xmlkey"/><entry name="xmlpath"/><entry name="multiline">0</entry><entry name="multilineIcon">0</entry><entry name="customfield"/><entry name="onchangereset"/><entry name="resetable">1</entry></properties></text><text enabled="1" fill="b" focus="0" id="UC4RB_TFS_OLDITEMs.00" inputassistance="0" len="" nl="1" regex="" separator=";" showaspassword="0" text="Old Item" tooltip="Specifies the name of the source file or folder being branched. The olditem may also contain version information in the format item;version" upper="0" required="0" alt="1" multiline="0" multilineIcon="0"><oninputassistant><command request="_internal" target="_view" targetaction="setAttribute" targetparam="promptname|@id"/><command request="_internal" target="_view" targetaction="setAttribute" targetparam="promptvalue|@value"/><command owner="_promptsetcontainer" owneraction="getData" request="getpromptinputassistance" target="_chainwindow"/></oninputassistant><properties><entry listparam="C" name="reference" reftype="STATIC">UC_DATATYPE_STRING</entry><entry name="text">Old Item</entry><entry name="multiselect">0</entry><entry name="separator">;</entry><entry name="len"/><entry name="quotes"/><entry name="id">UC4RB_TFS_OLDITEMs.00</entry><entry name="inputassistance">0</entry><entry name="enabled">0</entry><entry name="upper">0</entry><entry name="focus">0</entry><entry name="showaspassword">0</entry><entry name="tooltip">Specifies the name of the source file or folder being branched. The olditem may also contain version information in the format item;version</entry><entry name="modifiable">1</entry><entry name="regex"/><entry name="required">1</entry><entry name="initvalue"/><entry name="xmlkey"/><entry name="xmlpath"/><entry name="multiline">0</entry><entry name="multilineIcon">0</entry><entry name="customfield"/><entry name="onchangereset"/><entry name="resetable">1</entry></properties></text><text enabled="1" fill="b" focus="0" id="UC4RB_TFS_NEWITEMs.00" inputassistance="0" len="" nl="1" regex="" separator=";" showaspassword="0" text="New Item" tooltip="Specifies the name of the destination file or folder or the parent folder for the destination." upper="0" required="0" alt="1" multiline="0" multilineIcon="0"><oninputassistant><command request="_internal" target="_view" targetaction="setAttribute" targetparam="promptname|@id"/><command request="_internal" target="_view" targetaction="setAttribute" targetparam="promptvalue|@value"/><command owner="_promptsetcontainer" owneraction="getData" request="getpromptinputassistance" target="_chainwindow"/></oninputassistant><properties><entry listparam="C" name="reference" reftype="STATIC">UC_DATATYPE_STRING</entry><entry name="text">New Item</entry><entry name="multiselect">0</entry><entry name="separator">;</entry><entry name="len"/><entry name="quotes"/><entry name="id">UC4RB_TFS_NEWITEMs.00</entry><entry name="inputassistance">0</entry><entry name="enabled">0</entry><entry name="upper">0</entry><entry name="focus">0</entry><entry name="showaspassword">0</entry><entry name="tooltip">Specifies the name of the destination file or folder or the parent folder for the destination.</entry><entry name="modifiable">1</entry><entry name="regex"/><entry name="required">1</entry><entry name="initvalue"/><entry name="xmlkey"/><entry name="xmlpath"/><entry name="multiline">0</entry><entry name="multilineIcon">0</entry><entry name="customfield"/><entry name="onchangereset"/><entry name="resetable">1</entry></properties></text><text enabled="1" fill="b" focus="0" id="UC4RB_TFS_VERSIONs.00" inputassistance="0" len="" nl="1" regex="" separator=";" showaspassword="0" text="Version" tooltip="The version of the item at which you want to create the branch." upper="0" required="0" alt="1" multiline="0" multilineIcon="0"><oninputassistant><command request="_internal" target="_view" targetaction="setAttribute" targetparam="promptname|@id"/><command request="_internal" target="_view" targetaction="setAttribute" targetparam="promptvalue|@value"/><command owner="_promptsetcontainer" owneraction="getData" request="getpromptinputassistance" target="_chainwindow"/></oninputassistant><properties><entry listparam="C" name="reference" reftype="STATIC">UC_DATATYPE_STRING</entry><entry name="text">Version</entry><entry name="multiselect">0</entry><entry name="separator">;</entry><entry name="len"/><entry name="quotes"/><entry name="id">UC4RB_TFS_VERSIONs.00</entry><entry name="inputassistance">0</entry><entry name="enabled">0</entry><entry name="upper">0</entry><entry name="focus">0</entry><entry name="showaspassword">0</entry><entry name="tooltip">The version of the item at which you want to create the branch.</entry><entry name="modifiable">1</entry><entry name="regex"/><entry name="required">1</entry><entry name="initvalue"/><entry name="xmlkey"/><entry name="xmlpath"/><entry name="multiline">0</entry><entry name="multilineIcon">0</entry><entry name="customfield"/><entry name="onchangereset"/><entry name="resetable">1</entry></properties></text><combo dynamic="0" enabled="1" fill="b" focus="0" id="UC4RB_TFS_LOCKs.00" nl="1" quotes="" text="Lock" tooltip="Prevents other users from checking in or checking out items until you check in your pending branch and associated changes." alt="1" filter="0" strict="1" vtype="i"><command request="_internal" target="_view" targetaction="setAttribute" targetparam="promptname|@id"/><command owner="_self" owneraction="setsource" ownerparam="src|_dialog@src"/><command owner="_promptsetcontainer" owneraction="getData" request="getpromptcombolist" target="_self" targetaction="setlist" wait="0"/><properties><entry listparam="C" name="reference" reftype="STATIC">PCK.AUTOMIC_TFS.PRV.VARA.LOCK</entry><entry name="text">Lock</entry><entry name="quotes"/><entry name="id">UC4RB_TFS_LOCKs.00</entry><entry name="enabled">0</entry><entry name="focus">0</entry><entry name="tooltip">Prevents other users from checking in or checking out items until you check in your pending branch and associated changes.</entry><entry name="dynamic">0</entry><entry name="modifiable">1</entry><entry name="initvalue"/><entry name="xmlkey"/><entry name="xmlpath"/><entry name="onchangereset"/><entry name="customfield"/><entry name="resetable">1</entry></properties></combo><dynradiogroup enabled="1" fill="b" focus="0" id="UC4RB_TFS_NOGETs.00" nl="1" quotes="" text="No Get" tooltip="If this option is specified, local copies of the files and folders in the new branch are not created in the local workspace." alt="1" required="0"><properties><entry listparam="C" name="reference" reftype="STATIC">PCK.ITPA_SHARED.PRV.VARA.YES_NO</entry><entry name="text">No Get</entry><entry name="quotes"/><entry name="id">UC4RB_TFS_NOGETs.00</entry><entry name="enabled">0</entry><entry name="focus">0</entry><entry name="tooltip">If this option is specified, local copies of the files and folders in the new branch are not created in the local workspace.</entry><entry name="modifiable">1</entry><entry name="initvalue"/><entry name="xmlkey"/><entry name="xmlpath"/><entry name="customfield"/></properties></dynradiogroup></readpanel></dialog>]]></XUIEDITOR>
+<XUIEDITOR><![CDATA[<dialog height="506" icon="PRPT" id="PRPTS" left="0" top="0" width="420"><readpanel fill="b" id="PRPTBOX" nl="1" scroll="v" text="Branch"><properties><entry name="text">Branch</entry><entry name="modifiable">0</entry></properties><text alt="1" enabled="1" fill="b" focus="0" id="UC4RB_TFS_UTIL_PATHs.00" inputassistance="0" len="" multiline="0" multilineIcon="0" nl="1" regex="" required="0" separator=";" showaspassword="0" text="TF Utility Path" tooltip="Path to the tf.exe utility which will be used to communicate with Team Foundation Server." upper="0"><oninputassistant><command request="_internal" target="_view" targetaction="setAttribute" targetparam="promptname|@id"/><command request="_internal" target="_view" targetaction="setAttribute" targetparam="promptvalue|@value"/><command owner="_promptsetcontainer" owneraction="getData" request="getpromptinputassistance" target="_chainwindow"/></oninputassistant>
+         
+         <properties>
+            <entry listparam="C" name="reference" reftype="STATIC">UC_DATATYPE_STRING</entry>
+            <entry name="text">TF Utility Path</entry>
+            <entry name="multiselect">0</entry>
+            <entry name="separator">;</entry>
+            <entry name="len"/>
+            <entry name="quotes"/>
+            <entry name="id">UC4RB_TFS_UTIL_PATHs.00</entry>
+            <entry name="inputassistance">0</entry>
+            <entry name="enabled">0</entry>
+            <entry name="upper">0</entry>
+            <entry name="focus">0</entry>
+            <entry name="showaspassword">0</entry>
+            <entry name="tooltip">Path to the tf.exe utility which will be used to communicate with Team Foundation Server.</entry>
+            <entry name="modifiable">1</entry>
+            <entry name="regex"/>
+            <entry name="required">0</entry>
+            <entry name="initvalue"/>
+            <entry name="xmlkey"/>
+            <entry name="xmlpath"/>
+            <entry name="multiline">0</entry>
+            <entry name="multilineIcon">0</entry>
+            <entry name="customfield"/>
+            <entry name="onchangereset"/>
+            <entry name="resetable">1</entry>
+         </properties>
+      </text><text alt="1" enabled="1" fill="b" focus="0" id="UC4RB_TFS_WORKING_DIRs.00" inputassistance="0" len="" multiline="0" multilineIcon="0" nl="1" regex="" required="0" separator=";" showaspassword="0" text="Workspace" tooltip="Path to working directory." upper="0"><oninputassistant><command request="_internal" target="_view" targetaction="setAttribute" targetparam="promptname|@id"/><command request="_internal" target="_view" targetaction="setAttribute" targetparam="promptvalue|@value"/><command owner="_promptsetcontainer" owneraction="getData" request="getpromptinputassistance" target="_chainwindow"/></oninputassistant>
+         
+         <properties>
+            <entry listparam="C" name="reference" reftype="STATIC">UC_DATATYPE_STRING</entry>
+            <entry name="text">Workspace</entry>
+            <entry name="multiselect">0</entry>
+            <entry name="separator">;</entry>
+            <entry name="len"/>
+            <entry name="quotes"/>
+            <entry name="id">UC4RB_TFS_WORKING_DIRs.00</entry>
+            <entry name="inputassistance">0</entry>
+            <entry name="enabled">0</entry>
+            <entry name="upper">0</entry>
+            <entry name="focus">0</entry>
+            <entry name="showaspassword">0</entry>
+            <entry name="tooltip">Path to working directory.</entry>
+            <entry name="modifiable">1</entry>
+            <entry name="regex"/>
+            <entry name="required">1</entry>
+            <entry name="initvalue"/>
+            <entry name="xmlkey"/>
+            <entry name="xmlpath"/>
+            <entry name="multiline">0</entry>
+            <entry name="multilineIcon">0</entry>
+            <entry name="customfield"/>
+            <entry name="onchangereset"/>
+            <entry name="resetable">1</entry>
+         </properties>
+      </text><text alt="1" enabled="1" fill="b" focus="0" id="UC4RB_TFS_OLDITEMs.00" inputassistance="0" len="" multiline="0" multilineIcon="0" nl="1" regex="" required="0" separator=";" showaspassword="0" text="Old Item" tooltip="Specifies the name of the source file or folder being branched. The olditem may also contain version information in the format item;version" upper="0"><oninputassistant><command request="_internal" target="_view" targetaction="setAttribute" targetparam="promptname|@id"/><command request="_internal" target="_view" targetaction="setAttribute" targetparam="promptvalue|@value"/><command owner="_promptsetcontainer" owneraction="getData" request="getpromptinputassistance" target="_chainwindow"/></oninputassistant>
+         
+         <properties>
+            <entry listparam="C" name="reference" reftype="STATIC">UC_DATATYPE_STRING</entry>
+            <entry name="text">Old Item</entry>
+            <entry name="multiselect">0</entry>
+            <entry name="separator">;</entry>
+            <entry name="len"/>
+            <entry name="quotes"/>
+            <entry name="id">UC4RB_TFS_OLDITEMs.00</entry>
+            <entry name="inputassistance">0</entry>
+            <entry name="enabled">0</entry>
+            <entry name="upper">0</entry>
+            <entry name="focus">0</entry>
+            <entry name="showaspassword">0</entry>
+            <entry name="tooltip">Specifies the name of the source file or folder being branched. The olditem may also contain version information in the format item;version</entry>
+            <entry name="modifiable">1</entry>
+            <entry name="regex"/>
+            <entry name="required">1</entry>
+            <entry name="initvalue"/>
+            <entry name="xmlkey"/>
+            <entry name="xmlpath"/>
+            <entry name="multiline">0</entry>
+            <entry name="multilineIcon">0</entry>
+            <entry name="customfield"/>
+            <entry name="onchangereset"/>
+            <entry name="resetable">1</entry>
+         </properties>
+      </text><text alt="1" enabled="1" fill="b" focus="0" id="UC4RB_TFS_NEWITEMs.00" inputassistance="0" len="" multiline="0" multilineIcon="0" nl="1" regex="" required="0" separator=";" showaspassword="0" text="New Item" tooltip="Specifies the name of the destination file or folder or the parent folder for the destination." upper="0"><oninputassistant><command request="_internal" target="_view" targetaction="setAttribute" targetparam="promptname|@id"/><command request="_internal" target="_view" targetaction="setAttribute" targetparam="promptvalue|@value"/><command owner="_promptsetcontainer" owneraction="getData" request="getpromptinputassistance" target="_chainwindow"/></oninputassistant>
+         
+         <properties>
+            <entry listparam="C" name="reference" reftype="STATIC">UC_DATATYPE_STRING</entry>
+            <entry name="text">New Item</entry>
+            <entry name="multiselect">0</entry>
+            <entry name="separator">;</entry>
+            <entry name="len"/>
+            <entry name="quotes"/>
+            <entry name="id">UC4RB_TFS_NEWITEMs.00</entry>
+            <entry name="inputassistance">0</entry>
+            <entry name="enabled">0</entry>
+            <entry name="upper">0</entry>
+            <entry name="focus">0</entry>
+            <entry name="showaspassword">0</entry>
+            <entry name="tooltip">Specifies the name of the destination file or folder or the parent folder for the destination.</entry>
+            <entry name="modifiable">1</entry>
+            <entry name="regex"/>
+            <entry name="required">1</entry>
+            <entry name="initvalue"/>
+            <entry name="xmlkey"/>
+            <entry name="xmlpath"/>
+            <entry name="multiline">0</entry>
+            <entry name="multilineIcon">0</entry>
+            <entry name="customfield"/>
+            <entry name="onchangereset"/>
+            <entry name="resetable">1</entry>
+         </properties>
+      </text><text alt="1" enabled="1" fill="b" focus="0" id="UC4RB_TFS_VERSIONs.00" inputassistance="0" len="" multiline="0" multilineIcon="0" nl="1" regex="" required="0" separator=";" showaspassword="0" text="Version" tooltip="The version of the item at which you want to create the branch." upper="0"><oninputassistant><command request="_internal" target="_view" targetaction="setAttribute" targetparam="promptname|@id"/><command request="_internal" target="_view" targetaction="setAttribute" targetparam="promptvalue|@value"/><command owner="_promptsetcontainer" owneraction="getData" request="getpromptinputassistance" target="_chainwindow"/></oninputassistant>
+         
+         <properties>
+            <entry listparam="C" name="reference" reftype="STATIC">UC_DATATYPE_STRING</entry>
+            <entry name="text">Version</entry>
+            <entry name="multiselect">0</entry>
+            <entry name="separator">;</entry>
+            <entry name="len"/>
+            <entry name="quotes"/>
+            <entry name="id">UC4RB_TFS_VERSIONs.00</entry>
+            <entry name="inputassistance">0</entry>
+            <entry name="enabled">0</entry>
+            <entry name="upper">0</entry>
+            <entry name="focus">0</entry>
+            <entry name="showaspassword">0</entry>
+            <entry name="tooltip">The version of the item at which you want to create the branch.</entry>
+            <entry name="modifiable">1</entry>
+            <entry name="regex"/>
+            <entry name="required">1</entry>
+            <entry name="initvalue"/>
+            <entry name="xmlkey"/>
+            <entry name="xmlpath"/>
+            <entry name="multiline">0</entry>
+            <entry name="multilineIcon">0</entry>
+            <entry name="customfield"/>
+            <entry name="onchangereset"/>
+            <entry name="resetable">1</entry>
+         </properties>
+      </text><combo alt="1" dynamic="0" enabled="1" fill="b" filter="0" focus="0" id="UC4RB_TFS_LOCKs.00" nl="1" quotes="" strict="1" text="Lock" tooltip="Prevents other users from checking in or checking out items until you check in your pending branch and associated changes." vtype="i"><command request="_internal" target="_view" targetaction="setAttribute" targetparam="promptname|@id"/><command owner="_self" owneraction="setsource" ownerparam="src|_dialog@src"/><command owner="_promptsetcontainer" owneraction="getData" request="getpromptcombolist" target="_self" targetaction="setlist" wait="0"/>
+         
+         
+         
+         <properties>
+            <entry listparam="C" name="reference" reftype="STATIC">PCK.AUTOMIC_TFS.PRV.VARA.LOCK</entry>
+            <entry name="text">Lock</entry>
+            <entry name="quotes"/>
+            <entry name="id">UC4RB_TFS_LOCKs.00</entry>
+            <entry name="enabled">0</entry>
+            <entry name="focus">0</entry>
+            <entry name="tooltip">Prevents other users from checking in or checking out items until you check in your pending branch and associated changes.</entry>
+            <entry name="dynamic">0</entry>
+            <entry name="modifiable">1</entry>
+            <entry name="initvalue"/>
+            <entry name="xmlkey"/>
+            <entry name="xmlpath"/>
+            <entry name="onchangereset"/>
+            <entry name="customfield"/>
+            <entry name="resetable">1</entry>
+         </properties>
+      </combo><dynradiogroup alt="1" enabled="1" fill="b" focus="0" id="UC4RB_TFS_NOGETs.00" nl="1" quotes="" text="No Get" tooltip="If this option is specified, local copies of the files and folders in the new branch are not created in the local workspace." required="0">
+         <properties>
+            <entry listparam="C" name="reference" reftype="STATIC">PCK.ITPA_SHARED.PRV.VARA.YES_NO</entry>
+            <entry name="text">No Get</entry>
+            <entry name="quotes"/>
+            <entry name="id">UC4RB_TFS_NOGETs.00</entry>
+            <entry name="enabled">0</entry>
+            <entry name="focus">0</entry>
+            <entry name="tooltip">If this option is specified, local copies of the files and folders in the new branch are not created in the local workspace.</entry>
+            <entry name="modifiable">1</entry>
+            <entry name="initvalue"/>
+            <entry name="xmlkey"/>
+            <entry name="xmlpath"/>
+            <entry name="customfield"/>
+         </properties>
+      </dynradiogroup></readpanel></dialog>]]></XUIEDITOR>
 </PROMPTSETXUI>
 <PROMPTSETDATA state="1">
 <DATAEDITOR><![CDATA[<PRPTS ontop="1"><PRPTBOX><UC4RB_TFS_UTIL_PATHs.00 haslist="0" msgnr="-1" msginsert="" altview="0" promptname="UC4RB_TFS_UTIL_PATH#" ReadFromTable="OPSE"></UC4RB_TFS_UTIL_PATHs.00><UC4RB_TFS_WORKING_DIRs.00 haslist="0" msgnr="-1" msginsert="" altview="0" promptname="UC4RB_TFS_WORKING_DIR#" ReadFromTable="OPSE"></UC4RB_TFS_WORKING_DIRs.00><UC4RB_TFS_OLDITEMs.00 haslist="0" msgnr="-1" msginsert="" altview="0" promptname="UC4RB_TFS_OLDITEM#" ReadFromTable="OPSE"></UC4RB_TFS_OLDITEMs.00><UC4RB_TFS_NEWITEMs.00 haslist="0" msgnr="-1" msginsert="" altview="0" promptname="UC4RB_TFS_NEWITEM#" ReadFromTable="OPSE"></UC4RB_TFS_NEWITEMs.00><UC4RB_TFS_VERSIONs.00 haslist="0" msgnr="-1" msginsert="" altview="0" promptname="UC4RB_TFS_VERSION#" ReadFromTable="OPSE"></UC4RB_TFS_VERSIONs.00><UC4RB_TFS_LOCKs.00 haslist="0" msgnr="-1" msginsert="" altview="0" promptname="UC4RB_TFS_LOCK#" ReadFromTable="OPSE">NONE</UC4RB_TFS_LOCKs.00><UC4RB_TFS_NOGETs.00 haslist="0" msgnr="-1" msginsert="" altview="0" promptname="UC4RB_TFS_NOGET#" ReadFromTable="OPSE">NO</UC4RB_TFS_NOGETs.00></PRPTBOX></PRPTS>]]></DATAEDITOR>
