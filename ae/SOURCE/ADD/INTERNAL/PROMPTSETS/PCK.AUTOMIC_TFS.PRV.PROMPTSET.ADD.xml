@@ -38,11 +38,11 @@
             <entry name="onchangereset"/>
             <entry name="resetable">1</entry>
          </properties>
-      </text><text alt="1" enabled="1" fill="b" focus="0" id="UC4RB_TFS_WORKING_DIRs.00" inputassistance="0" len="" multiline="0" multilineIcon="0" nl="1" regex="" required="0" separator=";" showaspassword="0" text="Workspace" tooltip="Path to workingcopy" upper="0"><oninputassistant><command request="_internal" target="_view" targetaction="setAttribute" targetparam="promptname|@id"/><command request="_internal" target="_view" targetaction="setAttribute" targetparam="promptvalue|@value"/><command owner="_promptsetcontainer" owneraction="getData" request="getpromptinputassistance" target="_chainwindow"/></oninputassistant>
+      </text><text alt="1" enabled="1" fill="b" focus="0" id="UC4RB_TFS_WORKING_DIRs.00" inputassistance="0" len="" multiline="0" multilineIcon="0" nl="1" regex="" required="0" separator=";" showaspassword="0" text="Working Directory" tooltip="Path to working directory" upper="0"><oninputassistant><command request="_internal" target="_view" targetaction="setAttribute" targetparam="promptname|@id"/><command request="_internal" target="_view" targetaction="setAttribute" targetparam="promptvalue|@value"/><command owner="_promptsetcontainer" owneraction="getData" request="getpromptinputassistance" target="_chainwindow"/></oninputassistant>
          
          <properties>
             <entry listparam="C" name="reference" reftype="STATIC">UC_DATATYPE_STRING</entry>
-            <entry name="text">Workspace</entry>
+            <entry name="text">Working Directory</entry>
             <entry name="multiselect">0</entry>
             <entry name="separator">;</entry>
             <entry name="len"/>
@@ -53,7 +53,7 @@
             <entry name="upper">0</entry>
             <entry name="focus">0</entry>
             <entry name="showaspassword">0</entry>
-            <entry name="tooltip">Path to workingcopy</entry>
+            <entry name="tooltip">Path to working directory</entry>
             <entry name="customfield"/>
             <entry name="modifiable">1</entry>
             <entry name="multiline">0</entry>
