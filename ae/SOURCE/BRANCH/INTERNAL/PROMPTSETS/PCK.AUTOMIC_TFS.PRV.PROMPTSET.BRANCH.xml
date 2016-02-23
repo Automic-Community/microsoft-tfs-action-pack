@@ -173,7 +173,7 @@
          </properties>
       </combo><dynradiogroup alt="1" enabled="1" fill="b" focus="0" id="UC4RB_TFS_NOGETs.00" nl="1" quotes="" text="No Get" tooltip="If this option is specified, local copies of the files and folders in the new branch are not created in the local workspace." required="0">
          <properties>
-            <entry listparam="C" name="reference" reftype="STATIC">PCK.ITPA_SHARED.PRV.VARA.YES_NO</entry>
+            <entry listparam="C" name="reference" reftype="STATIC">PCK.AUTOMIC_TFS.PRV.VARA.YES_NO</entry>
             <entry name="text">No Get</entry>
             <entry name="quotes"/>
             <entry name="id">UC4RB_TFS_NOGETs.00</entry>
@@ -189,7 +189,7 @@
       </dynradiogroup></readpanel></dialog>]]></XUIEDITOR>
 </PROMPTSETXUI>
 <PROMPTSETDATA state="1">
-<DATAEDITOR><![CDATA[<PRPTS ontop="1"><PRPTBOX><UC4RB_TFS_UTIL_PATHs.00 haslist="0" msgnr="-1" msginsert="" altview="0" promptname="UC4RB_TFS_UTIL_PATH#" ReadFromTable="OPSE"></UC4RB_TFS_UTIL_PATHs.00><UC4RB_TFS_WORKING_DIRs.00 haslist="0" msgnr="-1" msginsert="" altview="0" promptname="UC4RB_TFS_WORKING_DIR#" ReadFromTable="OPSE"></UC4RB_TFS_WORKING_DIRs.00><UC4RB_TFS_OLDITEMs.00 haslist="0" msgnr="-1" msginsert="" altview="0" promptname="UC4RB_TFS_OLDITEM#" ReadFromTable="OPSE"></UC4RB_TFS_OLDITEMs.00><UC4RB_TFS_NEWITEMs.00 haslist="0" msgnr="-1" msginsert="" altview="0" promptname="UC4RB_TFS_NEWITEM#" ReadFromTable="OPSE"></UC4RB_TFS_NEWITEMs.00><UC4RB_TFS_VERSIONs.00 haslist="0" msgnr="-1" msginsert="" altview="0" promptname="UC4RB_TFS_VERSION#" ReadFromTable="OPSE"></UC4RB_TFS_VERSIONs.00><UC4RB_TFS_LOCKs.00 haslist="0" msgnr="-1" msginsert="" altview="0" promptname="UC4RB_TFS_LOCK#" ReadFromTable="OPSE">NONE</UC4RB_TFS_LOCKs.00><UC4RB_TFS_NOGETs.00 haslist="0" msgnr="-1" msginsert="" altview="0" promptname="UC4RB_TFS_NOGET#" ReadFromTable="OPSE">NO</UC4RB_TFS_NOGETs.00></PRPTBOX></PRPTS>]]></DATAEDITOR>
+<DATAEDITOR><![CDATA[<PRPTS ontop="1"><PRPTBOX><UC4RB_TFS_UTIL_PATHs.00 haslist="0" msgnr="-1" msginsert="" altview="0" promptname="UC4RB_TFS_UTIL_PATH#" ReadFromTable="OPSE"></UC4RB_TFS_UTIL_PATHs.00><UC4RB_TFS_WORKING_DIRs.00 haslist="0" msgnr="-1" msginsert="" altview="0" promptname="UC4RB_TFS_WORKING_DIR#" ReadFromTable="OPSE"></UC4RB_TFS_WORKING_DIRs.00><UC4RB_TFS_OLDITEMs.00 haslist="0" msgnr="-1" msginsert="" altview="0" promptname="UC4RB_TFS_OLDITEM#" ReadFromTable="OPSE"></UC4RB_TFS_OLDITEMs.00><UC4RB_TFS_NEWITEMs.00 haslist="0" msgnr="-1" msginsert="" altview="0" promptname="UC4RB_TFS_NEWITEM#" ReadFromTable="OPSE"></UC4RB_TFS_NEWITEMs.00><UC4RB_TFS_VERSIONs.00 haslist="0" msgnr="-1" msginsert="" altview="0" promptname="UC4RB_TFS_VERSION#" ReadFromTable="OPSE"></UC4RB_TFS_VERSIONs.00><UC4RB_TFS_LOCKs.00 haslist="0" msgnr="-1" msginsert="" altview="0" promptname="UC4RB_TFS_LOCK#" ReadFromTable="OPSE">NONE</UC4RB_TFS_LOCKs.00><UC4RB_TFS_NOGETs.00 haslist="0" msgnr="-1" msginsert="" altview="0" promptname="UC4RB_TFS_NOGET#" ReadFromTable="OPSE">No</UC4RB_TFS_NOGETs.00></PRPTBOX></PRPTS>]]></DATAEDITOR>
 </PROMPTSETDATA>
 <DOCU_Docu state="1" type="text">
 <DOC/>

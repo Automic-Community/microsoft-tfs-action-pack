@@ -124,7 +124,7 @@
          </properties>
       </text><dynradiogroup alt="1" enabled="1" fill="b" focus="0" id="UC4RB_TFS_ALLs.00" nl="1" quotes="" text="All" tooltip="Forces all files to be retrieved, not just those that are out-of-date." required="0">
          <properties>
-            <entry listparam="C" name="reference" reftype="STATIC">PCK.ITPA_SHARED.PRV.VARA.YES_NO</entry>
+            <entry listparam="C" name="reference" reftype="STATIC">PCK.AUTOMIC_TFS.PRV.VARA.YES_NO</entry>
             <entry name="text">All</entry>
             <entry name="quotes"/>
             <entry name="id">UC4RB_TFS_ALLs.00</entry>
@@ -139,7 +139,7 @@
          </properties>
       </dynradiogroup><dynradiogroup alt="1" enabled="1" fill="b" focus="0" id="UC4RB_TFS_OVERWRITEs.00" nl="1" quotes="" text="Overwrite" tooltip="Overwrites writable files that are not checked out" required="0">
          <properties>
-            <entry listparam="C" name="reference" reftype="STATIC">PCK.ITPA_SHARED.PRV.VARA.YES_NO</entry>
+            <entry listparam="C" name="reference" reftype="STATIC">PCK.AUTOMIC_TFS.PRV.VARA.YES_NO</entry>
             <entry name="text">Overwrite</entry>
             <entry name="quotes"/>
             <entry name="id">UC4RB_TFS_OVERWRITEs.00</entry>
@@ -154,7 +154,7 @@
          </properties>
       </dynradiogroup><dynradiogroup alt="1" enabled="1" fill="b" focus="0" id="UC4RB_TFS_FORCEs.00" nl="1" quotes="" text="Force" tooltip="Implies All and Overwrite." required="0">
          <properties>
-            <entry listparam="C" name="reference" reftype="STATIC">PCK.ITPA_SHARED.PRV.VARA.YES_NO</entry>
+            <entry listparam="C" name="reference" reftype="STATIC">PCK.AUTOMIC_TFS.PRV.VARA.YES_NO</entry>
             <entry name="text">Force</entry>
             <entry name="quotes"/>
             <entry name="id">UC4RB_TFS_FORCEs.00</entry>
@@ -169,7 +169,7 @@
          </properties>
       </dynradiogroup><dynradiogroup alt="1" enabled="1" fill="b" focus="0" id="UC4RB_TFS_RECURSIVEs.00" nl="1" quotes="" text="Recursive" tooltip="Deletes all files and/or folders and subfolders from the specified directory." required="0">
          <properties>
-            <entry listparam="C" name="reference" reftype="STATIC">PCK.ITPA_SHARED.PRV.VARA.YES_NO</entry>
+            <entry listparam="C" name="reference" reftype="STATIC">PCK.AUTOMIC_TFS.PRV.VARA.YES_NO</entry>
             <entry name="text">Recursive</entry>
             <entry name="quotes"/>
             <entry name="id">UC4RB_TFS_RECURSIVEs.00</entry>
@@ -185,7 +185,7 @@
       </dynradiogroup></readpanel></dialog>]]></XUIEDITOR>
 </PROMPTSETXUI>
 <PROMPTSETDATA state="1">
-<DATAEDITOR><![CDATA[<PRPTS ontop="1"><PRPTBOX><UC4RB_TFS_UTIL_PATHs.00 haslist="0" msgnr="-1" msginsert="" altview="0" promptname="UC4RB_TFS_UTIL_PATH#" ReadFromTable="OPSE"></UC4RB_TFS_UTIL_PATHs.00><UC4RB_TFS_WORKING_DIRs.00 haslist="0" msgnr="-1" msginsert="" altview="0" promptname="UC4RB_TFS_WORKING_DIR#" ReadFromTable="OPSE"></UC4RB_TFS_WORKING_DIRs.00><UC4RB_TFS_ITEMs.00 haslist="0" msgnr="-1" msginsert="" altview="0" promptname="UC4RB_TFS_ITEM#" ReadFromTable="OPSE"></UC4RB_TFS_ITEMs.00><UC4RB_TFS_VERSIONs.00 haslist="0" msgnr="-1" msginsert="" altview="0" promptname="UC4RB_TFS_VERSION#" ReadFromTable="OPSE"></UC4RB_TFS_VERSIONs.00><UC4RB_TFS_ALLs.00 haslist="0" msgnr="-1" msginsert="" altview="0" promptname="UC4RB_TFS_ALL#" ReadFromTable="OPSE">NO</UC4RB_TFS_ALLs.00><UC4RB_TFS_OVERWRITEs.00 haslist="0" msgnr="-1" msginsert="" altview="0" promptname="UC4RB_TFS_OVERWRITE#" ReadFromTable="OPSE">YES</UC4RB_TFS_OVERWRITEs.00><UC4RB_TFS_FORCEs.00 haslist="0" msgnr="-1" msginsert="" altview="0" promptname="UC4RB_TFS_FORCE#" ReadFromTable="OPSE">NO</UC4RB_TFS_FORCEs.00><UC4RB_TFS_RECURSIVEs.00 haslist="0" msgnr="-1" msginsert="" altview="0" promptname="UC4RB_TFS_RECURSIVE#" ReadFromTable="OPSE">YES</UC4RB_TFS_RECURSIVEs.00></PRPTBOX></PRPTS>]]></DATAEDITOR>
+<DATAEDITOR><![CDATA[<PRPTS ontop="1"><PRPTBOX><UC4RB_TFS_UTIL_PATHs.00 haslist="0" msgnr="-1" msginsert="" altview="0" promptname="UC4RB_TFS_UTIL_PATH#" ReadFromTable="OPSE"></UC4RB_TFS_UTIL_PATHs.00><UC4RB_TFS_WORKING_DIRs.00 haslist="0" msgnr="-1" msginsert="" altview="0" promptname="UC4RB_TFS_WORKING_DIR#" ReadFromTable="OPSE"></UC4RB_TFS_WORKING_DIRs.00><UC4RB_TFS_ITEMs.00 haslist="0" msgnr="-1" msginsert="" altview="0" promptname="UC4RB_TFS_ITEM#" ReadFromTable="OPSE"></UC4RB_TFS_ITEMs.00><UC4RB_TFS_VERSIONs.00 haslist="0" msgnr="-1" msginsert="" altview="0" promptname="UC4RB_TFS_VERSION#" ReadFromTable="OPSE"></UC4RB_TFS_VERSIONs.00><UC4RB_TFS_ALLs.00 haslist="0" msgnr="-1" msginsert="" altview="0" promptname="UC4RB_TFS_ALL#" ReadFromTable="OPSE">No</UC4RB_TFS_ALLs.00><UC4RB_TFS_OVERWRITEs.00 haslist="0" msgnr="-1" msginsert="" altview="0" promptname="UC4RB_TFS_OVERWRITE#" ReadFromTable="OPSE">Yes</UC4RB_TFS_OVERWRITEs.00><UC4RB_TFS_FORCEs.00 haslist="0" msgnr="-1" msginsert="" altview="0" promptname="UC4RB_TFS_FORCE#" ReadFromTable="OPSE">No</UC4RB_TFS_FORCEs.00><UC4RB_TFS_RECURSIVEs.00 haslist="0" msgnr="-1" msginsert="" altview="0" promptname="UC4RB_TFS_RECURSIVE#" ReadFromTable="OPSE">Yes</UC4RB_TFS_RECURSIVEs.00></PRPTBOX></PRPTS>]]></DATAEDITOR>
 </PROMPTSETDATA>
 <DOCU_Docu state="1" type="text">
 <DOC/>
