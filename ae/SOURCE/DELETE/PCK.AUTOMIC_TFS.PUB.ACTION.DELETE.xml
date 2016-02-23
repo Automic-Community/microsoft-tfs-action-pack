@@ -19,9 +19,9 @@
 <ExtRepAll>0</ExtRepAll>
 <ExtRepNone>0</ExtRepNone>
 <IntAccount/>
-<AutoDeactNo>1</AutoDeactNo>
+<AutoDeactNo>0</AutoDeactNo>
 <AutoDeact1ErrorFree>0</AutoDeact1ErrorFree>
-<AutoDeactErrorFree>0</AutoDeactErrorFree>
+<AutoDeactErrorFree>1</AutoDeactErrorFree>
 <DeactWhen/>
 <AutoDeactAlways>0</AutoDeactAlways>
 <DeactDelay>0</DeactDelay>
@@ -192,7 +192,7 @@
 <MaxRetCode>0</MaxRetCode>
 <MrcExecute/>
 <MrcElseE>0</MrcElseE>
-<FcstStatus>0|U00000000 ??? ""</FcstStatus>
+<FcstStatus>0| |</FcstStatus>
 
 <ErtMethodDef>1</ErtMethodDef>
 <ErtMethodFix>0</ErtMethodFix>
@@ -262,7 +262,26 @@
 <MSCRI/>
 </SCRIPT>
 <DOCU_Docu state="1" type="text">
-<DOC><![CDATA[Removes files and folders from the Team Foundation source control server and deletes them from the disk.]]></DOC>
+<DOC><![CDATA[= RB name =
+PCK.AUTOMIC_TFS.PUB.ACTION.DELETE
+= General description =
+Removes files and folders from the Team Foundation source control server and deletes them from the disk.
+= Inputs =
+* TF Utility Path: Path to the tf.exe utility which will be used to communicate with Team Foundation Server. If no path was specified, the default value (C:/Program Files/Microsoft Visual Studio 9.0/Common7/IDE/Tf) will be assumed.
+* Workspace: Path to working directory.
+* Item: Identifies the file or folder to delete from the Team Foundation source control server.
+* Recursive: Deletes all files and/or folders and subfolders from the specified directory.
+* Lock: Prevents other users from checking in or checking out the specified files.
+= Behavior =
+= Outputs =
+* Return code is 0 if success
+* Return code is not 0 if not success.
+= Rollback =
+(none)
+= Logging =
+(none)
+= Example =
+(none)]]></DOC>
 </DOCU_Docu>
 </JOBP>
 </uc-export>
