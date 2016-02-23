@@ -83,7 +83,7 @@
 <row Name="PCK.AUTOMIC_TFS.PUB.ACTION.MOVE/UC4RB_TFS_NEWITEM#" Value="" Value1="" Value2="" Value3="" Value4=""/>
 <row Name="PCK.AUTOMIC_TFS.PUB.ACTION.MOVE/UC4RB_TFS_OLDITEM#" Value="" Value1="" Value2="" Value3="" Value4=""/>
 <row Name="PCK.AUTOMIC_TFS.PUB.ACTION.MOVE/UC4RB_TFS_UTIL_PATH#" Value="EXT:/source/tfs/util_path" Value1="" Value2="" Value3="" Value4=""/>
-<row Name="PCK.AUTOMIC_TFS.PUB.ACTION.MOVE/UC4RB_TFS_WORKING_DIR#" Value="EXT:/source/tfs/item" Value1="" Value2="" Value3="" Value4=""/>
+<row Name="PCK.AUTOMIC_TFS.PUB.ACTION.MOVE/UC4RB_TFS_WORKING_DIR#" Value="EXT:/target/target_files_dirs" Value1="" Value2="" Value3="" Value4=""/>
 </Variables>
 </VARA>
 <DOCU_Docu state="1" type="text">
