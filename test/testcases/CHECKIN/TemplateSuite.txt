@@ -10,22 +10,22 @@ Resource          ../../resources/keywords.txt
 Resource          prt_keywords.txt
 
 *** Test Cases ***    OK_NOK    TF Utility Path      Workspace            Author           File                Comment         Override    Reason     Recursive    RETURN CODE    RETURN STATUS    MESSAGE
-01_Success Checkin    OK        ${_TFS_UTIL_PATH}    C:\\Projects         Administrator    MyProject\\xml\\    Test checkin    NO          AT Test    YES          0              ${ENDED_OK}      ${EMPTY}
+01_Success Checkin    OK        ${_TFS_UTIL_PATH}    C:\\Projects         Administrator    MyProject\\xml\\    Test checkin    No          AT Test    Yes          0              ${ENDED_OK}      ${EMPTY}
 
 02_Fail Wrong Utility Path
-                      NOK       wrong                C:\\Projects         Administrator    MyProject\\xml\\    Test checkin    NO          AT Test    YES          0              ${ENDED_NOK}     ${EMPTY}
+                      NOK       wrong                C:\\Projects         Administrator    MyProject\\xml\\    Test checkin    No          AT Test    Yes          0              ${ENDED_NOK}     ${EMPTY}
 
 03_Fail Wrong Workspace Path
-                      NOK       ${_TFS_UTIL_PATH}    C:\\Projectswrong    Administrator    MyProject\\xml\\    Test checkin    NO          AT Test    YES          0              ${ENDED_NOK}     ${EMPTY}
+                      NOK       ${_TFS_UTIL_PATH}    C:\\Projectswrong    Administrator    MyProject\\xml\\    Test checkin    No          AT Test    Yes          0              ${ENDED_NOK}     ${EMPTY}
 
 04_Fail Wrong Author
-                      NOK       ${_TFS_UTIL_PATH}    C:\\Projects         wrong            MyProject\\xml\\    Test checkin    NO          AT Test    YES          0              ${ENDED_NOK}     ${EMPTY}
+                      NOK       ${_TFS_UTIL_PATH}    C:\\Projects         wrong            MyProject\\xml\\    Test checkin    No          AT Test    Yes          0              ${ENDED_NOK}     ${EMPTY}
 
 05_Success Checkin Override Yes
-                      OK        ${_TFS_UTIL_PATH}    C:\\Projects         Administrator    MyProject\\xml\\    Test checkin    YES         AT Test    YES          0              ${ENDED_OK}      ${EMPTY}
+                      OK        ${_TFS_UTIL_PATH}    C:\\Projects         Administrator    MyProject\\xml\\    Test checkin    Yes         AT Test    Yes          0              ${ENDED_OK}      ${EMPTY}
 
 06_Fail Checkin Recursive No
-                      NOK       ${_TFS_UTIL_PATH}    C:\\Projects         Administrator    MyProject\\xml\\    Test checkin    NO          AT Test    NO           0              ${ENDED_NOK}     ${EMPTY}
+                      NOK       ${_TFS_UTIL_PATH}    C:\\Projects         Administrator    MyProject\\xml\\    Test checkin    No          AT Test    No           0              ${ENDED_NOK}     ${EMPTY}
 
 *** Keywords ***
 Checkin Template
