@@ -10,7 +10,17 @@
 <DOC><![CDATA[About Automic's Team Foundation Server Package
 ==============================================
 
-This package contains actions to interact with a given TFS instance. It uses the tf utility provided by TFS.]]></DOC>
+This package contains actions to interact with a given TFS instance. It uses the tf utility provided by TFS.
+
+=Setup=
+
+* Requires the tf utility to perform commands via the commandline. Should support TFS 2005, TFS 2008 & TFS 2010.
+The tf utility comes with visual studio professional(+) or as a part of the team explorer, both need to have the corresponding version (TFS 2005 - VS2005 - TE2005, etc.).
+Default value of Tf utility path is "C:\Program Files\Microsoft Visual Studio 9.0\Common7\IDE\Tf.exe" and user can change this default value in 'PCK.AUTOMIC_TFS.PRV.INCLUDE.ENSURE_UTILITY_PATH' object.
+
+=Rollback=
+
+The TFS actions do not support rollbacks yet.]]></DOC>
 </DOCU_Docu>
 </DOCU>
 </uc-export>
