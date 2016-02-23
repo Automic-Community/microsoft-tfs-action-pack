@@ -153,7 +153,7 @@ Requires the CheckinOther permission.</entry>
          </properties>
       </text><dynradiogroup alt="1" enabled="1" fill="b" focus="0" id="UC4RB_TFS_OVERRIDEs.00" nl="1" quotes="" text="Override" tooltip="Lets you overwrite a check-in policy failure. This option is only needed when there is a check-in policy and you want to check in anyway." required="0">
          <properties>
-            <entry listparam="C" name="reference" reftype="STATIC">PCK.ITPA_SHARED.PRV.VARA.YES_NO</entry>
+            <entry listparam="C" name="reference" reftype="STATIC">PCK.AUTOMIC_TFS.PRV.VARA.YES_NO</entry>
             <entry name="text">Override</entry>
             <entry name="quotes"/>
             <entry name="id">UC4RB_TFS_OVERRIDEs.00</entry>
@@ -196,7 +196,7 @@ Requires the CheckinOther permission.</entry>
          </properties>
       </text><dynradiogroup alt="1" enabled="1" fill="b" focus="0" id="UC4RB_TFS_RECURSIVEs.00" nl="1" quotes="" text="Recursive" tooltip="Checks in all items in the specified or implied working folder and subfolders." required="0">
          <properties>
-            <entry listparam="C" name="reference" reftype="STATIC">PCK.ITPA_SHARED.PRV.VARA.YES_NO</entry>
+            <entry listparam="C" name="reference" reftype="STATIC">PCK.AUTOMIC_TFS.PRV.VARA.YES_NO</entry>
             <entry name="text">Recursive</entry>
             <entry name="quotes"/>
             <entry name="id">UC4RB_TFS_RECURSIVEs.00</entry>
@@ -212,7 +212,7 @@ Requires the CheckinOther permission.</entry>
       </dynradiogroup></readpanel></dialog>]]></XUIEDITOR>
 </PROMPTSETXUI>
 <PROMPTSETDATA state="1">
-<DATAEDITOR><![CDATA[<PRPTS ontop="1"><PRPTBOX><UC4RB_TFS_UTIL_PATHs.00 haslist="0" msgnr="-1" msginsert="" altview="0" promptname="UC4RB_TFS_UTIL_PATH#" ReadFromTable="OPSE"></UC4RB_TFS_UTIL_PATHs.00><UC4RB_TFS_WORKING_DIRs.00 haslist="0" msgnr="-1" msginsert="" altview="0" promptname="UC4RB_TFS_WORKING_DIR#" ReadFromTable="OPSE"></UC4RB_TFS_WORKING_DIRs.00><UC4RB_TFS_AUTHORs.00 haslist="0" msgnr="-1" msginsert="" altview="0" promptname="UC4RB_TFS_AUTHOR#" ReadFromTable="OPSE"></UC4RB_TFS_AUTHORs.00><UC4RB_TFS_FILEs.00 haslist="0" msgnr="-1" msginsert="" altview="0" promptname="UC4RB_TFS_FILE#" ReadFromTable="OPSE"></UC4RB_TFS_FILEs.00><UC4RB_TFS_COMMENTs.00 haslist="0" msgnr="-1" msginsert="" altview="0" promptname="UC4RB_TFS_COMMENT#" ReadFromTable="OPSE"></UC4RB_TFS_COMMENTs.00><UC4RB_TFS_OVERRIDEs.00 haslist="0" msgnr="-1" msginsert="" altview="0" promptname="UC4RB_TFS_OVERRIDE#" ReadFromTable="OPSE">NO</UC4RB_TFS_OVERRIDEs.00><UC4RB_TFS_REASONs.00 haslist="0" msgnr="-1" msginsert="" altview="0" promptname="UC4RB_TFS_REASON#" ReadFromTable="OPSE"></UC4RB_TFS_REASONs.00><UC4RB_TFS_RECURSIVEs.00 haslist="0" msgnr="-1" msginsert="" altview="0" promptname="UC4RB_TFS_RECURSIVE#" ReadFromTable="OPSE">YES</UC4RB_TFS_RECURSIVEs.00></PRPTBOX></PRPTS>]]></DATAEDITOR>
+<DATAEDITOR><![CDATA[<PRPTS ontop="1"><PRPTBOX><UC4RB_TFS_UTIL_PATHs.00 haslist="0" msgnr="-1" msginsert="" altview="0" promptname="UC4RB_TFS_UTIL_PATH#" ReadFromTable="OPSE"></UC4RB_TFS_UTIL_PATHs.00><UC4RB_TFS_WORKING_DIRs.00 haslist="0" msgnr="-1" msginsert="" altview="0" promptname="UC4RB_TFS_WORKING_DIR#" ReadFromTable="OPSE"></UC4RB_TFS_WORKING_DIRs.00><UC4RB_TFS_AUTHORs.00 haslist="0" msgnr="-1" msginsert="" altview="0" promptname="UC4RB_TFS_AUTHOR#" ReadFromTable="OPSE"></UC4RB_TFS_AUTHORs.00><UC4RB_TFS_FILEs.00 haslist="0" msgnr="-1" msginsert="" altview="0" promptname="UC4RB_TFS_FILE#" ReadFromTable="OPSE"></UC4RB_TFS_FILEs.00><UC4RB_TFS_COMMENTs.00 haslist="0" msgnr="-1" msginsert="" altview="0" promptname="UC4RB_TFS_COMMENT#" ReadFromTable="OPSE"></UC4RB_TFS_COMMENTs.00><UC4RB_TFS_OVERRIDEs.00 haslist="0" msgnr="-1" msginsert="" altview="0" promptname="UC4RB_TFS_OVERRIDE#" ReadFromTable="OPSE">No</UC4RB_TFS_OVERRIDEs.00><UC4RB_TFS_REASONs.00 haslist="0" msgnr="-1" msginsert="" altview="0" promptname="UC4RB_TFS_REASON#" ReadFromTable="OPSE"></UC4RB_TFS_REASONs.00><UC4RB_TFS_RECURSIVEs.00 haslist="0" msgnr="-1" msginsert="" altview="0" promptname="UC4RB_TFS_RECURSIVE#" ReadFromTable="OPSE">Yes</UC4RB_TFS_RECURSIVEs.00></PRPTBOX></PRPTS>]]></DATAEDITOR>
 </PROMPTSETDATA>
 <DOCU_Docu state="1" type="text">
 <DOC/>

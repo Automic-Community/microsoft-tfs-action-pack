@@ -9,20 +9,20 @@ Test Template     Get Template
 Resource          ../../resources/keywords.txt
 Resource          prt_keywords.txt
 
-*** Test Cases ***    OK_NOK    TF Utility Path      Workspace            Item                Version     All    Overwrite    Force    Recursive    RETURN CODE    RETURN STATUS    MESSAGE
-01_Success Get        OK        ${_TFS_UTIL_PATH}    C:\\Projects         MyProject\\xml      ${EMPTY}    NO     YES          NO       YES          0              ${ENDED_OK}      ${EMPTY}
+*** Test Cases ***    OK_NOK    TF Utility Path      Workspace            Item                   Version     All    Overwrite    Force    Recursive    RETURN CODE    RETURN STATUS    MESSAGE
+01_Success Get        OK        ${_TFS_UTIL_PATH}    C:\\Projects         MyProject\\xml         ${EMPTY}    No     Yes          No       Yes          0              ${ENDED_OK}      ${EMPTY}
 
 02_Fail Get Wrong utility path
-                      NOK       wrong                C:\\Projects         MyProject\\xml      ${EMPTY}    NO     YES          NO       YES          0              ${ENDED_NOK}     ${EMPTY}
+                      NOK       wrong                C:\\Projects         MyProject\\xml         ${EMPTY}    No     Yes          No       Yes          0              ${ENDED_NOK}     ${EMPTY}
 
 03_Fail Get Wrong workspace path
-                      NOK       ${_TFS_UTIL_PATH}    C:\\Projectswrong    MyProject\\xml      ${EMPTY}    NO     YES          NO       YES          0              ${ENDED_NOK}     ${EMPTY}
+                      NOK       ${_TFS_UTIL_PATH}    C:\\Projectswrong    MyProject\\xml         ${EMPTY}    No     Yes          No       Yes          0              ${ENDED_NOK}     ${EMPTY}
 
 04_Fail Get Wrong item
-                      NOK       ${_TFS_UTIL_PATH}    C:\\Projects         MyProject\\wrong    ${EMPTY}    NO     YES          NO       YES          0              ${ENDED_NOK}     ${EMPTY}
+                      NOK       ${_TFS_UTIL_PATH}    C:\\Projects         MyProject\\wrong       ${EMPTY}    No     Yes          No       Yes          0              ${ENDED_NOK}     ${EMPTY}
 
 05_Fail Get version not exist
-                      NOK       ${_TFS_UTIL_PATH}    C:\\Projects         MyProject\\xml\\get    No          NO     YES          NO       YES          0              ${ENDED_NOK}     ${EMPTY}
+                      NOK       ${_TFS_UTIL_PATH}    C:\\Projects         MyProject\\xml\\get    No          No     Yes          No       Yes          0              ${ENDED_NOK}     ${EMPTY}
 
 *** Keywords ***
 Get Template

@@ -10,19 +10,19 @@ Resource          ../../resources/keywords.txt
 Resource          prt_keywords.txt
 
 *** Test Cases ***    OK_NOK    TF Utility Path      Workspace            Version    Source                   Destination       Recursive    Lock    Force    Discard    Baseless    Candidate    RETURN CODE    RETURN STATUS    MESSAGE
-01_Success Merge      OK        ${_TFS_UTIL_PATH}    C:\\Projects         T          MyProject-branch\\xml    MyProject\\xml    YES          NONE    YES      NO         NO          NO           0              ${ENDED_OK}      ${EMPTY}
+01_Success Merge      OK        ${_TFS_UTIL_PATH}    C:\\Projects         T          MyProject-branch\\xml    MyProject\\xml    Yes          NONE    Yes      No         No          No           0              ${ENDED_OK}      ${EMPTY}
 
 02_Fail Merge Wrong utility path
-                      NOK       wrong                C:\\Projects         T          MyProject-branch\\xml    MyProject\\xml    YES          NONE    YES      NO         NO          NO           0              ${ENDED_NOK}     ${EMPTY}
+                      NOK       wrong                C:\\Projects         T          MyProject-branch\\xml    MyProject\\xml    Yes          NONE    Yes      No         No          No           0              ${ENDED_NOK}     ${EMPTY}
 
 03_Fail Merge Wrong workspace path
-                      NOK       ${_TFS_UTIL_PATH}    C:\\Projectswrong    T          MyProject-branch\\xml    MyProject\\xml    YES          NONE    YES      NO         NO          NO           0              ${ENDED_NOK}     ${EMPTY}
+                      NOK       ${_TFS_UTIL_PATH}    C:\\Projectswrong    T          MyProject-branch\\xml    MyProject\\xml    Yes          NONE    Yes      No         No          No           0              ${ENDED_NOK}     ${EMPTY}
 
 04_Fail Merge Wrong item
-                      NOK       ${_TFS_UTIL_PATH}    C:\\Projects         T          wrong                    MyProject\\xml    YES          NONE    YES      NO         NO          NO           0              ${ENDED_NOK}     ${EMPTY}
+                      NOK       ${_TFS_UTIL_PATH}    C:\\Projects         T          wrong                    MyProject\\xml    Yes          NONE    Yes      No         No          No           0              ${ENDED_NOK}     ${EMPTY}
 
 05_Fail Merge Wrong version
-                      NOK       ${_TFS_UTIL_PATH}    C:\\Projects         C123456    MyProject-branch\\xml    MyProject\\xml    YES          NONE    YES      NO         NO          NO           0              ${ENDED_NOK}     ${EMPTY}
+                      NOK       ${_TFS_UTIL_PATH}    C:\\Projects         C123456    MyProject-branch\\xml    MyProject\\xml    Yes          NONE    Yes      No         No          No           0              ${ENDED_NOK}     ${EMPTY}
 
 *** Keywords ***
 Merge Template

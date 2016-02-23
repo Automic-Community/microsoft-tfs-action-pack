@@ -10,16 +10,16 @@ Resource          ../../resources/keywords.txt
 Resource          prt_keywords.txt
 
 *** Test Cases ***    OK_NOK    TF Utility Path      Workspace            Old Item     New Item     Version    Lock    No Get    RETURN CODE    RETURN STATUS    MESSAGE
-01_Success Branch     OK        ${_TFS_UTIL_PATH}    C:\\Projects         MyProject    MyProject    T          NONE    NO        0              ${ENDED_OK}      ${EMPTY}
+01_Success Branch     OK        ${_TFS_UTIL_PATH}    C:\\Projects         MyProject    MyProject    T          NONE    No        0              ${ENDED_OK}      ${EMPTY}
 
 02_Fail Branch Using wrong utility path
-                      NOK       wrong                C:\\Projects         MyProject    MyProject    T          NONE    NO        0              ${ENDED_NOK}     ${EMPTY}
+                      NOK       wrong                C:\\Projects         MyProject    MyProject    T          NONE    No        0              ${ENDED_NOK}     ${EMPTY}
 
 03_Fail Branch Using wrong workspace path
-                      NOK       ${_TFS_UTIL_PATH}    C:\\Projectswrong    MyProject    MyProject    T          NONE    NO        0              ${ENDED_NOK}     ${EMPTY}
+                      NOK       ${_TFS_UTIL_PATH}    C:\\Projectswrong    MyProject    MyProject    T          NONE    No        0              ${ENDED_NOK}     ${EMPTY}
 
 04_Fail Branch Using wrong version
-                      NOK       ${_TFS_UTIL_PATH}    C:\\Projects         MyProject    MyProject    Llabel     NONE    NO        0              ${ENDED_NOK}     ${EMPTY}
+                      NOK       ${_TFS_UTIL_PATH}    C:\\Projects         MyProject    MyProject    Llabel     NONE    No        0              ${ENDED_NOK}     ${EMPTY}
 
 *** Keywords ***
 Branch Template
