@@ -9,17 +9,17 @@ Test Template     Add Template
 Resource          ../../resources/keywords.txt
 Resource          prt_keywords.txt
 
-*** Test Cases ***    OK_NOK    TF Utility Path      Workspace            Path                                      Recursive    Lock    RETURN CODE    RETURN STATUS    MESSAGE
-01_Success Add        OK        ${_TFS_UTIL_PATH}    C:\\Projects         C:\\Projects\\MyProject\\xml\\add         YES          NONE    0              ${ENDED_OK}      ${EMPTY}
+*** Test Cases ***    OK_NOK    TF Utility Path      Workspace            Path              Recursive    Lock    RETURN CODE    RETURN STATUS    MESSAGE
+01_Success Add        OK        ${_TFS_UTIL_PATH}    C:\\Projects         MyProject\\xml    YES          NONE    0              ${ENDED_OK}      ${EMPTY}
 
 02_Fail Add Using wrong utility path
-                      NOK       wrong                C:\\Projects         C:\\Projects\\MyProject\\xml\\add         YES          NONE    0              ${ENDED_NOK}     ${EMPTY}
+                      NOK       wrong                C:\\Projects         MyProject\\xml    YES          NONE    0              ${ENDED_NOK}     ${EMPTY}
 
 03_Fail Add Using wrong workspace path
-                      NOK       ${_TFS_UTIL_PATH}    C:\\Projectswrong    C:\\Projectswrong\\MyProject\\xml\\add    YES          NONE    0              ${ENDED_NOK}     ${EMPTY}
+                      NOK       ${_TFS_UTIL_PATH}    C:\\Projectswrong    MyProject\\xml    YES          NONE    0              ${ENDED_NOK}     ${EMPTY}
 
 04_Fail Add Using wrong add path
-                      NOK       ${_TFS_UTIL_PATH}    C:\\Projects         C:\\Projectswrong\\MyProject\\xml\\add    YES          NONE    0              ${ENDED_NOK}     ${EMPTY}
+                      NOK       ${_TFS_UTIL_PATH}    C:\\Projects         wrong\\xml        YES          NONE    0              ${ENDED_NOK}     ${EMPTY}
 
 *** Keywords ***
 Add Template

@@ -9,21 +9,21 @@ Test Template     Checkout Template
 Resource          ../../resources/keywords.txt
 Resource          prt_keywords.txt
 
-*** Test Cases ***    OK_NOK    TF Utility Path      Workspace            Item                                 Recursive    Lock    RETURN CODE    RETURN STATUS    MESSAGE
+*** Test Cases ***    OK_NOK    TF Utility Path      Workspace            Item              Recursive    Lock    RETURN CODE    RETURN STATUS    MESSAGE
 01_Success Checkout
-                      OK        ${_TFS_UTIL_PATH}    C:\\Projects         MyProject\\xml\\changes\\checkout    YES          NONE    0              ${ENDED_OK}      ${EMPTY}
+                      OK        ${_TFS_UTIL_PATH}    C:\\Projects         MyProject\\xml    YES          NONE    0              ${ENDED_OK}      ${EMPTY}
 
 02_Fail Checkout Wrong utility Path
-                      NOK       wrong                C:\\Projects         MyProject\\xml\\changes\\checkout    YES          NONE    0              ${ENDED_NOK}     ${EMPTY}
+                      NOK       wrong                C:\\Projects         MyProject\\xml    YES          NONE    0              ${ENDED_NOK}     ${EMPTY}
 
 03_Fail Checkout Wrong workspace Path
-                      NOK       ${_TFS_UTIL_PATH}    C:\\Projectswrong    MyProject\\xml\\changes\\checkout    YES          NONE    0              ${ENDED_NOK}     ${EMPTY}
+                      NOK       ${_TFS_UTIL_PATH}    C:\\Projectswrong    MyProject\\xml    YES          NONE    0              ${ENDED_NOK}     ${EMPTY}
 
 04_Fail Checkout Not Exist item
-                      NOK       ${_TFS_UTIL_PATH}    C:\\Projects         not existed                          YES          NONE    0              ${ENDED_NOK}     ${EMPTY}
+                      NOK       ${_TFS_UTIL_PATH}    C:\\Projects         not existed       YES          NONE    0              ${ENDED_NOK}     ${EMPTY}
 
 05_Fail Checkout Recursive No
-                      NOK       ${_TFS_UTIL_PATH}    C:\\Projects         MyProject\\xml\\changes\\checkout    NO           NONE    0              ${ENDED_NOK}     ${EMPTY}
+                      NOK       ${_TFS_UTIL_PATH}    C:\\Projects         MyProject\\xml    NO           NONE    0              ${ENDED_NOK}     ${EMPTY}
 
 *** Keywords ***
 Checkout Template

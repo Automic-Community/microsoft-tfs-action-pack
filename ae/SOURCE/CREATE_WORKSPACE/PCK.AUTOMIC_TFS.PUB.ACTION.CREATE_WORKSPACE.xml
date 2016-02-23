@@ -19,9 +19,9 @@
 <ExtRepAll>0</ExtRepAll>
 <ExtRepNone>0</ExtRepNone>
 <IntAccount/>
-<AutoDeactNo>1</AutoDeactNo>
+<AutoDeactNo>0</AutoDeactNo>
 <AutoDeact1ErrorFree>0</AutoDeact1ErrorFree>
-<AutoDeactErrorFree>0</AutoDeactErrorFree>
+<AutoDeactErrorFree>1</AutoDeactErrorFree>
 <DeactWhen/>
 <AutoDeactAlways>0</AutoDeactAlways>
 <DeactDelay>0</DeactDelay>
@@ -58,6 +58,7 @@
 <UC4RB_TFS_COMMENTs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_TFS_COMMENT#" promptsetname="PCK.AUTOMIC_TFS.PRV.PROMPTSET.CREATE_WORKSPACE"/>
 <UC4RB_TFS_SERVER_NAMEs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_TFS_SERVER_NAME#" promptsetname="PCK.AUTOMIC_TFS.PRV.PROMPTSET.CREATE_WORKSPACE"/>
 <UC4RB_TFS_UTIL_PATHs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_TFS_UTIL_PATH#" promptsetname="PCK.AUTOMIC_TFS.PRV.PROMPTSET.CREATE_WORKSPACE"/>
+<UC4RB_TFS_WORKING_DIRs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_TFS_WORKING_DIR#" promptsetname="PCK.AUTOMIC_TFS.PRV.PROMPTSET.CREATE_WORKSPACE"/>
 <UC4RB_TFS_WORKSPACE_NAMEs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_TFS_WORKSPACE_NAME#" promptsetname="PCK.AUTOMIC_TFS.PRV.PROMPTSET.CREATE_WORKSPACE"/>
 <UC4RB_TFS_WORKSPACE_OWNERs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_TFS_WORKSPACE_OWNER#" promptsetname="PCK.AUTOMIC_TFS.PRV.PROMPTSET.CREATE_WORKSPACE"/>
 </PRPTBOX>
@@ -117,6 +118,7 @@
 <UC4RB_TFS_COMMENTs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_TFS_COMMENT#" promptsetname="PCK.AUTOMIC_TFS.PRV.PROMPTSET.CREATE_WORKSPACE"/>
 <UC4RB_TFS_SERVER_NAMEs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_TFS_SERVER_NAME#" promptsetname="PCK.AUTOMIC_TFS.PRV.PROMPTSET.CREATE_WORKSPACE"/>
 <UC4RB_TFS_UTIL_PATHs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_TFS_UTIL_PATH#" promptsetname="PCK.AUTOMIC_TFS.PRV.PROMPTSET.CREATE_WORKSPACE"/>
+<UC4RB_TFS_WORKING_DIRs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_TFS_WORKING_DIR#" promptsetname="PCK.AUTOMIC_TFS.PRV.PROMPTSET.CREATE_WORKSPACE"/>
 <UC4RB_TFS_WORKSPACE_NAMEs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_TFS_WORKSPACE_NAME#" promptsetname="PCK.AUTOMIC_TFS.PRV.PROMPTSET.CREATE_WORKSPACE"/>
 <UC4RB_TFS_WORKSPACE_OWNERs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_TFS_WORKSPACE_OWNER#" promptsetname="PCK.AUTOMIC_TFS.PRV.PROMPTSET.CREATE_WORKSPACE"/>
 </PRPTBOX>
@@ -162,6 +164,7 @@
 <UC4RB_TFS_COMMENTs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_TFS_COMMENT#" promptsetname="PCK.AUTOMIC_TFS.PRV.PROMPTSET.CREATE_WORKSPACE"/>
 <UC4RB_TFS_SERVER_NAMEs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_TFS_SERVER_NAME#" promptsetname="PCK.AUTOMIC_TFS.PRV.PROMPTSET.CREATE_WORKSPACE"/>
 <UC4RB_TFS_UTIL_PATHs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_TFS_UTIL_PATH#" promptsetname="PCK.AUTOMIC_TFS.PRV.PROMPTSET.CREATE_WORKSPACE"/>
+<UC4RB_TFS_WORKING_DIRs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_TFS_WORKING_DIR#" promptsetname="PCK.AUTOMIC_TFS.PRV.PROMPTSET.CREATE_WORKSPACE"/>
 <UC4RB_TFS_WORKSPACE_NAMEs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_TFS_WORKSPACE_NAME#" promptsetname="PCK.AUTOMIC_TFS.PRV.PROMPTSET.CREATE_WORKSPACE"/>
 <UC4RB_TFS_WORKSPACE_OWNERs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_TFS_WORKSPACE_OWNER#" promptsetname="PCK.AUTOMIC_TFS.PRV.PROMPTSET.CREATE_WORKSPACE"/>
 </PRPTBOX>
@@ -192,7 +195,7 @@
 <MaxRetCode>0</MaxRetCode>
 <MrcExecute/>
 <MrcElseE>0</MrcElseE>
-<FcstStatus>0|U00000000 ??? ""</FcstStatus>
+<FcstStatus>0| |</FcstStatus>
 
 <ErtMethodDef>1</ErtMethodDef>
 <ErtMethodFix>0</ErtMethodFix>
@@ -262,7 +265,27 @@
 <MSCRI/>
 </SCRIPT>
 <DOCU_Docu state="1" type="text">
-<DOC><![CDATA[Lets you create a workspace.]]></DOC>
+<DOC><![CDATA[= RB name =
+PCK.AUTOMIC_TFS.PUB.ACTION.CREATE_WORKSPACE
+= General description =
+Lets user create a workspace.
+= Inputs =
+* TF Utility Path: Path to the tf.exe utility which will be used to communicate with Team Foundation Server. If no path was specified, the default value (C:/Program Files/Microsoft Visual Studio 9.0/Common7/IDE/Tf) will be assumed.
+* Working Directory: Path to working directory.
+* Workspace Name: Specifies a name for the workspace to create, edit, delete, or display information about.
+* Workspace Owner: Specifies a username for the workspace. This parameter is only required when the workspace owner is not the person performing the command.
+* Server Name: The server name.
+* Comment: A comment message.
+= Behavior =
+= Outputs =
+* Return code is 0 if success
+* Return code is not 0 if not success.
+= Rollback =
+(none)
+= Logging =
+(none)
+= Example =
+(none)]]></DOC>
 </DOCU_Docu>
 </JOBP>
 </uc-export>
