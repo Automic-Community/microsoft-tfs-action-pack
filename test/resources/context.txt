@@ -19,8 +19,9 @@ Init Agent
     [Documentation]    Requirement
     Run Keyword If    '${ENV}' == 'WIN'    Init Win Agent
     Run Keyword If    '${ENV}' == 'UNIX'    Init Unix Agent
-    Run Keyword If    '${ENV}' == 'VVNTFS04' and '${APP}' == 'TFS'    Init VVNTFS04 Agent
-    Run Keyword If    '${ENV}' == 'VVNTFS03' and '${APP}' == 'TFS'    Init VVNTFS03 Agent
+    Run Keyword If    '${ENV}' == 'VVNTFS04' and '${APP}' == 'TFS'    Init VVNTFS04 Agent to Test TFS
+    Run Keyword If    '${ENV}' == 'VVNTFS03' and '${APP}' == 'TFS'    Init VVNTFS03 Agent to Test TFS
+    Run Keyword If    '${ENV}' == 'VVNATSATTFS01' and '${APP}' == 'TFS'    Init VVNATSATTFS01 Agent to Test TFS
 
 Init Win Agent
     [Documentation]    TODO: Write agent used to test description here
@@ -32,10 +33,10 @@ Init Unix Agent
     Set Global Variable    ${/}    /
     Set Global Variable    ${_OS}    UNIX
 
-Init VVNTFS04 Agent
+Init VVNTFS04 Agent to Test TFS
     Set Global Variable    ${/}    \\
     Set Global Variable    ${_OS}    WIN
-    Vm Connect    @{VM}
+    #Vm Connect    @{VM}
     #    Vm Revert    VVNTFS04    WIN_AGENT_TFS_2008
     Log    Wait for agent up...
     #    Sleep    5 minutes
@@ -47,10 +48,10 @@ Init VVNTFS04 Agent
     Set Global Variable    ${_DEFAULT_SOURCE_DIR}    ${VVNTFS04_DEFAULT_SOURCE_DIR}
     Set Global Variable    ${_TFS_UTIL_PATH}    ${VVNTFS04_TFS_UTILITY_PATH}
 
-Init VVNTFS03 Agent
+Init VVNTFS03 Agent to Test TFS
     Set Global Variable    ${/}    \\
     Set Global Variable    ${_OS}    WIN
-    Vm Connect    @{VM}
+    #Vm Connect    @{VM}
     #    Vm Revert    VVNTFS03    WIN_AGENT_TFS_2010
     Log    Wait for agent up...
     #    Sleep    5 minutes
@@ -61,3 +62,13 @@ Init VVNTFS03 Agent
     Set Global Variable    ${_DEFAULT_OUTPUT_DIR}    ${VVNTFS03_DEFAULT_OUTPUT_DIR}
     Set Global Variable    ${_DEFAULT_SOURCE_DIR}    ${VVNTFS03_DEFAULT_SOURCE_DIR}
     Set Global Variable    ${_TFS_UTIL_PATH}    ${VVNTFS03_TFS_UTILITY_PATH}
+
+Init VVNATSATTFS01 Agent to Test TFS
+    Set Global Variable    ${/}    \\
+    Set Global Variable    ${_OS}    WIN
+    Set Global Variable    ${_AGENT}    ${VVNATSATTFS01_AGENT}
+    Set Global Variable    ${_LOGIN}    ${LOGIN.ALL}
+    Set Global Variable    ${_WORKING_DIR}    D:\\AT_sources\\
+    Set Global Variable    ${_DEFAULT_OUTPUT_DIR}    ${VVNATSATTFS01_DEFAULT_OUTPUT_DIR}
+    Set Global Variable    ${_DEFAULT_SOURCE_DIR}    ${VVNATSATTFS01_DEFAULT_SOURCE_DIR}
+    Set Global Variable    ${_TFS_UTIL_PATH}    ${VVNATSATTFS01_TFS_UTILITY_PATH}
