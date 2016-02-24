@@ -1,6 +1,4 @@
 --doc This is test suite of #_action_short_name_#
---name  TFS
---exclude _template_
 # This is a comment
 Init_Environments.txt
 testcases
