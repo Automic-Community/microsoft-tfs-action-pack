@@ -4,42 +4,44 @@ Documentation     NOTE:
 Suite Setup       Setup_suite
 Suite Teardown    Teardown_suite
 Force Tags        CREATE WORKSPACE
-Default Tags      win    unix
+Default Tags      win
 Test Template     Create Workspace Template
 Resource          ../../resources/keywords.txt
 Resource          prt_keywords.txt
 
 *** Variables ***
+${CREATE_WORKSPACE_working_dir}    ${_WORKING_DIR}${/}CREATE_WORKSPACE    # Working dir for testing CREATE_WORKSPACE action
+${CREATE_WORKSPACE_workspace}    ${PREFIX}_CREATE_WORKSPACE_WS    #workspace for testing CREATE_WORKSPACE action
+${CREATE_WORKSPACE_branch}    ${PREFIX}_CREATE_WORKSPACE_TEST    #branch for testing CREATE_WORKSPACE action
 ${TFS_WS_OWNER}    VVNSATTFS01\\Administrator
-${TFS_SERVER}     http://vvnsattfs01:8080/tfs/DEV
-${TFS_WORKING_DIR}    C:\\Projects
 
-*** Test Cases ***    OK_NOK    TF Utility Path      Working Directory              Owner              Server                  Comment                              RETURN CODE    RETURN STATUS    MESSAGE
+*** Test Cases ***    OK_NOK     TF Utility Path           Working Directory                           Workspace                             Owner              Server                  Comment                              RETURN CODE    RETURN STATUS    MESSAGE
 01_Success Create Workspace
-                      OK        ${_TFS_UTIL_PATH}    ${TFS_WORKING_DIR}             ${TFS_WS_OWNER}    ${TFS_SERVER}           01_Success Create Workspace          0              ${ENDED_OK}      ${EMPTY}
+                      [Setup]    Create New Working Dir    ${CREATE_WORKSPACE_working_dir}${/}01       ${CREATE_WORKSPACE_workspace}_01
+                      OK         ${_TFS_UTIL_PATH}         ${CREATE_WORKSPACE_working_dir}${/}01       ${CREATE_WORKSPACE_workspace}_01      ${TFS_WS_OWNER}    ${_TFS_SERVER}          01_Success Create Workspace          0              ${ENDED_OK}      ${EMPTY}
 
 02_Fail Create Workspace Using wrong utility path
-                      NOK       wrong                ${TFS_WORKING_DIR}             ${TFS_WS_OWNER}    ${TFS_SERVER}           02_Fail Create Wrong utility path    0              ${ENDED_NOK}     ${EMPTY}
+                      [Setup]    Create New Working Dir    ${CREATE_WORKSPACE_working_dir}${/}Fail     ${CREATE_WORKSPACE_workspace}_Fail
+                      NOK        wrong                     ${CREATE_WORKSPACE_working_dir}${/}Fail     ${CREATE_WORKSPACE_workspace}_Fail    ${TFS_WS_OWNER}    ${_TFS_SERVER}          02_Fail Create Wrong utility path    0              ${ENDED_NOK}     ${EMPTY}
 
 03_Fail Create Workspace Using wrong working dir
-                      NOK       ${_TFS_UTIL_PATH}    ${TFS_WORKING_DIR}_20160101    ${TFS_WS_OWNER}    ${TFS_SERVER}           03_Fail Create Wrong working dir     0              ${ENDED_NOK}     ${EMPTY}
+                      NOK        ${_TFS_UTIL_PATH}         ${CREATE_WORKSPACE_working_dir}_20160101    ${CREATE_WORKSPACE_workspace}_Fail    ${TFS_WS_OWNER}    ${_TFS_SERVER}          03_Fail Create Wrong working dir     0              ${ENDED_NOK}     ${EMPTY}
 
 04_Fail Create Workspace Using wrong owner
-                      NOK       ${_TFS_UTIL_PATH}    ${TFS_WORKING_DIR}             inferno            ${TFS_SERVER}           04_Fail Create Wrong owner           0              ${ENDED_NOK}     ${EMPTY}
+                      NOK        ${_TFS_UTIL_PATH}         ${CREATE_WORKSPACE_working_dir}${/}Fail     ${CREATE_WORKSPACE_workspace}_Fail    inferno            ${_TFS_SERVER}          04_Fail Create Wrong owner           0              ${ENDED_NOK}     ${EMPTY}
 
 05_Fail Create Workspace Using wrong server
-                      NOK       ${_TFS_UTIL_PATH}    ${TFS_WORKING_DIR}             ${TFS_WS_OWNER}    http://vvntfs01:8080    05_Fail Create Wrong server          0              ${ENDED_NOK}     ${EMPTY}
+                      NOK        ${_TFS_UTIL_PATH}         ${CREATE_WORKSPACE_working_dir}${/}Fail     ${CREATE_WORKSPACE_workspace}_Fail    ${TFS_WS_OWNER}    http://vvntfs01:8080    05_Fail Create Wrong server          0              ${ENDED_NOK}     ${EMPTY}
 
 *** Keywords ***
 Create Workspace Template
-    [Arguments]    ${OK_NOK}    ${TFS_UTIL_PATH}    ${TFS_WORKING_DIR}    ${TFS_OWNER}    ${TFS_SERVER}    ${TFS_COMMENT}
-    ...    ${returnCode}    ${returnStatus}    ${message}
+    [Arguments]    ${OK_NOK}    ${TFS_UTIL_PATH}    ${TFS_WORKING_DIR}    ${TFS_NAME}    ${TFS_OWNER}    ${TFS_SERVER}
+    ...    ${TFS_COMMENT}    ${returnCode}    ${returnStatus}    ${message}
     [Documentation]    This template is used for test Create Workspace with needed arguments
-    ${_CURRENT_TIMESTAMP_}    Get Time    epochs
     Init Action    ${ACTION_CREATEWS}
     Action Set    ${PRT_CREATEWS_TFS_UTIL_PATH}    ${TFS_UTIL_PATH}
     Action Set    ${PRT_CREATEWS_TFS_WORKING_DIR}    ${TFS_WORKING_DIR}
-    Action Set    ${PRT_CREATEWS_TFS_NAME}    VVNSATTFS01_${_CURRENT_TIMESTAMP_}
+    Action Set    ${PRT_CREATEWS_TFS_NAME}    ${TFS_NAME}
     Action Set    ${PRT_CREATEWS_TFS_OWNER}    ${TFS_OWNER}
     Action Set    ${PRT_CREATEWS_TFS_SERVER}    ${TFS_SERVER}
     Action Set    ${PRT_CREATEWS_TFS_COMMENT}    ${TFS_COMMENT}
@@ -61,3 +63,12 @@ Setup_suite
 Teardown_suite
     [Documentation]    TODO: Write all steps for cleanup after testing here
     Log    Testing for Create Workspace Template end
+
+Create New Working Dir
+    [Arguments]    ${workingDir}    ${workspaceName}
+    Log    Delete Working Dir from previous test
+    Delete Dir    ${workingDir}
+    Log    Delete Workspace from last test
+    Delete Workspace    ${workspaceName}
+    Log    Finish remove data from previous test. Preparing test data...
+    Create Dir    ${workingDir}
