@@ -18,13 +18,13 @@ ${BRANCH_workspace}    ${PREFIX}_BRANCH_WS    #workspace for testing BRANCH acti
 01_Success Branch     OK        ${_TFS_UTIL_PATH}    ${BRANCH_working_dir}    ${_TFS_BASE_ITEM}\\MyProject    ${_TFS_BASE_ITEM}\\${PREFIX}_BRANCH_01    ${_TFS_BASE_VERSION}    NONE    No        0              ${ENDED_OK}      ${EMPTY}
 
 02_Fail Branch Using wrong utility path
-                      NOK       wrong                ${BRANCH_working_dir}    MyProject                       MyProject                                 T                       NONE    No        0              ${ENDED_NOK}     ${EMPTY}
+                      NOK       wrong                ${BRANCH_working_dir}    MyProject                       MyProject                                 T                       NONE    No        0              ${ENDED_NOK}     ERROR[TF Utility Path]
 
-03_Fail Branch Using wrong workspace path
-                      NOK       ${_TFS_UTIL_PATH}    wrong                    MyProject                       MyProject                                 T                       NONE    No        0              ${ENDED_NOK}     ${EMPTY}
+03_Fail Branch Using wrong Working Dir path
+                      NOK       ${_TFS_UTIL_PATH}    wrong                    MyProject                       MyProject                                 T                       NONE    No        0              ${ENDED_NOK}     ERROR[Working Directory]
 
 04_Fail Branch Using wrong version
-                      NOK       ${_TFS_UTIL_PATH}    ${BRANCH_working_dir}    MyProject                       MyProject                                 Llabel                  NONE    No        0              ${ENDED_NOK}     ${EMPTY}
+                      NOK       ${_TFS_UTIL_PATH}    ${BRANCH_working_dir}    MyProject                       MyProject                                 No                      NONE    No        0              ${ENDED_NOK}     'N' is not a supported version specification type
 
 *** Keywords ***
 Branch Template
@@ -43,12 +43,14 @@ Branch Template
     Action Execute
     Action Report Should Be Found
     Run Keyword If    '${OK_NOK}'=='OK'    Action Return Code Should Be    ${returnCode}
+    Run Keyword If    '${OK_NOK}'=='NOK'    Action Return Code Should Not Equal    ${returnCode}
     Action Return Status Should Be    ${returnStatus}
     Action Report Should Contain    ${header_logging}
     Action Report Should Contain    ${param_logging}
     Run Keyword If    '${OK_NOK}'=='OK'    Action Report Should Contain    ${execution_logging}
-    Run Keyword If    '${OK_NOK}'=='OK'    Action Report Should Contain    ${message}
+    Action Report Should Contain    ${message}
     Run Keyword If    '${OK_NOK}'=='OK'    Action Report Should Contain    ${footer_logging_OK}
+    Run Keyword If    '${OK_NOK}'=='NOK'    Action Report Should Contain    ${footer_logging_NOK}
 
 Setup_suite
     [Documentation]    TODO: Write all steps need prepare before testing here

@@ -23,7 +23,7 @@ ${GET_branch}     ${PREFIX}_GET_TEST    #branch for testing GET action
                       [Setup]            Mapping Working Dir with Workspace    ${GET_working_dir}${/}02    ${GET_workspace}_02
                       NOK                wrong                                 ${GET_working_dir}${/}02    ${_TFS_BASE_ITEM}\\MyProject    ${EMPTY}                No     Yes          No       Yes          0              ${ENDED_NOK}     ERROR[TF Utility Path]
 
-03_Fail Get Wrong workspace path
+03_Fail Get Wrong Working Dir path
                       [Setup]            Mapping Working Dir with Workspace    ${GET_working_dir}${/}03    ${GET_workspace}_03
                       NOK                ${_TFS_UTIL_PATH}                     C:\\Projectswrong           ${_TFS_BASE_ITEM}\\MyProject    ${EMPTY}                No     Yes          No       Yes          0              ${ENDED_NOK}     ERROR[Working Directory]
 

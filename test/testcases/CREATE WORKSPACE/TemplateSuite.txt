@@ -22,10 +22,10 @@ ${TFS_WS_OWNER}    VVNSATTFS01\\Administrator
 
 02_Fail Create Workspace Using wrong utility path
                       [Setup]    Create New Working Dir    ${CREATE_WORKSPACE_working_dir}${/}Fail     ${CREATE_WORKSPACE_workspace}_Fail
-                      NOK        wrong                     ${CREATE_WORKSPACE_working_dir}${/}Fail     ${CREATE_WORKSPACE_workspace}_Fail    ${TFS_WS_OWNER}    ${_TFS_SERVER}          02_Fail Create Wrong utility path    0              ${ENDED_NOK}     ${EMPTY}
+                      NOK        wrong                     ${CREATE_WORKSPACE_working_dir}${/}Fail     ${CREATE_WORKSPACE_workspace}_Fail    ${TFS_WS_OWNER}    ${_TFS_SERVER}          02_Fail Create Wrong utility path    0              ${ENDED_NOK}     ERROR[TF Utility Path]
 
 03_Fail Create Workspace Using wrong working dir
-                      NOK        ${_TFS_UTIL_PATH}         ${CREATE_WORKSPACE_working_dir}_20160101    ${CREATE_WORKSPACE_workspace}_Fail    ${TFS_WS_OWNER}    ${_TFS_SERVER}          03_Fail Create Wrong working dir     0              ${ENDED_NOK}     ${EMPTY}
+                      NOK        ${_TFS_UTIL_PATH}         ${CREATE_WORKSPACE_working_dir}_20160101    ${CREATE_WORKSPACE_workspace}_Fail    ${TFS_WS_OWNER}    ${_TFS_SERVER}          03_Fail Create Wrong working dir     0              ${ENDED_NOK}     ERROR[Working Directory]
 
 04_Fail Create Workspace Using wrong owner
                       NOK        ${_TFS_UTIL_PATH}         ${CREATE_WORKSPACE_working_dir}${/}Fail     ${CREATE_WORKSPACE_workspace}_Fail    inferno            ${_TFS_SERVER}          04_Fail Create Wrong owner           0              ${ENDED_NOK}     ${EMPTY}
@@ -49,12 +49,14 @@ Create Workspace Template
     Action Execute
     Action Report Should Be Found
     Run Keyword If    '${OK_NOK}'=='OK'    Action Return Code Should Be    ${returnCode}
+    Run Keyword If    '${OK_NOK}'=='NOK'    Action Return Code Should Not Equal    ${returnCode}
     Action Return Status Should Be    ${returnStatus}
     Action Report Should Contain    ${header_logging}
     Action Report Should Contain    ${param_logging}
     Run Keyword If    '${OK_NOK}'=='OK'    Action Report Should Contain    ${execution_logging}
-    Run Keyword If    '${OK_NOK}'=='OK'    Action Report Should Contain    ${message}
+    Action Report Should Contain    ${message}
     Run Keyword If    '${OK_NOK}'=='OK'    Action Report Should Contain    ${footer_logging_OK}
+    Run Keyword If    '${OK_NOK}'=='NOK'    Action Report Should Contain    ${footer_logging_NOK}
 
 Setup_suite
     [Documentation]    TODO: Write all steps need prepare before testing here

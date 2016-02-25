@@ -108,7 +108,7 @@ Add Item To TFS
     Action Set    ${PRT_ADD_TFS_UTIL_PATH}    ${_TFS_UTIL_PATH}
     Action Set    ${PRT_ADD_TFS_WORKING_DIR}    ${TFS_WORKING_DIR}
     Action Set    ${PRT_ADD_TFS_ADD_PATH}    ${TFS_ADD_PATH}
-    Action Set    ${PRT_ADD_TFS_RECURSIVE}    YES
+    Action Set    ${PRT_ADD_TFS_RECURSIVE}    Yes
     Action Set    ${PRT_ADD_TFS_LOCK}    NONE
     Action Set Timeout    300
     Action Execute
@@ -232,4 +232,4 @@ Delete Workspace
 Delete Branch
     [Arguments]    ${TFS_WORKING_DIR}    ${TFS_ITEM}
     Delete Item from TFS    ${TFS_WORKING_DIR}    ${TFS_ITEM}
-    Checkin Changes    ${TFS_WORKING_DIR}    ${TFS_ITEM}    Delete unused branch
+    Checkin Changes    ${TFS_WORKING_DIR}    ${TFS_ITEM}    Delete unused branch/item
