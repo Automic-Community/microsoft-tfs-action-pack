@@ -13,6 +13,11 @@ ${_WORKING_DIR}    /
 ${_DEFAULT_SOURCE_DIR}    /
 ${_DEFAULT_OUTPUT_DIR}    /
 ${_TFS_UTIL_PATH}    /
+${_TFS_AUTHOR}    Administrator
+${_TFS_SERVER}    /
+${_TFS_BASE_ITEM}    Projects
+${_TFS_BASE_VERSION}    85    #D2016-02-24
+${_PREFIX}        FIBO
 
 *** Key Words ***
 Init Agent
@@ -43,10 +48,11 @@ Init VVNTFS04 Agent to Test TFS
     Log    Agent might be up :D
     Set Global Variable    ${_AGENT}    ${VVNTFS04_AGENT}
     Set Global Variable    ${_LOGIN}    ${LOGIN.ALL}
-    Set Global Variable    ${_WORKING_DIR}    D:\\AT_sources\\
+    Set Global Variable    ${_WORKING_DIR}    ${VVNTFS04_WORKING_DIR}
     Set Global Variable    ${_DEFAULT_OUTPUT_DIR}    ${VVNTFS04_DEFAULT_OUTPUT_DIR}
     Set Global Variable    ${_DEFAULT_SOURCE_DIR}    ${VVNTFS04_DEFAULT_SOURCE_DIR}
     Set Global Variable    ${_TFS_UTIL_PATH}    ${VVNTFS04_TFS_UTILITY_PATH}
+    Set Global Variable    ${_TFS_SERVER}    ${VVNTFS04_TFS_SERVER}
 
 Init VVNTFS03 Agent to Test TFS
     Set Global Variable    ${/}    \\
@@ -58,17 +64,19 @@ Init VVNTFS03 Agent to Test TFS
     Log    Agent might be up :D
     Set Global Variable    ${_AGENT}    ${VVNTFS03_AGENT}
     Set Global Variable    ${_LOGIN}    ${LOGIN.ALL}
-    Set Global Variable    ${_WORKING_DIR}    D:\\AT_sources\\
+    Set Global Variable    ${_WORKING_DIR}    ${VVNTFS03_WORKING_DIR}
     Set Global Variable    ${_DEFAULT_OUTPUT_DIR}    ${VVNTFS03_DEFAULT_OUTPUT_DIR}
     Set Global Variable    ${_DEFAULT_SOURCE_DIR}    ${VVNTFS03_DEFAULT_SOURCE_DIR}
     Set Global Variable    ${_TFS_UTIL_PATH}    ${VVNTFS03_TFS_UTILITY_PATH}
+    Set Global Variable    ${_TFS_SERVER}    ${VVNTFS03_TFS_SERVER}
 
 Init VVNATSATTFS01 Agent to Test TFS
     Set Global Variable    ${/}    \\
     Set Global Variable    ${_OS}    WIN
     Set Global Variable    ${_AGENT}    ${VVNATSATTFS01_AGENT}
     Set Global Variable    ${_LOGIN}    ${LOGIN.ALL}
-    Set Global Variable    ${_WORKING_DIR}    D:\\AT_sources\\
+    Set Global Variable    ${_WORKING_DIR}    ${VVNATSATTFS01_WORKING_DIR}
     Set Global Variable    ${_DEFAULT_OUTPUT_DIR}    ${VVNATSATTFS01_DEFAULT_OUTPUT_DIR}
     Set Global Variable    ${_DEFAULT_SOURCE_DIR}    ${VVNATSATTFS01_DEFAULT_SOURCE_DIR}
     Set Global Variable    ${_TFS_UTIL_PATH}    ${VVNATSATTFS01_TFS_UTILITY_PATH}
+    Set Global Variable    ${_TFS_SERVER}    ${VVNATSATTFS01_TFS_SERVER}

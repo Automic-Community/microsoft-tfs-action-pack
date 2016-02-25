@@ -9,17 +9,23 @@ Test Template     Add Template
 Resource          ../../resources/keywords.txt
 Resource          prt_keywords.txt
 
-*** Test Cases ***    OK_NOK    TF Utility Path      Workspace            Path              Recursive    Lock    RETURN CODE    RETURN STATUS    MESSAGE
-01_Success Add        OK        ${_TFS_UTIL_PATH}    C:\\Projects         MyProject\\xml    Yes          NONE    0              ${ENDED_OK}      ${EMPTY}
+*** Variables ***
+${ADD_working_dir}    ${_WORKING_DIR}${/}ADD    # Working dir for testing ADD action
+${ADD_workspace}    ${PREFIX}_ADD_WS    #workspace for testing ADD action
+${ADD_branch}     ${PREFIX}_ADD_TEST    #branch for testing ADD action
+
+*** Test Cases ***    OK_NOK     TF Utility Path      Working Dir                                                                         Path                                                        Recursive    Lock    RETURN CODE    RETURN STATUS    MESSAGE
+01_Success Add        [Setup]    Create File          ${ADD_working_dir}${/}${_TFS_BASE_ITEM}${/}${ADD_branch}${/}${PREFIX}_ADD_01.txt
+                      OK         ${_TFS_UTIL_PATH}    ${ADD_working_dir}                                                                  ${ADD_working_dir}${/}${_TFS_BASE_ITEM}${/}${ADD_branch}    Yes          NONE    0              ${ENDED_OK}      ${EMPTY}
 
 02_Fail Add Using wrong utility path
-                      NOK       wrong                C:\\Projects         MyProject\\xml    Yes          NONE    0              ${ENDED_NOK}     ${EMPTY}
+                      NOK        wrong                ${ADD_working_dir}                                                                  ${ADD_working_dir}${/}${_TFS_BASE_ITEM}${/}${ADD_branch}    Yes          NONE    0              ${ENDED_NOK}     ${EMPTY}
 
 03_Fail Add Using wrong workspace path
-                      NOK       ${_TFS_UTIL_PATH}    C:\\Projectswrong    MyProject\\xml    Yes          NONE    0              ${ENDED_NOK}     ${EMPTY}
+                      NOK        ${_TFS_UTIL_PATH}    ${ADD_working_dir}                                                                  ${ADD_working_dir}${/}${_TFS_BASE_ITEM}${/}${ADD_branch}    Yes          NONE    0              ${ENDED_NOK}     ${EMPTY}
 
 04_Fail Add Using wrong add path
-                      NOK       ${_TFS_UTIL_PATH}    C:\\Projects         wrong\\xml        Yes          NONE    0              ${ENDED_NOK}     ${EMPTY}
+                      NOK        ${_TFS_UTIL_PATH}    ${ADD_working_dir}                                                                  wrong\\xml                                                  Yes          NONE    0              ${ENDED_NOK}     ${EMPTY}
 
 *** Keywords ***
 Add Template
@@ -47,6 +53,17 @@ Add Template
 Setup_suite
     [Documentation]    TODO: Write all steps need prepare before testing here
     Log    Start testing for Add Template
+    Log    Delete Working Dir from previous test
+    Delete Dir    ${ADD_working_dir}
+    Log    Delete Workspace from last test
+    Delete Workspace    ${ADD_workspace}
+    Log    Delete Branch from last test
+    Delete Branch    ${ADD_working_dir}    ${ADD_branch}
+    Log    Finish remove data from previous test. Preparing test data...
+    Create Dir    ${ADD_working_dir}
+    Create Workspace    ${ADD_working_dir}    ${ADD_workspace}
+    Get Source    ${ADD_working_dir}    ${_TFS_BASE_ITEM}    ${_TFS_BASE_VERSION}
+    Create Branch    ${ADD_working_dir}    ${_TFS_BASE_ITEM}\\MyProject    ${_TFS_BASE_ITEM}\\${ADD_branch}
 
 Teardown_suite
     [Documentation]    TODO: Write all steps for cleanup after testing here
