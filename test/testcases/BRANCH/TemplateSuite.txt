@@ -9,29 +9,33 @@ Test Template     Branch Template
 Resource          ../../resources/keywords.txt
 Resource          prt_keywords.txt
 
-*** Test Cases ***    OK_NOK    TF Utility Path      Workspace            Old Item     New Item     Version    Lock    No Get    RETURN CODE    RETURN STATUS    MESSAGE
-01_Success Branch     OK        ${_TFS_UTIL_PATH}    C:\\Projects         MyProject    MyProject    T          NONE    No        0              ${ENDED_OK}      ${EMPTY}
+*** Variables ***
+${BRANCH_working_dir}    ${_WORKING_DIR}${/}BRANCH    # Working dir for testing BRANCH action
+${BRANCH_workspace}    ${PREFIX}_BRANCH_WS    #workspace for testing BRANCH action
+#${BRANCH_branch}    ${PREFIX}_BRANCH_TEST    #branch for testing BRANCH action
+
+*** Test Cases ***    OK_NOK    TF Utility Path      Working Dir              Old Item                        New Item                                  Version                 Lock    No Get    RETURN CODE    RETURN STATUS    MESSAGE
+01_Success Branch     OK        ${_TFS_UTIL_PATH}    ${BRANCH_working_dir}    ${_TFS_BASE_ITEM}\\MyProject    ${_TFS_BASE_ITEM}\\${PREFIX}_BRANCH_01    ${_TFS_BASE_VERSION}    NONE    No        0              ${ENDED_OK}      ${EMPTY}
 
 02_Fail Branch Using wrong utility path
-                      NOK       wrong                C:\\Projects         MyProject    MyProject    T          NONE    No        0              ${ENDED_NOK}     ${EMPTY}
+                      NOK       wrong                ${BRANCH_working_dir}    MyProject                       MyProject                                 T                       NONE    No        0              ${ENDED_NOK}     ${EMPTY}
 
 03_Fail Branch Using wrong workspace path
-                      NOK       ${_TFS_UTIL_PATH}    C:\\Projectswrong    MyProject    MyProject    T          NONE    No        0              ${ENDED_NOK}     ${EMPTY}
+                      NOK       ${_TFS_UTIL_PATH}    wrong                    MyProject                       MyProject                                 T                       NONE    No        0              ${ENDED_NOK}     ${EMPTY}
 
 04_Fail Branch Using wrong version
-                      NOK       ${_TFS_UTIL_PATH}    C:\\Projects         MyProject    MyProject    Llabel     NONE    No        0              ${ENDED_NOK}     ${EMPTY}
+                      NOK       ${_TFS_UTIL_PATH}    ${BRANCH_working_dir}    MyProject                       MyProject                                 Llabel                  NONE    No        0              ${ENDED_NOK}     ${EMPTY}
 
 *** Keywords ***
 Branch Template
     [Arguments]    ${OK_NOK}    ${TFS_UTIL_PATH}    ${TFS_WORKING_DIR}    ${TFS_OLDITEM}    ${TFS_NEWITEM}    ${TFS_VERSION}
     ...    ${TFS_LOCK}    ${TFS_NOGET}    ${returnCode}    ${returnStatus}    ${message}
     [Documentation]    This template is used for test BRANCH with needed arguments
-    ${_CURRENT_TIMESTAMP_}    Get Time    epochs
     Init Action    ${ACTION_BRANCH}
     Action Set    ${PRT_BRANCH_TFS_UTIL_PATH}    ${TFS_UTIL_PATH}
     Action Set    ${PRT_BRANCH_TFS_WORKING_DIR}    ${TFS_WORKING_DIR}
     Action Set    ${PRT_BRANCH_TFS_OLDITEM}    ${TFS_OLDITEM}
-    Action Set    ${PRT_BRANCH_TFS_NEWITEM}    ${TFS_NEWITEM}_${_CURRENT_TIMESTAMP_}
+    Action Set    ${PRT_BRANCH_TFS_NEWITEM}    ${TFS_NEWITEM}
     Action Set    ${PRT_BRANCH_TFS_VERSION}    ${TFS_VERSION}
     Action Set    ${PRT_BRANCH_TFS_LOCK}    ${TFS_LOCK}
     Action Set    ${PRT_BRANCH_TFS_NOGET}    ${TFS_NOGET}
@@ -49,6 +53,14 @@ Branch Template
 Setup_suite
     [Documentation]    TODO: Write all steps need prepare before testing here
     Log    Start testing for Branch Template
+    Log    Delete Working Dir from previous test. This also delete branch
+    Delete Dir    ${BRANCH_working_dir}
+    Log    Delete Workspace from last test
+    Delete Workspace    ${BRANCH_workspace}
+    Log    Finish remove data from previous test. Preparing test data...
+    Create Dir    ${BRANCH_working_dir}
+    Create Workspace    ${BRANCH_working_dir}    ${BRANCH_workspace}
+    Get Source    ${BRANCH_working_dir}    ${_TFS_BASE_ITEM}    ${_TFS_BASE_VERSION}
 
 Teardown_suite
     [Documentation]    TODO: Write all steps for cleanup after testing here
