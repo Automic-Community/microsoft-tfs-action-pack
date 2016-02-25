@@ -14,33 +14,44 @@ ${GET_working_dir}    ${_WORKING_DIR}${/}GET    # Working dir for testing GET ac
 ${GET_workspace}    ${PREFIX}_GET_WS    #workspace for testing GET action
 ${GET_branch}     ${PREFIX}_GET_TEST    #branch for testing GET action
 
-*** Test Cases ***    OK_NOK    TF Utility Path      Workspace             Item                            Version                 All    Overwrite    Force    Recursive    RETURN CODE    RETURN STATUS    MESSAGE
+*** Test Cases ***    OK_NOK             TF Utility Path                       Working Dir                 Item                            Version                 All    Overwrite    Force    Recursive    RETURN CODE    RETURN STATUS    MESSAGE
 01_Success Get Changeset 85
-                      OK        ${_TFS_UTIL_PATH}    ${GET_working_dir}    ${_TFS_BASE_ITEM}\\MyProject    ${_TFS_BASE_VERSION}    No     Yes          No       Yes          0              ${ENDED_OK}      ${EMPTY}
+                      [Setup]            Mapping Working Dir with Workspace    ${GET_working_dir}${/}01    ${GET_workspace}_01
+                      OK                 ${_TFS_UTIL_PATH}                     ${GET_working_dir}${/}01    ${_TFS_BASE_ITEM}\\MyProject    ${_TFS_BASE_VERSION}    No     Yes          No       Yes          0              ${ENDED_OK}      Getting MyProject
 
 02_Fail Get Wrong utility path
-                      NOK       wrong                ${GET_working_dir}    ${_TFS_BASE_ITEM}\\MyProject    ${EMPTY}                No     Yes          No       Yes          0              ${ENDED_NOK}     ${EMPTY}
+                      [Setup]            Mapping Working Dir with Workspace    ${GET_working_dir}${/}02    ${GET_workspace}_02
+                      NOK                wrong                                 ${GET_working_dir}${/}02    ${_TFS_BASE_ITEM}\\MyProject    ${EMPTY}                No     Yes          No       Yes          0              ${ENDED_NOK}     ERROR[TF Utility Path]
 
 03_Fail Get Wrong workspace path
-                      NOK       ${_TFS_UTIL_PATH}    C:\\Projectswrong     ${_TFS_BASE_ITEM}\\MyProject    ${EMPTY}                No     Yes          No       Yes          0              ${ENDED_NOK}     ${EMPTY}
+                      [Setup]            Mapping Working Dir with Workspace    ${GET_working_dir}${/}03    ${GET_workspace}_03
+                      NOK                ${_TFS_UTIL_PATH}                     C:\\Projectswrong           ${_TFS_BASE_ITEM}\\MyProject    ${EMPTY}                No     Yes          No       Yes          0              ${ENDED_NOK}     ERROR[Working Directory]
 
 04_Fail Get Wrong item
-                      NOK       ${_TFS_UTIL_PATH}    ${GET_working_dir}    wrong                           ${EMPTY}                No     Yes          No       Yes          0              ${ENDED_NOK}     ${EMPTY}
+                      [Documentation]    issue comes from tf.exe
+                      [Tags]             KNOWN_ISSUE
+                      [Setup]            Mapping Working Dir with Workspace    ${GET_working_dir}${/}04    ${GET_workspace}_04
+                      OK                 ${_TFS_UTIL_PATH}                     ${GET_working_dir}${/}04    wrong                           ${EMPTY}                No     Yes          No       Yes          0              ${ENDED_OK}      All files are up to date
 
 05_Fail Get version not exist
-                      NOK       ${_TFS_UTIL_PATH}    ${GET_working_dir}    ${_TFS_BASE_ITEM}\\MyProject    No                      No     Yes          No       Yes          0              ${ENDED_NOK}     ${EMPTY}
+                      [Setup]            Mapping Working Dir with Workspace    ${GET_working_dir}${/}05    ${GET_workspace}_05
+                      NOK                ${_TFS_UTIL_PATH}                     ${GET_working_dir}${/}05    ${_TFS_BASE_ITEM}\\MyProject    No                      No     Yes          No       Yes          0              ${ENDED_NOK}     'N' is not a supported version specification type
 
 06_Success Get Label Version
-                      OK        ${_TFS_UTIL_PATH}    ${GET_working_dir}    ${_TFS_BASE_ITEM}\\MyProject    LAT_POINT               No     Yes          No       Yes          0              ${ENDED_OK}      ${EMPTY}
+                      [Setup]            Mapping Working Dir with Workspace    ${GET_working_dir}${/}06    ${GET_workspace}_06
+                      OK                 ${_TFS_UTIL_PATH}                     ${GET_working_dir}${/}06    ${_TFS_BASE_ITEM}\\MyProject    LAT_POINT               No     Yes          No       Yes          0              ${ENDED_OK}      Getting MyProject
 
 07_Success Get Date Version
-                      OK        ${_TFS_UTIL_PATH}    ${GET_working_dir}    ${_TFS_BASE_ITEM}\\MyProject    D2016-02-25             No     Yes          No       Yes          0              ${ENDED_OK}      ${EMPTY}
+                      [Setup]            Mapping Working Dir with Workspace    ${GET_working_dir}${/}07    ${GET_workspace}_07
+                      OK                 ${_TFS_UTIL_PATH}                     ${GET_working_dir}${/}07    ${_TFS_BASE_ITEM}\\MyProject    D2016-02-25             No     Yes          No       Yes          0              ${ENDED_OK}      Getting MyProject
 
 08_Success Get Blank Version
-                      OK        ${_TFS_UTIL_PATH}    ${GET_working_dir}    ${_TFS_BASE_ITEM}\\MyProject    ${EMPTY}                No     Yes          No       Yes          0              ${ENDED_OK}      ${EMPTY}
+                      [Setup]            Mapping Working Dir with Workspace    ${GET_working_dir}${/}08    ${GET_workspace}_08
+                      OK                 ${_TFS_UTIL_PATH}                     ${GET_working_dir}${/}08    ${_TFS_BASE_ITEM}\\MyProject    ${EMPTY}                No     Yes          No       Yes          0              ${ENDED_OK}      Getting MyProject
 
 09_Success Get Latest Version
-                      OK        ${_TFS_UTIL_PATH}    ${GET_working_dir}    ${_TFS_BASE_ITEM}\\MyProject    T                       No     Yes          No       Yes          0              ${ENDED_OK}      ${EMPTY}
+                      [Setup]            Mapping Working Dir with Workspace    ${GET_working_dir}${/}09    ${GET_workspace}_09
+                      OK                 ${_TFS_UTIL_PATH}                     ${GET_working_dir}${/}09    ${_TFS_BASE_ITEM}\\MyProject    T                       No     Yes          No       Yes          0              ${ENDED_OK}      Getting MyProject
 
 *** Keywords ***
 Get Template
@@ -63,21 +74,25 @@ Get Template
     Action Return Status Should Be    ${returnStatus}
     Action Report Should Contain    ${header_logging}
     Action Report Should Contain    ${param_logging}
-    Run Keyword If    '${OK_NOK}'=='OK'    Action Report Should Contain    ${execution_logging}
-    Run Keyword If    '${OK_NOK}'=='OK'    Action Report Should Contain    ${message}
+    Run Keyword If    '${OK_NOK}'=='OK'    Run Keyword If    '${OK_NOK}'=='OK'    Action Report Should Contain    ${execution_logging}
+    Action Report Should Contain    ${message}
     Run Keyword If    '${OK_NOK}'=='OK'    Action Report Should Contain    ${footer_logging_OK}
+    Run Keyword If    '${OK_NOK}'=='NOK'    Action Report Should Contain    ${footer_logging_NOK}
 
 Setup_suite
     [Documentation]    TODO: Write all steps need prepare before testing here
     Log    Start testing for Get Template
-    Log    Delete Working Dir from previous test
-    Delete Dir    ${GET_working_dir}
-    Log    Delete Workspace from last test
-    Delete Workspace    ${GET_workspace}
-    Log    Finish remove data from previous test. Preparing test data...
-    Create Dir    ${GET_working_dir}
-    Create Workspace    ${GET_working_dir}    ${GET_workspace}
 
 Teardown_suite
     [Documentation]    TODO: Write all steps for cleanup after testing here
     Log    Testing for Get Template end
+
+Mapping Working Dir with Workspace
+    [Arguments]    ${WorkingDir}    ${Workspace}
+    Log    Delete Workspace from last test
+    Delete Workspace    ${Workspace}
+    Log    Delete Working Dir from previous test
+    Delete Dir    ${WorkingDir}
+    Log    Finish remove data from previous test. Preparing test data...
+    Create Dir    ${WorkingDir}
+    Create Workspace    ${WorkingDir}    ${Workspace}
