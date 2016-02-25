@@ -4,26 +4,31 @@ Documentation     NOTE:
 Suite Setup       Setup_suite
 Suite Teardown    Teardown_suite
 Force Tags        CHECKOUT
-Default Tags      win    unix
+Default Tags      win
 Test Template     Checkout Template
 Resource          ../../resources/keywords.txt
 Resource          prt_keywords.txt
 
-*** Test Cases ***    OK_NOK    TF Utility Path      Workspace            Item              Recursive    Lock    RETURN CODE    RETURN STATUS    MESSAGE
+*** Variables ***
+${CHECKOUT_working_dir}    ${_WORKING_DIR}${/}CHECKOUT    # Working dir for testing CHECKOUT action
+${CHECKOUT_workspace}    ${PREFIX}_CHECKOUT_WS    #workspace for testing CHECKOUT action
+${CHECKOUT_branch}    ${PREFIX}_CHECKOUT_TEST    #branch for testing CHECKOUT action
+
+*** Test Cases ***    OK_NOK    TF Utility Path      Working Dir                Item                                     Recursive    Lock    RETURN CODE    RETURN STATUS    MESSAGE
 01_Success Checkout
-                      OK        ${_TFS_UTIL_PATH}    C:\\Projects         MyProject\\xml    Yes          NONE    0              ${ENDED_OK}      ${EMPTY}
+                      OK        ${_TFS_UTIL_PATH}    ${CHECKOUT_working_dir}    ${_TFS_BASE_ITEM}\\${CHECKOUT_branch}    Yes          NONE    0              ${ENDED_OK}      ${EMPTY}
 
 02_Fail Checkout Wrong utility Path
-                      NOK       wrong                C:\\Projects         MyProject\\xml    Yes          NONE    0              ${ENDED_NOK}     ${EMPTY}
+                      NOK       wrong                ${CHECKOUT_working_dir}    ${_TFS_BASE_ITEM}\\${CHECKOUT_branch}    Yes          NONE    0              ${ENDED_NOK}     ${EMPTY}
 
-03_Fail Checkout Wrong workspace Path
-                      NOK       ${_TFS_UTIL_PATH}    C:\\Projectswrong    MyProject\\xml    Yes          NONE    0              ${ENDED_NOK}     ${EMPTY}
+03_Fail Checkout Wrong Working Dir Path
+                      NOK       ${_TFS_UTIL_PATH}    wrong                      ${_TFS_BASE_ITEM}\\${CHECKOUT_branch}    Yes          NONE    0              ${ENDED_NOK}     ${EMPTY}
 
 04_Fail Checkout Not Exist item
-                      NOK       ${_TFS_UTIL_PATH}    C:\\Projects         not existed       Yes          NONE    0              ${ENDED_NOK}     ${EMPTY}
+                      NOK       ${_TFS_UTIL_PATH}    ${CHECKOUT_working_dir}    wrong                                    Yes          NONE    0              ${ENDED_NOK}     ${EMPTY}
 
 05_Fail Checkout Recursive No
-                      NOK       ${_TFS_UTIL_PATH}    C:\\Projects         MyProject\\xml    No           NONE    0              ${ENDED_NOK}     ${EMPTY}
+                      NOK       ${_TFS_UTIL_PATH}    ${CHECKOUT_working_dir}    ${_TFS_BASE_ITEM}\\${CHECKOUT_branch}    No           NONE    0              ${ENDED_NOK}     ${EMPTY}
 
 *** Keywords ***
 Checkout Template
@@ -50,6 +55,17 @@ Checkout Template
 Setup_suite
     [Documentation]    TODO: Write all steps need prepare before testing here
     Log    Start testing for Checkout Template
+    Log    Delete Working Dir from previous test
+    Delete Dir    ${CHECKOUT_working_dir}
+    Log    Delete Branch from last test
+    Delete Branch    ${CHECKOUT_working_dir}    ${PREFIX}_CHECKOUT_*
+    Log    Delete Workspace from last test
+    Delete Workspace    ${CHECKOUT_workspace}
+    Log    Finish remove data from previous test. Preparing test data...
+    Create Dir    ${CHECKOUT_working_dir}
+    Create Workspace    ${CHECKOUT_working_dir}    ${CHECKOUT_workspace}
+    Get Source    ${CHECKOUT_working_dir}    ${_TFS_BASE_ITEM}    ${_TFS_BASE_VERSION}
+    Create Branch    ${CHECKOUT_working_dir}    ${_TFS_BASE_ITEM}\\MyProject    ${_TFS_BASE_ITEM}\\${CHECKOUT_branch}
 
 Teardown_suite
     [Documentation]    TODO: Write all steps for cleanup after testing here

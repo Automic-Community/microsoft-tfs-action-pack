@@ -4,28 +4,31 @@ Documentation     NOTE:
 Suite Setup       Setup_suite
 Suite Teardown    Teardown_suite
 Force Tags        CHECKIN
-Default Tags      win    unix
+Default Tags      win
 Test Template     Checkin Template
 Resource          ../../resources/keywords.txt
 Resource          prt_keywords.txt
 
-*** Test Cases ***    OK_NOK    TF Utility Path      Workspace            Author           File                Comment         Override    Reason     Recursive    RETURN CODE    RETURN STATUS    MESSAGE
-01_Success Checkin    OK        ${_TFS_UTIL_PATH}    C:\\Projects         Administrator    MyProject\\xml\\    Test checkin    No          AT Test    Yes          0              ${ENDED_OK}      ${EMPTY}
+*** Variables ***
+${CHECKIN_working_dir}    ${_WORKING_DIR}${/}CHECKIN    # Working dir for testing CHECKIN action
+${CHECKIN_workspace}    ${PREFIX}_CHECKIN_WS    #workspace for testing CHECKIN action
+${CHECKIN_branch}    ${PREFIX}_CHECKIN_TEST    #branch for testing CHECKIN action
+
+*** Test Cases ***    OK_NOK     TF Utility Path            Working Dir                 Author           File                                      Comment         Override    Reason     Recursive    RETURN CODE    RETURN STATUS    MESSAGE
+01_Success Checkin    [Setup]    Add File Before Checkin    ${PREFIX}_CHECKIN_01.txt
+                      OK         ${_TFS_UTIL_PATH}          ${CHECKIN_working_dir}      Administrator    ${_TFS_BASE_ITEM}${/}${CHECKIN_branch}    Test checkin    No          AT Test    Yes          0              ${ENDED_OK}      ${EMPTY}
 
 02_Fail Wrong Utility Path
-                      NOK       wrong                C:\\Projects         Administrator    MyProject\\xml\\    Test checkin    No          AT Test    Yes          0              ${ENDED_NOK}     ${EMPTY}
+                      NOK        wrong                      ${CHECKIN_working_dir}      Administrator    ${_TFS_BASE_ITEM}${/}${CHECKIN_branch}    Test checkin    No          AT Test    Yes          0              ${ENDED_NOK}     ${EMPTY}
 
 03_Fail Wrong Workspace Path
-                      NOK       ${_TFS_UTIL_PATH}    C:\\Projectswrong    Administrator    MyProject\\xml\\    Test checkin    No          AT Test    Yes          0              ${ENDED_NOK}     ${EMPTY}
+                      NOK        ${_TFS_UTIL_PATH}          C:\\Projectswrong           Administrator    ${_TFS_BASE_ITEM}${/}${CHECKIN_branch}    Test checkin    No          AT Test    Yes          0              ${ENDED_NOK}     ${EMPTY}
 
 04_Fail Wrong Author
-                      NOK       ${_TFS_UTIL_PATH}    C:\\Projects         wrong            MyProject\\xml\\    Test checkin    No          AT Test    Yes          0              ${ENDED_NOK}     ${EMPTY}
+                      NOK        ${_TFS_UTIL_PATH}          ${CHECKIN_working_dir}      wrong            ${_TFS_BASE_ITEM}${/}${CHECKIN_branch}    Test checkin    No          AT Test    Yes          0              ${ENDED_NOK}     ${EMPTY}
 
-05_Success Checkin Override Yes
-                      OK        ${_TFS_UTIL_PATH}    C:\\Projects         Administrator    MyProject\\xml\\    Test checkin    Yes         AT Test    Yes          0              ${ENDED_OK}      ${EMPTY}
-
-06_Fail Checkin Recursive No
-                      NOK       ${_TFS_UTIL_PATH}    C:\\Projects         Administrator    MyProject\\xml\\    Test checkin    No          AT Test    No           0              ${ENDED_NOK}     ${EMPTY}
+05_Fail Checkin Recursive No
+                      NOK        ${_TFS_UTIL_PATH}          ${CHECKIN_working_dir}      Administrator    ${_TFS_BASE_ITEM}${/}${CHECKIN_branch}    Test checkin    No          AT Test    No           0              ${ENDED_NOK}     ${EMPTY}
 
 *** Keywords ***
 Checkin Template
@@ -56,7 +59,24 @@ Checkin Template
 Setup_suite
     [Documentation]    TODO: Write all steps need prepare before testing here
     Log    Start testing for Checkin Template
+    Log    Delete Branch from last test
+    Delete Branch    ${CHECKIN_working_dir}    ${PREFIX}_CHECKIN_*
+    Log    Delete Workspace from last test
+    Delete Workspace    ${CHECKIN_workspace}
+    Log    Delete Working Dir from previous test
+    Delete Dir    ${CHECKIN_working_dir}
+    Log    Finish remove data from previous test. Preparing test data...
+    Create Dir    ${CHECKIN_working_dir}
+    Create Workspace    ${CHECKIN_working_dir}    ${CHECKIN_workspace}
+    Get Source    ${CHECKIN_working_dir}    ${_TFS_BASE_ITEM}    ${_TFS_BASE_VERSION}
+    Create Branch    ${CHECKIN_working_dir}    ${_TFS_BASE_ITEM}\\MyProject    ${_TFS_BASE_ITEM}\\${CHECKIN_branch}
 
 Teardown_suite
     [Documentation]    TODO: Write all steps for cleanup after testing here
     Log    Testing for Checkin Template end
+
+Add File Before Checkin
+    [Arguments]    ${newFile}
+    Delete Item from TFS    ${CHECKIN_working_dir}    ${_TFS_BASE_ITEM}${/}${CHECKIN_branch}${/}${newFile}
+    Create File    ${CHECKIN_working_dir}${/}${_TFS_BASE_ITEM}${/}${CHECKIN_branch}${/}${newFile}
+    Add Item To TFS    ${CHECKIN_working_dir}    ${CHECKIN_working_dir}${/}${_TFS_BASE_ITEM}${/}${CHECKIN_branch}${/}${newFile}
