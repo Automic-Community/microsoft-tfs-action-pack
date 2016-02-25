@@ -15,7 +15,7 @@ ${BRANCH_workspace}    ${PREFIX}_BRANCH_WS    #workspace for testing BRANCH acti
 #${BRANCH_branch}    ${PREFIX}_BRANCH_TEST    #branch for testing BRANCH action
 
 *** Test Cases ***    OK_NOK    TF Utility Path      Working Dir              Old Item                        New Item                                  Version                 Lock    No Get    RETURN CODE    RETURN STATUS    MESSAGE
-01_Success Branch     OK        ${_TFS_UTIL_PATH}    ${BRANCH_working_dir}    ${_TFS_BASE_ITEM}\\MyProject    ${_TFS_BASE_ITEM}\\${PREFIX}_BRANCH_01    ${_TFS_BASE_VERSION}    NONE    No        0              ${ENDED_OK}      ${EMPTY}
+01_Success Branch     OK        ${_TFS_UTIL_PATH}    ${BRANCH_working_dir}    ${_TFS_BASE_ITEM}\\MyProject    ${_TFS_BASE_ITEM}\\${PREFIX}_BRANCH_01    ${_TFS_BASE_VERSION}    NONE    No        0              ${ENDED_OK}      INFO: Start branch ...
 
 02_Fail Branch Using wrong utility path
                       NOK       wrong                ${BRANCH_working_dir}    MyProject                       MyProject                                 T                       NONE    No        0              ${ENDED_NOK}     ERROR[TF Utility Path]

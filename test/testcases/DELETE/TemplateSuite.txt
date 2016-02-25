@@ -14,7 +14,7 @@ ${DELETE_working_dir}    ${_WORKING_DIR}${/}DELETE    # Working dir for testing 
 ${DELETE_workspace}    ${PREFIX}_DELETE_WS    #workspace for testing DELETE action
 
 *** Test Cases ***    OK_NOK    TF Utility Path      Working Directory        Item                               Recursive    Lock    RETURN CODE    RETURN STATUS    MESSAGE
-01_Success Delete     OK        ${_TFS_UTIL_PATH}    ${DELETE_working_dir}    ${_TFS_BASE_ITEM}\\test.txt        Yes          NONE    0              ${ENDED_OK}      ${EMPTY}
+01_Success Delete     OK        ${_TFS_UTIL_PATH}    ${DELETE_working_dir}    ${_TFS_BASE_ITEM}\\test.txt        Yes          NONE    0              ${ENDED_OK}      Projects:
 
 02_Fail Delete Wrong utility path
                       NOK       wrong                ${DELETE_working_dir}    ${_TFS_BASE_ITEM}\\new_file.txt    Yes          NONE    0              ${ENDED_NOK}     ERROR[TF Utility Path]
@@ -23,7 +23,7 @@ ${DELETE_workspace}    ${PREFIX}_DELETE_WS    #workspace for testing DELETE acti
                       NOK       ${_TFS_UTIL_PATH}    wrong                    ${_TFS_BASE_ITEM}\\new_file.txt    Yes          NONE    0              ${ENDED_NOK}     ERROR[Working Directory]
 
 04_Fail Delete Wrong item
-                      NOK       ${_TFS_UTIL_PATH}    ${DELETE_working_dir}    wrong                              Yes          NONE    0              ${ENDED_NOK}     ${EMPTY}
+                      NOK       ${_TFS_UTIL_PATH}    ${DELETE_working_dir}    wrong                              Yes          NONE    0              ${ENDED_NOK}     No matching items found in
 
 *** Keywords ***
 Delete Template

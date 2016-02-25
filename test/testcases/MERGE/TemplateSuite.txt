@@ -30,7 +30,7 @@ ${MERGE_branch_target}    MyProject-branch
 
 04_Fail Merge Wrong item
                       [Setup]    Mapping Working Dir with Workspace    ${MERGE_working_dir}${/}04    ${MERGE_workspace}_04
-                      NOK        ${_TFS_UTIL_PATH}                     ${MERGE_working_dir}${/}04    ${_TFS_BASE_VERSION}     wrong                       Projects\\${MERGE_branch_target}    Yes          NONE    No       No         No          No           0              ${ENDED_NOK}     ${EMPTY}
+                      NOK        ${_TFS_UTIL_PATH}                     ${MERGE_working_dir}${/}04    ${_TFS_BASE_VERSION}     wrong                       Projects\\${MERGE_branch_target}    Yes          NONE    No       No         No          No           0              ${ENDED_NOK}     No matching items found in
 
 05_Fail Merge Wrong version
                       [Setup]    Mapping Working Dir with Workspace    ${MERGE_working_dir}${/}05    ${MERGE_workspace}_05

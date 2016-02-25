@@ -16,7 +16,7 @@ ${CHECKOUT_branch}    ${PREFIX}_CHECKOUT_TEST    #branch for testing CHECKOUT ac
 
 *** Test Cases ***    OK_NOK    TF Utility Path      Working Dir                Item                                     Recursive    Lock    RETURN CODE    RETURN STATUS    MESSAGE
 01_Success Checkout
-                      OK        ${_TFS_UTIL_PATH}    ${CHECKOUT_working_dir}    ${_TFS_BASE_ITEM}\\${CHECKOUT_branch}    Yes          NONE    0              ${ENDED_OK}      ${EMPTY}
+                      OK        ${_TFS_UTIL_PATH}    ${CHECKOUT_working_dir}    ${_TFS_BASE_ITEM}\\${CHECKOUT_branch}    Yes          NONE    0              ${ENDED_OK}      Projects\FIBO_CHECKOUT_TEST
 
 02_Fail Checkout Wrong utility Path
                       NOK       wrong                ${CHECKOUT_working_dir}    ${_TFS_BASE_ITEM}\\${CHECKOUT_branch}    Yes          NONE    0              ${ENDED_NOK}     ERROR[TF Utility Path]
@@ -25,10 +25,10 @@ ${CHECKOUT_branch}    ${PREFIX}_CHECKOUT_TEST    #branch for testing CHECKOUT ac
                       NOK       ${_TFS_UTIL_PATH}    wrong                      ${_TFS_BASE_ITEM}\\${CHECKOUT_branch}    Yes          NONE    0              ${ENDED_NOK}     ERROR[Working Directory]
 
 04_Fail Checkout Not Exist item
-                      NOK       ${_TFS_UTIL_PATH}    ${CHECKOUT_working_dir}    wrong                                    Yes          NONE    0              ${ENDED_NOK}     ${EMPTY}
+                      NOK       ${_TFS_UTIL_PATH}    ${CHECKOUT_working_dir}    wrong                                    Yes          NONE    0              ${ENDED_NOK}     No matching items found in
 
 05_Fail Checkout Recursive No
-                      NOK       ${_TFS_UTIL_PATH}    ${CHECKOUT_working_dir}    ${_TFS_BASE_ITEM}\\${CHECKOUT_branch}    No           NONE    0              ${ENDED_NOK}     ${EMPTY}
+                      NOK       ${_TFS_UTIL_PATH}    ${CHECKOUT_working_dir}    ${_TFS_BASE_ITEM}\\${CHECKOUT_branch}    No           NONE    0              ${ENDED_NOK}     TF14040: The folder $/Projects/FIBO_CHECKOUT_TEST may not be checked out.
 
 *** Keywords ***
 Checkout Template

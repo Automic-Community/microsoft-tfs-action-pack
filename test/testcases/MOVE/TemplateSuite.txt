@@ -16,7 +16,7 @@ ${MOVE_branch}    ${PREFIX}_MOVE_TEST    #branch for testing MOVE action
 
 *** Test Cases ***    OK_NOK     TF Utility Path                       Working Dir                  Old Item                          New Item                                  Lock    RETURN CODE    RETURN STATUS    MESSAGE
 01_Success Move       [Setup]    Mapping Working Dir with Workspace    ${MOVE_working_dir}${/}01    ${MOVE_workspace}_01
-                      OK         ${_TFS_UTIL_PATH}                     ${MOVE_working_dir}${/}01    ${_TFS_BASE_ITEM}${/}MyProject    ${_TFS_BASE_ITEM}${/}${PREFIX}_MOVE_01    NONE    0              ${ENDED_OK}      ${EMPTY}
+                      OK         ${_TFS_UTIL_PATH}                     ${MOVE_working_dir}${/}01    ${_TFS_BASE_ITEM}${/}MyProject    ${_TFS_BASE_ITEM}${/}${PREFIX}_MOVE_01    NONE    0              ${ENDED_OK}      Projects
 
 02_Fail Move Wrong utility path
                       [Setup]    Mapping Working Dir with Workspace    ${MOVE_working_dir}${/}02    ${MOVE_workspace}_02
@@ -28,7 +28,7 @@ ${MOVE_branch}    ${PREFIX}_MOVE_TEST    #branch for testing MOVE action
 
 04_Fail Move Wrong item
                       [Setup]    Mapping Working Dir with Workspace    ${MOVE_working_dir}${/}04    ${MOVE_workspace}_04
-                      NOK        ${_TFS_UTIL_PATH}                     ${MOVE_working_dir}${/}04    wrong                             ${_TFS_BASE_ITEM}${/}${PREFIX}_MOVE_04    NONE    0              ${ENDED_NOK}     ${EMPTY}
+                      NOK        ${_TFS_UTIL_PATH}                     ${MOVE_working_dir}${/}04    wrong                             ${_TFS_BASE_ITEM}${/}${PREFIX}_MOVE_04    NONE    0              ${ENDED_NOK}     could not be found in your workspace
 
 *** Keywords ***
 Move Template

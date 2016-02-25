@@ -18,7 +18,7 @@ ${TFS_WS_OWNER}    VVNSATTFS01\\Administrator
 *** Test Cases ***    OK_NOK     TF Utility Path           Working Directory                           Workspace                             Owner              Server                  Comment                              RETURN CODE    RETURN STATUS    MESSAGE
 01_Success Create Workspace
                       [Setup]    Create New Working Dir    ${CREATE_WORKSPACE_working_dir}${/}01       ${CREATE_WORKSPACE_workspace}_01
-                      OK         ${_TFS_UTIL_PATH}         ${CREATE_WORKSPACE_working_dir}${/}01       ${CREATE_WORKSPACE_workspace}_01      ${TFS_WS_OWNER}    ${_TFS_SERVER}          01_Success Create Workspace          0              ${ENDED_OK}      ${EMPTY}
+                      OK         ${_TFS_UTIL_PATH}         ${CREATE_WORKSPACE_working_dir}${/}01       ${CREATE_WORKSPACE_workspace}_01      ${TFS_WS_OWNER}    ${_TFS_SERVER}          01_Success Create Workspace          0              ${ENDED_OK}      INFO: Start create workspace
 
 02_Fail Create Workspace Using wrong utility path
                       [Setup]    Create New Working Dir    ${CREATE_WORKSPACE_working_dir}${/}Fail     ${CREATE_WORKSPACE_workspace}_Fail
@@ -28,10 +28,10 @@ ${TFS_WS_OWNER}    VVNSATTFS01\\Administrator
                       NOK        ${_TFS_UTIL_PATH}         ${CREATE_WORKSPACE_working_dir}_20160101    ${CREATE_WORKSPACE_workspace}_Fail    ${TFS_WS_OWNER}    ${_TFS_SERVER}          03_Fail Create Wrong working dir     0              ${ENDED_NOK}     ERROR[Working Directory]
 
 04_Fail Create Workspace Using wrong owner
-                      NOK        ${_TFS_UTIL_PATH}         ${CREATE_WORKSPACE_working_dir}${/}Fail     ${CREATE_WORKSPACE_workspace}_Fail    inferno            ${_TFS_SERVER}          04_Fail Create Wrong owner           0              ${ENDED_NOK}     ${EMPTY}
+                      NOK        ${_TFS_UTIL_PATH}         ${CREATE_WORKSPACE_working_dir}${/}Fail     ${CREATE_WORKSPACE_workspace}_Fail    inferno            ${_TFS_SERVER}          04_Fail Create Wrong owner           0              ${ENDED_NOK}     TF14045: The identity inferno is not a recognized identity
 
 05_Fail Create Workspace Using wrong server
-                      NOK        ${_TFS_UTIL_PATH}         ${CREATE_WORKSPACE_working_dir}${/}Fail     ${CREATE_WORKSPACE_workspace}_Fail    ${TFS_WS_OWNER}    http://vvntfs01:8080    05_Fail Create Wrong server          0              ${ENDED_NOK}     ${EMPTY}
+                      NOK        ${_TFS_UTIL_PATH}         ${CREATE_WORKSPACE_working_dir}${/}Fail     ${CREATE_WORKSPACE_workspace}_Fail    ${TFS_WS_OWNER}    http://vvntfs01:8080    05_Fail Create Wrong server          0              ${ENDED_NOK}     TF400324: Team Foundation services are not available from server
 
 *** Keywords ***
 Create Workspace Template
