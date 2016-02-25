@@ -3,26 +3,44 @@ Documentation     NOTE:
 ...               add note here
 Suite Setup       Setup_suite
 Suite Teardown    Teardown_suite
-Force Tags        GET    _template_
-Default Tags      win    unix
+Force Tags        GET
+Default Tags      win
 Test Template     Get Template
 Resource          ../../resources/keywords.txt
 Resource          prt_keywords.txt
 
-*** Test Cases ***    OK_NOK    TF Utility Path      Workspace            Item                   Version     All    Overwrite    Force    Recursive    RETURN CODE    RETURN STATUS    MESSAGE
-01_Success Get        OK        ${_TFS_UTIL_PATH}    C:\\Projects         MyProject\\xml         ${EMPTY}    No     Yes          No       Yes          0              ${ENDED_OK}      ${EMPTY}
+*** Variables ***
+${GET_working_dir}    ${_WORKING_DIR}${/}GET    # Working dir for testing GET action
+${GET_workspace}    ${PREFIX}_GET_WS    #workspace for testing GET action
+${GET_branch}     ${PREFIX}_GET_TEST    #branch for testing GET action
+
+*** Test Cases ***    OK_NOK    TF Utility Path      Workspace             Item                            Version                 All    Overwrite    Force    Recursive    RETURN CODE    RETURN STATUS    MESSAGE
+01_Success Get Changeset 85
+                      OK        ${_TFS_UTIL_PATH}    ${GET_working_dir}    ${_TFS_BASE_ITEM}\\MyProject    ${_TFS_BASE_VERSION}    No     Yes          No       Yes          0              ${ENDED_OK}      ${EMPTY}
 
 02_Fail Get Wrong utility path
-                      NOK       wrong                C:\\Projects         MyProject\\xml         ${EMPTY}    No     Yes          No       Yes          0              ${ENDED_NOK}     ${EMPTY}
+                      NOK       wrong                ${GET_working_dir}    ${_TFS_BASE_ITEM}\\MyProject    ${EMPTY}                No     Yes          No       Yes          0              ${ENDED_NOK}     ${EMPTY}
 
 03_Fail Get Wrong workspace path
-                      NOK       ${_TFS_UTIL_PATH}    C:\\Projectswrong    MyProject\\xml         ${EMPTY}    No     Yes          No       Yes          0              ${ENDED_NOK}     ${EMPTY}
+                      NOK       ${_TFS_UTIL_PATH}    C:\\Projectswrong     ${_TFS_BASE_ITEM}\\MyProject    ${EMPTY}                No     Yes          No       Yes          0              ${ENDED_NOK}     ${EMPTY}
 
 04_Fail Get Wrong item
-                      NOK       ${_TFS_UTIL_PATH}    C:\\Projects         MyProject\\wrong       ${EMPTY}    No     Yes          No       Yes          0              ${ENDED_NOK}     ${EMPTY}
+                      NOK       ${_TFS_UTIL_PATH}    ${GET_working_dir}    wrong                           ${EMPTY}                No     Yes          No       Yes          0              ${ENDED_NOK}     ${EMPTY}
 
 05_Fail Get version not exist
-                      NOK       ${_TFS_UTIL_PATH}    C:\\Projects         MyProject\\xml\\get    No          No     Yes          No       Yes          0              ${ENDED_NOK}     ${EMPTY}
+                      NOK       ${_TFS_UTIL_PATH}    ${GET_working_dir}    ${_TFS_BASE_ITEM}\\MyProject    No                      No     Yes          No       Yes          0              ${ENDED_NOK}     ${EMPTY}
+
+06_Success Get Label Version
+                      OK        ${_TFS_UTIL_PATH}    ${GET_working_dir}    ${_TFS_BASE_ITEM}\\MyProject    LAT_POINT               No     Yes          No       Yes          0              ${ENDED_OK}      ${EMPTY}
+
+07_Success Get Date Version
+                      OK        ${_TFS_UTIL_PATH}    ${GET_working_dir}    ${_TFS_BASE_ITEM}\\MyProject    D2016-02-25             No     Yes          No       Yes          0              ${ENDED_OK}      ${EMPTY}
+
+08_Success Get Blank Version
+                      OK        ${_TFS_UTIL_PATH}    ${GET_working_dir}    ${_TFS_BASE_ITEM}\\MyProject    ${EMPTY}                No     Yes          No       Yes          0              ${ENDED_OK}      ${EMPTY}
+
+09_Success Get Latest Version
+                      OK        ${_TFS_UTIL_PATH}    ${GET_working_dir}    ${_TFS_BASE_ITEM}\\MyProject    T                       No     Yes          No       Yes          0              ${ENDED_OK}      ${EMPTY}
 
 *** Keywords ***
 Get Template
@@ -52,6 +70,13 @@ Get Template
 Setup_suite
     [Documentation]    TODO: Write all steps need prepare before testing here
     Log    Start testing for Get Template
+    Log    Delete Working Dir from previous test
+    Delete Dir    ${GET_working_dir}
+    Log    Delete Workspace from last test
+    Delete Workspace    ${GET_workspace}
+    Log    Finish remove data from previous test. Preparing test data...
+    Create Dir    ${GET_working_dir}
+    Create Workspace    ${GET_working_dir}    ${GET_workspace}
 
 Teardown_suite
     [Documentation]    TODO: Write all steps for cleanup after testing here
