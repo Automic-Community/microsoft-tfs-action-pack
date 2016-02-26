@@ -27,6 +27,7 @@ Init Agent
     Run Keyword If    '${ENV}' == 'VVNTFS04' and '${APP}' == 'TFS'    Init VVNTFS04 Agent to Test TFS
     Run Keyword If    '${ENV}' == 'VVNTFS03' and '${APP}' == 'TFS'    Init VVNTFS03 Agent to Test TFS
     Run Keyword If    '${ENV}' == 'VVNATSATTFS01' and '${APP}' == 'TFS'    Init VVNATSATTFS01 Agent to Test TFS
+    Set Global Variable    ${_PREFIX}    FIBO_${AGENT}
 
 Init Win Agent
     [Documentation]    TODO: Write agent used to test description here
