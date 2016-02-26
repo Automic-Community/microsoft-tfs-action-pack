@@ -18,9 +18,9 @@ ${CHECKIN_branch}    ${PREFIX}_CHECKIN_TEST    #branch for testing CHECKIN actio
 01_Success Checkin    [Setup]    Add File Before Checkin    ${PREFIX}_CHECKIN_01.txt
                       OK         ${_TFS_UTIL_PATH}          ${CHECKIN_working_dir}      Administrator    ${_TFS_BASE_ITEM}${/}${CHECKIN_branch}    Test checkin    No          AT Test    Yes          0              ${ENDED_OK}      Checking in add
 
-02_Fail Wrong Utility Path
-                      [Setup]    Add File Before Checkin    ${PREFIX}_CHECKIN_02.txt
-                      NOK        wrong                      ${CHECKIN_working_dir}      Administrator    ${_TFS_BASE_ITEM}${/}${CHECKIN_branch}    Test checkin    No          AT Test    Yes          0              ${ENDED_NOK}     ERROR[TF Utility Path]
+02_Fail Checkin No Change
+                      [Setup]    Add File Before Checkin    ${PREFIX}_CHECKIN_06.txt
+                      NOK        ${_TFS_UTIL_PATH}          ${CHECKIN_working_dir}      Administrator    ${_TFS_BASE_ITEM}${/}${CHECKIN_branch}    Test checkin    No          AT Test    Yes          0              ${ENDED_NOK}     No files checked in
 
 03_Fail Wrong Working Dir Path
                       [Setup]    Add File Before Checkin    ${PREFIX}_CHECKIN_03.txt
@@ -37,6 +37,10 @@ ${CHECKIN_branch}    ${PREFIX}_CHECKIN_TEST    #branch for testing CHECKIN actio
 06_Fail Checkin No Change
                       [Setup]    Add File Before Checkin    ${PREFIX}_CHECKIN_06.txt
                       NOK        ${_TFS_UTIL_PATH}          ${CHECKIN_working_dir}      Administrator    ${_TFS_BASE_ITEM}${/}${CHECKIN_branch}    Test checkin    No          AT Test    Yes          0              ${ENDED_NOK}     No files checked in
+
+06_Fail Wrong Utility Path
+                      [Setup]    Add File Before Checkin    ${PREFIX}_CHECKIN_02.txt
+                      NOK        wrong                      ${CHECKIN_working_dir}      Administrator    ${_TFS_BASE_ITEM}${/}${CHECKIN_branch}    Test checkin    No          AT Test    Yes          0              ${ENDED_NOK}     ERROR[TF Utility Path]
 
 *** Keywords ***
 Checkin Template
