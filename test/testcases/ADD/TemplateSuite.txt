@@ -14,18 +14,18 @@ ${ADD_working_dir}    ${_WORKING_DIR}${/}ADD    # Working dir for testing ADD ac
 ${ADD_workspace}    ${PREFIX}_ADD_WS    #workspace for testing ADD action
 ${ADD_branch}     ${PREFIX}_ADD_TEST    #branch for testing ADD action
 
-*** Test Cases ***    OK_NOK     TF Utility Path      Working Dir                                                                         Path                                                        Recursive    Lock    RETURN CODE    RETURN STATUS    MESSAGE
+*** Test Cases ***    OK_NOK     TF Utility Path      Working Dir                                                                         Path                                                                                Recursive    Lock    RETURN CODE    RETURN STATUS    MESSAGE
 01_Success Add        [Setup]    Create File          ${ADD_working_dir}${/}${_TFS_BASE_ITEM}${/}${ADD_branch}${/}${PREFIX}_ADD_01.txt
-                      OK         ${_TFS_UTIL_PATH}    ${ADD_working_dir}                                                                  ${ADD_working_dir}${/}${_TFS_BASE_ITEM}${/}${ADD_branch}    Yes          NONE    0              ${ENDED_OK}      Start adding files & folders to TFS
+                      OK         ${_TFS_UTIL_PATH}    ${ADD_working_dir}                                                                  ${ADD_working_dir}${/}${_TFS_BASE_ITEM}${/}${ADD_branch}${/}${PREFIX}_ADD_01.txt    Yes          NONE    0              ${ENDED_OK}      Start adding files & folders to TFS
 
 02_Fail Add Using wrong utility path
-                      NOK        wrong                ${ADD_working_dir}                                                                  ${ADD_working_dir}${/}${_TFS_BASE_ITEM}${/}${ADD_branch}    Yes          NONE    0              ${ENDED_NOK}     ERROR[TF Utility Path]
+                      NOK        wrong                ${ADD_working_dir}                                                                  ${ADD_working_dir}${/}${_TFS_BASE_ITEM}${/}${ADD_branch}                            Yes          NONE    0              ${ENDED_NOK}     ERROR[TF Utility Path]
 
 03_Fail Add Using wrong Working Dir path
-                      NOK        ${_TFS_UTIL_PATH}    wrong                                                                               ${ADD_working_dir}${/}${_TFS_BASE_ITEM}${/}${ADD_branch}    Yes          NONE    0              ${ENDED_NOK}     ERROR[Working Directory]
+                      NOK        ${_TFS_UTIL_PATH}    wrong                                                                               ${ADD_working_dir}${/}${_TFS_BASE_ITEM}${/}${ADD_branch}                            Yes          NONE    0              ${ENDED_NOK}     ERROR[Working Directory]
 
 04_Fail Add Using wrong add path
-                      NOK        ${_TFS_UTIL_PATH}    ${ADD_working_dir}                                                                  wrong\\xml                                                  Yes          NONE    0              ${ENDED_NOK}     Could not find a part of the path
+                      NOK        ${_TFS_UTIL_PATH}    ${ADD_working_dir}                                                                  wrong\\xml                                                                          Yes          NONE    0              ${ENDED_NOK}     Could not find a part of the path
 
 *** Keywords ***
 Add Template
