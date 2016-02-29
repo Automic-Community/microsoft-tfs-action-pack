@@ -69,7 +69,8 @@ Setup_suite
     [Documentation]    TODO: Write all steps need prepare before testing here
     Log    Start testing for Checkin Template
     Log    Delete Branch from last test
-    Delete Branch    ${CHECKIN_working_dir}    ${PREFIX}_CHECKIN_*
+    Get Source    ${CHECKIN_working_dir}    ${_TFS_BASE_ITEM}\\${CHECKIN_branch}    T
+    Delete Branch    ${CHECKIN_working_dir}    ${_TFS_BASE_ITEM}\\${CHECKIN_branch}
     Log    Delete Workspace from last test
     Delete Workspace    ${CHECKIN_workspace}
     Log    Delete Working Dir from previous test
