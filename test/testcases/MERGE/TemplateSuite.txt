@@ -18,7 +18,7 @@ ${MERGE_branch_target}    MyProject-branch
 *** Test Cases ***    OK_NOK     TF Utility Path                       Working Dir                   Version                  Source                      Destination                         Recursive    Lock    Force    Discard    Baseless    Candidate    RETURN CODE    RETURN STATUS    MESSAGE
 01_Success Merge 2 branches in same versions
                       [Setup]    Mapping Working Dir with Workspace    ${MERGE_working_dir}${/}01    ${MERGE_workspace}_01
-                      OK         ${_TFS_UTIL_PATH}                     ${MERGE_working_dir}${/}01    ${EMPTY}                 Projects\\MyProject         Projects\\${MERGE_branch_target}    Yes          NONE    No       No         No          No           0              ${ENDED_OK}      There are no changes to merge
+                      OK         ${_TFS_UTIL_PATH}                     ${MERGE_working_dir}${/}01    T                        Projects\\MyProject         Projects\\${MERGE_branch_target}    Yes          NONE    No       No         No          No           0              ${ENDED_OK}      There are no changes to merge
 
 02_Fail Merge Wrong utility path
                       [Setup]    Mapping Working Dir with Workspace    ${MERGE_working_dir}${/}02    ${MERGE_workspace}_02
