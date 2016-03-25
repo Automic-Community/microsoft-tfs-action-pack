@@ -22,7 +22,7 @@ ${CHECKIN_branch}    ${PREFIX}_CHECKIN_TEST    #branch for testing CHECKIN actio
                       NOK           ${_TFS_UTIL_PATH}          ${CHECKIN_working_dir}      Administrator                             ${_TFS_BASE_ITEM}${/}${CHECKIN_branch}    Test checkin    No          AT Test    Yes          0              ${ENDED_NOK}     No files checked in
 
 03_Fail Wrong Working Dir Path
-                      [Setup]       Add File Before Checkin    ${PREFIX}_CHECKIN_03.txt
+                      #[Setup]      Add File Before Checkin    ${PREFIX}_CHECKIN_03.txt
                       NOK           ${_TFS_UTIL_PATH}          C:\\Projectswrong           Administrator                             ${_TFS_BASE_ITEM}${/}${CHECKIN_branch}    Test checkin    No          AT Test    Yes          0              ${ENDED_NOK}     ERROR[Working Directory]
 
 04_Fail Wrong Author
