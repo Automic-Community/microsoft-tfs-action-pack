@@ -14,28 +14,29 @@ ${CHECKIN_working_dir}    ${_WORKING_DIR}${/}CHECKIN    # Working dir for testin
 ${CHECKIN_workspace}    ${PREFIX}_CHECKIN_WS    #workspace for testing CHECKIN action
 ${CHECKIN_branch}    ${PREFIX}_CHECKIN_TEST    #branch for testing CHECKIN action
 
-*** Test Cases ***    OK_NOK     TF Utility Path            Working Dir                 Author           File                                      Comment         Override    Reason     Recursive    RETURN CODE    RETURN STATUS    MESSAGE
-01_Success Checkin    [Setup]    Add File Before Checkin    ${PREFIX}_CHECKIN_01.txt
-                      OK         ${_TFS_UTIL_PATH}          ${CHECKIN_working_dir}      Administrator    ${_TFS_BASE_ITEM}${/}${CHECKIN_branch}    Test checkin    No          AT Test    Yes          0              ${ENDED_OK}      Checking in add
+*** Test Cases ***    OK_NOK        TF Utility Path            Working Dir                 Author                                    File                                      Comment         Override    Reason     Recursive    RETURN CODE    RETURN STATUS    MESSAGE
+01_Success Checkin    [Setup]       Add File Before Checkin    ${PREFIX}_CHECKIN_01.txt
+                      OK            ${_TFS_UTIL_PATH}          ${CHECKIN_working_dir}      Administrator                             ${_TFS_BASE_ITEM}${/}${CHECKIN_branch}    Test checkin    No          AT Test    Yes          0              ${ENDED_OK}      Checking in add
 
 02_Fail Checkin No Change
-                      NOK        ${_TFS_UTIL_PATH}          ${CHECKIN_working_dir}      Administrator    ${_TFS_BASE_ITEM}${/}${CHECKIN_branch}    Test checkin    No          AT Test    Yes          0              ${ENDED_NOK}     No files checked in
+                      NOK           ${_TFS_UTIL_PATH}          ${CHECKIN_working_dir}      Administrator                             ${_TFS_BASE_ITEM}${/}${CHECKIN_branch}    Test checkin    No          AT Test    Yes          0              ${ENDED_NOK}     No files checked in
 
 03_Fail Wrong Working Dir Path
-                      [Setup]    Add File Before Checkin    ${PREFIX}_CHECKIN_03.txt
-                      NOK        ${_TFS_UTIL_PATH}          C:\\Projectswrong           Administrator    ${_TFS_BASE_ITEM}${/}${CHECKIN_branch}    Test checkin    No          AT Test    Yes          0              ${ENDED_NOK}     ERROR[Working Directory]
+                      [Setup]       Add File Before Checkin    ${PREFIX}_CHECKIN_03.txt
+                      NOK           ${_TFS_UTIL_PATH}          C:\\Projectswrong           Administrator                             ${_TFS_BASE_ITEM}${/}${CHECKIN_branch}    Test checkin    No          AT Test    Yes          0              ${ENDED_NOK}     ERROR[Working Directory]
 
 04_Fail Wrong Author
-                      [Setup]    Add File Before Checkin    ${PREFIX}_CHECKIN_04.txt
-                      NOK        ${_TFS_UTIL_PATH}          ${CHECKIN_working_dir}      wrong            ${_TFS_BASE_ITEM}${/}${CHECKIN_branch}    Test checkin    No          AT Test    Yes          0              ${ENDED_NOK}     ${EMPTY}
+                      [Setup]       Add File Before Checkin    ${PREFIX}_CHECKIN_04.txt
+                      NOK           ${_TFS_UTIL_PATH}          ${CHECKIN_working_dir}      wrong                                     ${_TFS_BASE_ITEM}${/}${CHECKIN_branch}    Test checkin    No          AT Test    Yes          0              ${ENDED_NOK}     ${EMPTY}
 
 05_Fail Checkin Recursive No
-                      [Setup]    Add File Before Checkin    ${PREFIX}_CHECKIN_05.txt
-                      NOK        ${_TFS_UTIL_PATH}          ${CHECKIN_working_dir}      Administrator    ${_TFS_BASE_ITEM}${/}${CHECKIN_branch}    Test checkin    No          AT Test    No           0              ${ENDED_NOK}     ${EMPTY}
+                      [Setup]       Add File Before Checkin    ${PREFIX}_CHECKIN_05.txt
+                      NOK           ${_TFS_UTIL_PATH}          ${CHECKIN_working_dir}      Administrator                             ${_TFS_BASE_ITEM}${/}${CHECKIN_branch}    Test checkin    No          AT Test    No           0              ${ENDED_NOK}     ${EMPTY}
+                      [Teardown]    Checkin Changes            ${CHECKIN_working_dir}      ${_TFS_BASE_ITEM}${/}${CHECKIN_branch}    Test checkin
 
 06_Fail Wrong Utility Path
-                      [Setup]    Add File Before Checkin    ${PREFIX}_CHECKIN_02.txt
-                      NOK        wrong                      ${CHECKIN_working_dir}      Administrator    ${_TFS_BASE_ITEM}${/}${CHECKIN_branch}    Test checkin    No          AT Test    Yes          0              ${ENDED_NOK}     ERROR[TF Utility Path]
+                      [Setup]       Add File Before Checkin    ${PREFIX}_CHECKIN_02.txt
+                      NOK           wrong                      ${CHECKIN_working_dir}      Administrator                             ${_TFS_BASE_ITEM}${/}${CHECKIN_branch}    Test checkin    No          AT Test    Yes          0              ${ENDED_NOK}     ERROR[TF Utility Path]
 
 *** Keywords ***
 Checkin Template
