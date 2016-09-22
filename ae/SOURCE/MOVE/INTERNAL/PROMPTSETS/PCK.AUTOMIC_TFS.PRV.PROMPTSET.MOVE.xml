@@ -124,8 +124,8 @@
          </properties>
       </text><combo alt="1" dynamic="0" enabled="1" fill="b" filter="0" focus="0" id="UC4RB_TFS_LOCKs.00" nl="1" quotes="" strict="1" text="Lock" tooltip="Include this option to prevent other users from checking in or checking out the specified items." vtype="i"><command request="_internal" target="_view" targetaction="setAttribute" targetparam="promptname|@id"/><command owner="_self" owneraction="setsource" ownerparam="src|_dialog@src"/><command owner="_promptsetcontainer" owneraction="getData" request="getpromptcombolist" target="_self" targetaction="setlist" wait="0"/>
          
-         
-         
+
+
          <properties>
             <entry listparam="C" name="reference" reftype="STATIC">PCK.AUTOMIC_TFS.PRV.VARA.LOCK</entry>
             <entry name="text">Lock</entry>
