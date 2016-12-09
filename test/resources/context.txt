@@ -26,7 +26,7 @@ Init Agent
     Run Keyword If    '${ENV}' == 'UNIX'    Init Unix Agent
     Run Keyword If    '${ENV}' == 'VVNTFS04' and '${APP}' == 'TFS'    Init VVNTFS04 Agent to Test TFS
     Run Keyword If    '${ENV}' == 'VVNTFS03' and '${APP}' == 'TFS'    Init VVNTFS03 Agent to Test TFS
-    Run Keyword If    '${ENV}' == 'VVNATSATTFS01' and '${APP}' == 'TFS'    Init VVNATSATTFS01 Agent to Test TFS
+    Run Keyword If    '${ENV}' == 'VVNSATTFS01' and '${APP}' == 'TFS'    Init VVNSATTFS01 Agent to Test TFS
     Set Global Variable    ${_PREFIX}    FIBO_${AGENT}
 
 Init Win Agent
@@ -71,13 +71,13 @@ Init VVNTFS03 Agent to Test TFS
     Set Global Variable    ${_TFS_UTIL_PATH}    ${VVNTFS03_TFS_UTILITY_PATH}
     Set Global Variable    ${_TFS_SERVER}    ${VVNTFS03_TFS_SERVER}
 
-Init VVNATSATTFS01 Agent to Test TFS
+Init VVNSATTFS01 Agent to Test TFS
     Set Global Variable    ${/}    \\
     Set Global Variable    ${_OS}    WIN
-    Set Global Variable    ${_AGENT}    ${VVNATSATTFS01_AGENT}
+    Set Global Variable    ${_AGENT}    ${VVNSATTFS01_AGENT}
     Set Global Variable    ${_LOGIN}    ${LOGIN.ALL}
-    Set Global Variable    ${_WORKING_DIR}    ${VVNATSATTFS01_WORKING_DIR}
-    Set Global Variable    ${_DEFAULT_OUTPUT_DIR}    ${VVNATSATTFS01_DEFAULT_OUTPUT_DIR}
-    Set Global Variable    ${_DEFAULT_SOURCE_DIR}    ${VVNATSATTFS01_DEFAULT_SOURCE_DIR}
-    Set Global Variable    ${_TFS_UTIL_PATH}    ${VVNATSATTFS01_TFS_UTILITY_PATH}
-    Set Global Variable    ${_TFS_SERVER}    ${VVNATSATTFS01_TFS_SERVER}
+    Set Global Variable    ${_WORKING_DIR}    ${VVNSATTFS01_WORKING_DIR}
+    Set Global Variable    ${_DEFAULT_OUTPUT_DIR}    ${VVNSATTFS01_DEFAULT_OUTPUT_DIR}
+    Set Global Variable    ${_DEFAULT_SOURCE_DIR}    ${VVNSATTFS01_DEFAULT_SOURCE_DIR}
+    Set Global Variable    ${_TFS_UTIL_PATH}    ${VVNSATTFS01_TFS_UTILITY_PATH}
+    Set Global Variable    ${_TFS_SERVER}    ${VVNSATTFS01_TFS_SERVER}

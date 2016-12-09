@@ -13,10 +13,10 @@ ${VVNTFS03_DEFAULT_SOURCE_DIR}    D:\\AT_sources
 ${VVNTFS03_TFS_UTILITY_PATH}    C:\\Program Files (x86)\\Microsoft Visual Studio 10.0\\Common7\\IDE\\tf.exe
 ${VVNTFS03_TFS_SERVER}    http://vvnsattfs01:8080/tfs/DEV
 ${VVNTFS03_WORKING_DIR}    C:\\TFS_AT
-###-------------------------VVNATSATTFS01--------------------###
-${VVNATSATTFS01_AGENT}    VVNATSATTFS01
-${VVNATSATTFS01_DEFAULT_OUTPUT_DIR}    D:\\AT_output
-${VVNATSATTFS01_DEFAULT_SOURCE_DIR}    D:\\AT_sources
-${VVNATSATTFS01_TFS_UTILITY_PATH}    C:\\Program Files (x86)\\Microsoft Visual Studio 11.0\\Common7\\IDE\\tf.exe
-${VVNATSATTFS01_TFS_SERVER}    http://vvnsattfs01:8080/tfs/DEV
-${VVNATSATTFS01_WORKING_DIR}    C:\\TFS_AT
+###-------------------------VVNSATTFS01--------------------###
+${VVNSATTFS01_AGENT}    VVNSATTFS01
+${VVNSATTFS01_DEFAULT_OUTPUT_DIR}    D:\\AT_output
+${VVNSATTFS01_DEFAULT_SOURCE_DIR}    D:\\AT_sources
+${VVNSATTFS01_TFS_UTILITY_PATH}    C:\\Program Files (x86)\\Microsoft Visual Studio 11.0\\Common7\\IDE\\tf.exe
+${VVNSATTFS01_TFS_SERVER}    http://vvnsattfs01:8080/tfs/DEV
+${VVNSATTFS01_WORKING_DIR}    C:\\TFS_AT
