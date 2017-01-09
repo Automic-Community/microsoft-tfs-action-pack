@@ -1,6 +1,6 @@
 *** Settings ***
-Force Tags        IMPORT    EXPORT    OTHER
-Default Tags
+Force Tags        PCK.AUTOMIC_TFS
+Default Tags      ALL    SMOKE_TEST
 Resource          resources/context.txt
 
 *** Test Cases ***
