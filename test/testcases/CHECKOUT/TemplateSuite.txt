@@ -12,7 +12,7 @@ Resource          prt_keywords.txt
 *** Variables ***
 ${CHECKOUT_working_dir}    ${_WORKING_DIR}${/}CHECKOUT    # Working dir for testing CHECKOUT action
 ${CHECKOUT_workspace}    ${PREFIX}_CHECKOUT_WS    #workspace for testing CHECKOUT action
-${CHECKOUT_branch}    ${PREFIX}_CHECKOUT_TEST    #branch for testing CHECKOUT action
+${CHECKOUT_branch}    ${PREFIX}_CHECKOUT_TEST_1    #branch for testing CHECKOUT action
 
 *** Test Cases ***    OK_NOK    TF Utility Path      Working Dir                Item                                     Recursive    Lock    RETURN CODE    RETURN STATUS    MESSAGE
 01_Success Checkout
@@ -28,7 +28,7 @@ ${CHECKOUT_branch}    ${PREFIX}_CHECKOUT_TEST    #branch for testing CHECKOUT ac
                       NOK       ${_TFS_UTIL_PATH}    ${CHECKOUT_working_dir}    wrong                                    Yes          NONE    0              ${ENDED_NOK}     No matching items found in
 
 05_Fail Checkout Recursive No
-                      NOK       ${_TFS_UTIL_PATH}    ${CHECKOUT_working_dir}    ${_TFS_BASE_ITEM}\\${CHECKOUT_branch}    No           NONE    0              ${ENDED_NOK}     TF14040: The folder $/Projects/${PREFIX}_CHECKOUT_TEST may not be checked out.
+                      NOK       ${_TFS_UTIL_PATH}    ${CHECKOUT_working_dir}    ${_TFS_BASE_ITEM}\\${CHECKOUT_branch}    No           NONE    0              ${ENDED_NOK}     TF14040: The folder $/Projects/${CHECKOUT_branch} may not be checked out.
 
 *** Keywords ***
 Checkout Template
