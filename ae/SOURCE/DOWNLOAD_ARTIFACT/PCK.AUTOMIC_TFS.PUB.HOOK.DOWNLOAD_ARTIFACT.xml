@@ -63,7 +63,7 @@
 <UC4RB_TFS_RECURSIVEs.00 ReadFromTable="OPUD" altview="1" haslist="0" msginsert="" msgnr="" promptname="UC4RB_TFS_RECURSIVE#" promptsetname="PCK.AUTOMIC_TFS.PRV.PROMPTSET.DOWNLOAD_ARTIFACT">EXT:@artifact/custom/recursive</UC4RB_TFS_RECURSIVEs.00>
 <UC4RB_TFS_UTIL_PATHs.00 ReadFromTable="OPUD" altview="1" haslist="0" msginsert="" msgnr="" promptname="UC4RB_TFS_UTIL_PATH#" promptsetname="PCK.AUTOMIC_TFS.PRV.PROMPTSET.DOWNLOAD_ARTIFACT">EXT:@artifact_source/custom/util_path</UC4RB_TFS_UTIL_PATHs.00>
 <UC4RB_TFS_VERSIONs.00 ReadFromTable="OPUD" altview="1" haslist="0" msginsert="" msgnr="" promptname="UC4RB_TFS_VERSION#" promptsetname="PCK.AUTOMIC_TFS.PRV.PROMPTSET.DOWNLOAD_ARTIFACT">EXT:@artifact/custom/version</UC4RB_TFS_VERSIONs.00>
-<UC4RB_TFS_WORKING_DIRs.00 ReadFromTable="OPUD" altview="1" haslist="0" msginsert="" msgnr="" promptname="UC4RB_TFS_WORKING_DIR#" promptsetname="PCK.AUTOMIC_TFS.PRV.PROMPTSET.DOWNLOAD_ARTIFACT">EXT:@artifact_source/custom/target_files_dirs</UC4RB_TFS_WORKING_DIRs.00>
+<UC4RB_TFS_WORKING_DIRs.00 ReadFromTable="OPUD" altview="1" haslist="0" msginsert="" msgnr="" promptname="UC4RB_TFS_WORKING_DIR#" promptsetname="PCK.AUTOMIC_TFS.PRV.PROMPTSET.DOWNLOAD_ARTIFACT">EXT:@artifact_source/custom/working_dir</UC4RB_TFS_WORKING_DIRs.00>
 </PRPTBOX>
 </PROMPTSET>
 </node>
@@ -85,7 +85,7 @@
 </PostCon>
 </postconditions>
 </task>
-<task Alias="" BranchType="0" Col="2" Lnr="2" OType="JOBS" Object="PCK.AUTOMIC_TFS.PRV.JOB.DOWNLOAD_ARTIFACT@WINDOWS" ParentAlias="" ParentObject="" Row="1" Text2="">
+<task Alias="" BranchType="0" Col="2" Lnr="2" OType="JOBP" Object="PCK.AUTOMIC_TFS.PUB.ACTION.GET" ParentAlias="" ParentObject="" Row="1" Text2="">
 <checkpoint RollbackFlag="1" RunPerPatch="0" RunPerTarget="0" TcpADays="0" TcpATime="00:00" TcpATimeTZ="" TcpExecute="" TcpOn="0" promptatgen="0" showprompt="0"/>
 <after ActFlg="1" AtimOn="0" ErlstStDays="0" ErlstStTime="00:00" ErlstStTimeTZ="" HoldFlg="0"/>
 <when ChkWhenExec="0" LtstEnd="0" LtstEndDays="0" LtstEndTime="00:00" LtstSt="0" LtstStDays="0" LtstStTime="00:00" LtstTimeTZ="" WCTypeAND="1" WCTypeOR="0" WElseA="0" WElseH="1" WElseS="0" WElseX="0" WhenExecute="" WtimOn="0"/>
@@ -115,6 +115,28 @@
 </node>
 <node content="1" id="PRPTS" name="PromptSets" parent="" pref="1" type="PROMPTSET"/>
 <node content="0" id="PPRPTS" name="Parent PromptSets" parent="" type="PPROMPTSET"/>
+<node content="1" id="PCK.AUTOMIC_TFS.PRV.PROMPTSET.GET" name="PCK.AUTOMIC_TFS.PRV.PROMPTSET.GET" parent="PRPTS" type="PROMPTSET">
+<PROMPTSET name="PCK.AUTOMIC_TFS.PRV.PROMPTSET.GET">
+<PRPTBOX promptset="PCK.AUTOMIC_TFS.PRV.PROMPTSET.GET">
+<UC4RB_TFS_ALLs.00 ReadFromTable="JPPV" altview="1" haslist="0" msginsert="" msgnr="" promptname="UC4RB_TFS_ALL#" promptsetname="PCK.AUTOMIC_TFS.PRV.PROMPTSET.GET">EXT:@artifact/custom/all</UC4RB_TFS_ALLs.00>
+<UC4RB_TFS_FORCEs.00 ReadFromTable="JPPV" altview="1" haslist="0" msginsert="" msgnr="" promptname="UC4RB_TFS_FORCE#" promptsetname="PCK.AUTOMIC_TFS.PRV.PROMPTSET.GET">EXT:@artifact/custom/force</UC4RB_TFS_FORCEs.00>
+<UC4RB_TFS_ITEMs.00 ReadFromTable="JPPV" altview="1" haslist="0" msginsert="" msgnr="" promptname="UC4RB_TFS_ITEM#" promptsetname="PCK.AUTOMIC_TFS.PRV.PROMPTSET.GET">EXT:@artifact/custom/item</UC4RB_TFS_ITEMs.00>
+<UC4RB_TFS_OVERWRITEs.00 ReadFromTable="JPPV" altview="1" haslist="0" msginsert="" msgnr="" promptname="UC4RB_TFS_OVERWRITE#" promptsetname="PCK.AUTOMIC_TFS.PRV.PROMPTSET.GET">EXT:@artifact/custom/overwrite</UC4RB_TFS_OVERWRITEs.00>
+<UC4RB_TFS_RECURSIVEs.00 ReadFromTable="JPPV" altview="1" haslist="0" msginsert="" msgnr="" promptname="UC4RB_TFS_RECURSIVE#" promptsetname="PCK.AUTOMIC_TFS.PRV.PROMPTSET.GET">EXT:@artifact/custom/recursive</UC4RB_TFS_RECURSIVEs.00>
+<UC4RB_TFS_UTIL_PATHs.00 ReadFromTable="JPPV" altview="1" haslist="0" msginsert="" msgnr="" promptname="UC4RB_TFS_UTIL_PATH#" promptsetname="PCK.AUTOMIC_TFS.PRV.PROMPTSET.GET">EXT:@artifact_source/custom/util_path</UC4RB_TFS_UTIL_PATHs.00>
+<UC4RB_TFS_VERSIONs.00 ReadFromTable="JPPV" altview="1" haslist="0" msginsert="" msgnr="" promptname="UC4RB_TFS_VERSION#" promptsetname="PCK.AUTOMIC_TFS.PRV.PROMPTSET.GET">EXT:@artifact/custom/version</UC4RB_TFS_VERSIONs.00>
+<UC4RB_TFS_WORKING_DIRs.00 ReadFromTable="JPPV" altview="1" haslist="0" msginsert="" msgnr="" promptname="UC4RB_TFS_WORKING_DIR#" promptsetname="PCK.AUTOMIC_TFS.PRV.PROMPTSET.GET">EXT:@artifact_source/custom/working_dir</UC4RB_TFS_WORKING_DIRs.00>
+</PRPTBOX>
+</PROMPTSET>
+</node>
+<node content="1" id="PCK.ITPA_SHARED.PRV.PROMPTSET.OVERWRITE_AGENT" name="PCK.ITPA_SHARED.PRV.PROMPTSET.OVERWRITE_AGENT" parent="PRPTS" type="PROMPTSET">
+<PROMPTSET name="PCK.ITPA_SHARED.PRV.PROMPTSET.OVERWRITE_AGENT">
+<PRPTBOX promptset="PCK.ITPA_SHARED.PRV.PROMPTSET.OVERWRITE_AGENT">
+<AGENTs.00 ReadFromTable="JPPV" altview="1" haslist="0" msginsert="" msgnr="" promptname="AGENT#" promptsetname="PCK.ITPA_SHARED.PRV.PROMPTSET.OVERWRITE_AGENT">&amp;AGENT#</AGENTs.00>
+<LOGINs.00 ReadFromTable="JPPV" altview="1" haslist="0" msginsert="" msgnr="" promptname="LOGIN#" promptsetname="PCK.ITPA_SHARED.PRV.PROMPTSET.OVERWRITE_AGENT">&amp;LOGIN#</LOGINs.00>
+</PRPTBOX>
+</PROMPTSET>
+</node>
 <node content="1" id="PCK.AUTOMIC_TFS.PRV.PROMPTSET.DOWNLOAD_ARTIFACT" name="PCK.AUTOMIC_TFS.PRV.PROMPTSET.DOWNLOAD_ARTIFACT" parent="PPRPTS" type="PPROMPTSET">
 <PROMPTSET name="PCK.AUTOMIC_TFS.PRV.PROMPTSET.DOWNLOAD_ARTIFACT">
 <PRPTBOX promptset="PCK.AUTOMIC_TFS.PRV.PROMPTSET.DOWNLOAD_ARTIFACT">
@@ -125,7 +147,7 @@
 <UC4RB_TFS_RECURSIVEs.00 ReadFromTable="OPUD" altview="1" haslist="0" msginsert="" msgnr="" promptname="UC4RB_TFS_RECURSIVE#" promptsetname="PCK.AUTOMIC_TFS.PRV.PROMPTSET.DOWNLOAD_ARTIFACT">EXT:@artifact/custom/recursive</UC4RB_TFS_RECURSIVEs.00>
 <UC4RB_TFS_UTIL_PATHs.00 ReadFromTable="OPUD" altview="1" haslist="0" msginsert="" msgnr="" promptname="UC4RB_TFS_UTIL_PATH#" promptsetname="PCK.AUTOMIC_TFS.PRV.PROMPTSET.DOWNLOAD_ARTIFACT">EXT:@artifact_source/custom/util_path</UC4RB_TFS_UTIL_PATHs.00>
 <UC4RB_TFS_VERSIONs.00 ReadFromTable="OPUD" altview="1" haslist="0" msginsert="" msgnr="" promptname="UC4RB_TFS_VERSION#" promptsetname="PCK.AUTOMIC_TFS.PRV.PROMPTSET.DOWNLOAD_ARTIFACT">EXT:@artifact/custom/version</UC4RB_TFS_VERSIONs.00>
-<UC4RB_TFS_WORKING_DIRs.00 ReadFromTable="OPUD" altview="1" haslist="0" msginsert="" msgnr="" promptname="UC4RB_TFS_WORKING_DIR#" promptsetname="PCK.AUTOMIC_TFS.PRV.PROMPTSET.DOWNLOAD_ARTIFACT">EXT:@artifact_source/custom/target_files_dirs</UC4RB_TFS_WORKING_DIRs.00>
+<UC4RB_TFS_WORKING_DIRs.00 ReadFromTable="OPUD" altview="1" haslist="0" msginsert="" msgnr="" promptname="UC4RB_TFS_WORKING_DIR#" promptsetname="PCK.AUTOMIC_TFS.PRV.PROMPTSET.DOWNLOAD_ARTIFACT">EXT:@artifact_source/custom/working_dir</UC4RB_TFS_WORKING_DIRs.00>
 </PRPTBOX>
 </PROMPTSET>
 </node>
@@ -187,7 +209,7 @@
 <UC4RB_COPY_INCLUDESs.00 ReadFromTable="JPPV" altview="1" haslist="0" msginsert="" msgnr="" promptname="UC4RB_COPY_INCLUDES#" promptsetname="PCK.AUTOMIC_BOND.PRV.PROMPTSET.GET_ARTIFACT.COPY">EXT:@artifact/custom/included_files</UC4RB_COPY_INCLUDESs.00>
 <UC4RB_COPY_RENAME_PATTERNs.00 ReadFromTable="JPPV" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_COPY_RENAME_PATTERN#" promptsetname="PCK.AUTOMIC_BOND.PRV.PROMPTSET.GET_ARTIFACT.COPY"/>
 <UC4RB_COPY_RENAME_REPLACEMENTs.00 ReadFromTable="JPPV" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_COPY_RENAME_REPLACEMENT#" promptsetname="PCK.AUTOMIC_BOND.PRV.PROMPTSET.GET_ARTIFACT.COPY"/>
-<UC4RB_COPY_SOURCE_DIRs.00 ReadFromTable="JPPV" altview="1" haslist="0" msginsert="" msgnr="" promptname="UC4RB_COPY_SOURCE_DIR#" promptsetname="PCK.AUTOMIC_BOND.PRV.PROMPTSET.GET_ARTIFACT.COPY">EXT:@artifact_source/custom/target_files_dirs</UC4RB_COPY_SOURCE_DIRs.00>
+<UC4RB_COPY_SOURCE_DIRs.00 ReadFromTable="JPPV" altview="1" haslist="0" msginsert="" msgnr="" promptname="UC4RB_COPY_SOURCE_DIR#" promptsetname="PCK.AUTOMIC_BOND.PRV.PROMPTSET.GET_ARTIFACT.COPY">EXT:@artifact_source/custom/working_dir</UC4RB_COPY_SOURCE_DIRs.00>
 <UC4RB_COPY_TARGET_DIRs.00 ReadFromTable="JPPV" altview="1" haslist="0" msginsert="" msgnr="" promptname="UC4RB_COPY_TARGET_DIR#" promptsetname="PCK.AUTOMIC_BOND.PRV.PROMPTSET.GET_ARTIFACT.COPY">&amp;UC4RB_ARTIFACT_DIR#</UC4RB_COPY_TARGET_DIRs.00>
 </PRPTBOX>
 </PROMPTSET>
@@ -202,7 +224,7 @@
 <UC4RB_TFS_RECURSIVEs.00 ReadFromTable="OPUD" altview="1" haslist="0" msginsert="" msgnr="" promptname="UC4RB_TFS_RECURSIVE#" promptsetname="PCK.AUTOMIC_TFS.PRV.PROMPTSET.DOWNLOAD_ARTIFACT">EXT:@artifact/custom/recursive</UC4RB_TFS_RECURSIVEs.00>
 <UC4RB_TFS_UTIL_PATHs.00 ReadFromTable="OPUD" altview="1" haslist="0" msginsert="" msgnr="" promptname="UC4RB_TFS_UTIL_PATH#" promptsetname="PCK.AUTOMIC_TFS.PRV.PROMPTSET.DOWNLOAD_ARTIFACT">EXT:@artifact_source/custom/util_path</UC4RB_TFS_UTIL_PATHs.00>
 <UC4RB_TFS_VERSIONs.00 ReadFromTable="OPUD" altview="1" haslist="0" msginsert="" msgnr="" promptname="UC4RB_TFS_VERSION#" promptsetname="PCK.AUTOMIC_TFS.PRV.PROMPTSET.DOWNLOAD_ARTIFACT">EXT:@artifact/custom/version</UC4RB_TFS_VERSIONs.00>
-<UC4RB_TFS_WORKING_DIRs.00 ReadFromTable="OPUD" altview="1" haslist="0" msginsert="" msgnr="" promptname="UC4RB_TFS_WORKING_DIR#" promptsetname="PCK.AUTOMIC_TFS.PRV.PROMPTSET.DOWNLOAD_ARTIFACT">EXT:@artifact_source/custom/target_files_dirs</UC4RB_TFS_WORKING_DIRs.00>
+<UC4RB_TFS_WORKING_DIRs.00 ReadFromTable="OPUD" altview="1" haslist="0" msginsert="" msgnr="" promptname="UC4RB_TFS_WORKING_DIR#" promptsetname="PCK.AUTOMIC_TFS.PRV.PROMPTSET.DOWNLOAD_ARTIFACT">EXT:@artifact_source/custom/working_dir</UC4RB_TFS_WORKING_DIRs.00>
 </PRPTBOX>
 </PROMPTSET>
 </node>
@@ -250,7 +272,7 @@
 <UC4RB_TFS_RECURSIVEs.00 ReadFromTable="OPUD" altview="1" haslist="0" msginsert="" msgnr="" promptname="UC4RB_TFS_RECURSIVE#" promptsetname="PCK.AUTOMIC_TFS.PRV.PROMPTSET.DOWNLOAD_ARTIFACT">EXT:@artifact/custom/recursive</UC4RB_TFS_RECURSIVEs.00>
 <UC4RB_TFS_UTIL_PATHs.00 ReadFromTable="OPUD" altview="1" haslist="0" msginsert="" msgnr="" promptname="UC4RB_TFS_UTIL_PATH#" promptsetname="PCK.AUTOMIC_TFS.PRV.PROMPTSET.DOWNLOAD_ARTIFACT">EXT:@artifact_source/custom/util_path</UC4RB_TFS_UTIL_PATHs.00>
 <UC4RB_TFS_VERSIONs.00 ReadFromTable="OPUD" altview="1" haslist="0" msginsert="" msgnr="" promptname="UC4RB_TFS_VERSION#" promptsetname="PCK.AUTOMIC_TFS.PRV.PROMPTSET.DOWNLOAD_ARTIFACT">EXT:@artifact/custom/version</UC4RB_TFS_VERSIONs.00>
-<UC4RB_TFS_WORKING_DIRs.00 ReadFromTable="OPUD" altview="1" haslist="0" msginsert="" msgnr="" promptname="UC4RB_TFS_WORKING_DIR#" promptsetname="PCK.AUTOMIC_TFS.PRV.PROMPTSET.DOWNLOAD_ARTIFACT">EXT:@artifact_source/custom/target_files_dirs</UC4RB_TFS_WORKING_DIRs.00>
+<UC4RB_TFS_WORKING_DIRs.00 ReadFromTable="OPUD" altview="1" haslist="0" msginsert="" msgnr="" promptname="UC4RB_TFS_WORKING_DIR#" promptsetname="PCK.AUTOMIC_TFS.PRV.PROMPTSET.DOWNLOAD_ARTIFACT">EXT:@artifact_source/custom/working_dir</UC4RB_TFS_WORKING_DIRs.00>
 </PRPTBOX>
 </PROMPTSET>
 </node>
@@ -321,7 +343,7 @@
 <PROMPTSET name="PCK.AUTOMIC_TFS.PRV.PROMPTSET.DOWNLOAD_ARTIFACT" ontop="1">
 <PRPTBOX promptset="PCK.AUTOMIC_TFS.PRV.PROMPTSET.DOWNLOAD_ARTIFACT" prptmode="1">
 <UC4RB_TFS_UTIL_PATHs.00 altview="1" haslist="0">EXT:@artifact_source/custom/util_path</UC4RB_TFS_UTIL_PATHs.00>
-<UC4RB_TFS_WORKING_DIRs.00 altview="1" haslist="0">EXT:@artifact_source/custom/target_files_dirs</UC4RB_TFS_WORKING_DIRs.00>
+<UC4RB_TFS_WORKING_DIRs.00 altview="1" haslist="0">EXT:@artifact_source/custom/working_dir</UC4RB_TFS_WORKING_DIRs.00>
 <UC4RB_TFS_ITEMs.00 altview="1" haslist="0">EXT:@artifact/custom/item</UC4RB_TFS_ITEMs.00>
 <UC4RB_TFS_VERSIONs.00 altview="1" haslist="0">EXT:@artifact/custom/version</UC4RB_TFS_VERSIONs.00>
 <UC4RB_TFS_ALLs.00 altview="1" haslist="0">EXT:@artifact/custom/all</UC4RB_TFS_ALLs.00>
