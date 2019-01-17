@@ -18,18 +18,19 @@
   <Artifact>
     <Properties>
       <Group name="artifactInfo" displayName="Artifact Information" expand="true">
-        <Property name="item" displayName="Item" mode="MANDATORY" type="SingleLineText">
-          <Description>Specify Artifact ID. Wildcard (*) is also supported.</Description>
+	    <Property name="included_files" displayName="Included Files" mode="EDITABLE" type="SingleLineText">
+          <Description>Set of comma separated include patterns using ANT matching rule. Example: **/*.war,**/*.zip will get all .war and .zip files recursively</Description>
         </Property>
         <Property name="version" displayName="Version" mode="EDITABLE" type="SingleLineText">
-          <Description>Optional version specification. You can specify a version by:
-						Date/time (D10/20/2005), 
-						Changeset version (C1256),
-						Label (Lmylabel),
-						Latest version (T),
-						Workspace version (Wworkspacename;owner)
+          <Description>Optional version specification.
+You can specify a version by:
+    Date/time (D10/20/2005) 
+    Changeset version (C1256)
+    Label (Lmylabel)
+    Latest version (T)
+    Workspace version (Wworkspacename;owner)
 
-						If no version is provided, Team Foundation Server retrieves the latest server version</Description>
+If no version is provided, Team Foundation Server retrieves the latest server version</Description>
         </Property>
         <Property name="all" displayName="All" mode="EDITABLE" type="SingleChoice">
           <List>Yes#;#No</List>
@@ -46,9 +47,6 @@
         <Property name="recursive" displayName="Recursive" mode="EDITABLE" type="SingleChoice">
           <List>Yes#;#No</List>
           <Defaultvalue>Yes</Defaultvalue>
-        </Property>
-        <Property name="included_files" displayName="Included Files" mode="EDITABLE" type="SingleLineText">
-          <Description>Set of comma separated include patterns using ANT matching rule. Example: **/*.war,**/*.zip will get all .war and .zip files recursively</Description>
         </Property>
         <Property name="excluded_files" displayName="Excluded Files" mode="EDITABLE" type="SingleLineText">
           <Description>Set of comma separated exclude patterns using ANT matching rule. Example: **/*.txt will exclude all .txt files recursively</Description>
