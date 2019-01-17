@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ArtifactSourceType>
+  <Name>TFS</Name>
+  <Properties>
+    <Group name="artifact_source" displayName="Artifact Source">
+      <Property name="protocol" displayName="Protocol" mode="READONLY" type="SingleLineText">
+        <Defaultvalue>TFS</Defaultvalue>
+      </Property>
+      <Property name="util_path" displayName="TF Utility Path" mode="MANDATORY" type="SingleLineText">
+        <Description>Specify the path of TF.exe utility file.</Description>
+      </Property>
+      <Property name="working_dir" displayName="Working Directory" mode="MANDATORY" type="SingleLineText">
+        <Description>Specify the working directory on local.</Description>
+      </Property>
+    </Group>
+  </Properties>
+  <Description>Transfer artifact via TFS</Description>
+  <Artifact>
+    <Properties>
+      <Group name="artifactInfo" displayName="Artifact Information" expand="true">
+	    <Property name="included_files" displayName="Included Files" mode="EDITABLE" type="SingleLineText">
+          <Description>Set of comma separated include patterns using ANT matching rule. Example: **/*.war,**/*.zip will get all .war and .zip files recursively</Description>
+        </Property>
+        <Property name="version" displayName="Version" mode="EDITABLE" type="SingleLineText">
+          <Description>Optional version specification.
+You can specify a version by:
+    Date/time (D10/20/2005) 
+    Changeset version (C1256)
+    Label (Lmylabel)
+    Latest version (T)
+    Workspace version (Wworkspacename;owner)
+
+If no version is provided, Team Foundation Server retrieves the latest server version</Description>
+        </Property>
+        <Property name="all" displayName="All" mode="EDITABLE" type="SingleChoice">
+          <List>Yes#;#No</List>
+          <Defaultvalue>No</Defaultvalue>
+        </Property>
+        <Property name="force" displayName="Force" mode="EDITABLE" type="SingleChoice">
+          <List>Yes#;#No</List>
+          <Defaultvalue>No</Defaultvalue>
+        </Property>
+        <Property name="overwrite" displayName="Overwrite" mode="EDITABLE" type="SingleChoice">
+          <List>Yes#;#No</List>
+          <Defaultvalue>Yes</Defaultvalue>
+        </Property>
+        <Property name="recursive" displayName="Recursive" mode="EDITABLE" type="SingleChoice">
+          <List>Yes#;#No</List>
+          <Defaultvalue>Yes</Defaultvalue>
+        </Property>
+        <Property name="excluded_files" displayName="Excluded Files" mode="EDITABLE" type="SingleLineText">
+          <Description>Set of comma separated exclude patterns using ANT matching rule. Example: **/*.txt will exclude all .txt files recursively</Description>
+          <Defaultvalue>**/$tf/**</Defaultvalue>
+        </Property>
+        <Property name="archive_type" displayName="Archive Type" mode="EDITABLE" type="SingleChoice">
+          <List>zip#;#tar#;#tar.gz</List>
+        </Property>
+      </Group>
+    </Properties>
+  </Artifact>
+</ArtifactSourceType>

@@ -1,2 +1,12 @@
 name: PCK.AUTOMIC_TFS
 source: ae
+
+# binary object resource mapping will be defined here
+binaries:
+  - object: RESOURCES/PCK.AUTOMIC_TFS.PRV.CUSTOM_TYPES
+    timestamp: disabled
+    resources:
+      - name: ARTIFACTSOURCE#TFS
+        type: TEXT
+        path: ara/types/artifact/Artifact_TFS_1.0.0.xml
+        version: 1.0.0
