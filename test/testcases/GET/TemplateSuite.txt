@@ -1,0 +1,98 @@
+*** Settings ***
+Documentation     NOTE:
+...               add note here
+Suite Setup       Setup_suite
+Suite Teardown    Teardown_suite
+Force Tags        GET
+Default Tags     ALL     win
+Test Template     Get Template
+Resource          ../../resources/keywords.txt
+Resource          prt_keywords.txt
+
+*** Variables ***
+${GET_working_dir}    ${_WORKING_DIR}${/}GET    # Working dir for testing GET action
+${GET_workspace}    ${PREFIX}_GET_WS    #workspace for testing GET action
+${GET_branch}     ${PREFIX}_GET_TEST    #branch for testing GET action
+
+*** Test Cases ***    OK_NOK             TF Utility Path                       Working Dir                 Item                            Version                 All    Overwrite    Force    Recursive    RETURN CODE    RETURN STATUS    MESSAGE
+01_Success Get Changeset 85
+                      [Setup]            Mapping Working Dir with Workspace    ${GET_working_dir}${/}01    ${GET_workspace}_01
+                      OK                 ${_TFS_UTIL_PATH}                     ${GET_working_dir}${/}01    ${_TFS_BASE_ITEM}\\MyProject    ${_TFS_BASE_VERSION}    No     Yes          No       Yes          0              ${ENDED_OK}      Getting MyProject
+
+02_Fail Get Wrong utility path
+                      [Setup]            Mapping Working Dir with Workspace    ${GET_working_dir}${/}02    ${GET_workspace}_02
+                      NOK                wrong                                 ${GET_working_dir}${/}02    ${_TFS_BASE_ITEM}\\MyProject    ${EMPTY}                No     Yes          No       Yes          0              ${ENDED_NOK}     ERROR[TF Utility Path]
+
+03_Fail Get Wrong Working Dir path
+                      [Setup]            Mapping Working Dir with Workspace    ${GET_working_dir}${/}03    ${GET_workspace}_03
+                      NOK                ${_TFS_UTIL_PATH}                     C:\\Projectswrong           ${_TFS_BASE_ITEM}\\MyProject    ${EMPTY}                No     Yes          No       Yes          0              ${ENDED_NOK}     ERROR[Working Directory]
+
+04_Fail Get Wrong item
+                      [Documentation]    issue comes from tf.exe
+                      [Tags]             KNOWN_ISSUE
+                      [Setup]            Mapping Working Dir with Workspace    ${GET_working_dir}${/}04    ${GET_workspace}_04
+                      OK                 ${_TFS_UTIL_PATH}                     ${GET_working_dir}${/}04    wrong                           ${EMPTY}                No     Yes          No       Yes          0              ${ENDED_OK}      All files are up to date
+
+05_Fail Get version not exist
+                      [Setup]            Mapping Working Dir with Workspace    ${GET_working_dir}${/}05    ${GET_workspace}_05
+                      NOK                ${_TFS_UTIL_PATH}                     ${GET_working_dir}${/}05    ${_TFS_BASE_ITEM}\\MyProject    No                      No     Yes          No       Yes          0              ${ENDED_NOK}     'N' is not a supported version specification type
+
+06_Success Get Label Version
+                      [Setup]            Mapping Working Dir with Workspace    ${GET_working_dir}${/}06    ${GET_workspace}_06
+                      OK                 ${_TFS_UTIL_PATH}                     ${GET_working_dir}${/}06    ${_TFS_BASE_ITEM}\\MyProject    LAT_POINT               No     Yes          No       Yes          0              ${ENDED_OK}      Getting MyProject
+
+07_Success Get Date Version
+                      [Setup]            Mapping Working Dir with Workspace    ${GET_working_dir}${/}07    ${GET_workspace}_07
+                      OK                 ${_TFS_UTIL_PATH}                     ${GET_working_dir}${/}07    ${_TFS_BASE_ITEM}\\MyProject    D2016-02-25             No     Yes          No       Yes          0              ${ENDED_OK}      Getting MyProject
+
+08_Success Get Blank Version
+                      [Setup]            Mapping Working Dir with Workspace    ${GET_working_dir}${/}08    ${GET_workspace}_08
+                      OK                 ${_TFS_UTIL_PATH}                     ${GET_working_dir}${/}08    ${_TFS_BASE_ITEM}\\MyProject    ${EMPTY}                No     Yes          No       Yes          0              ${ENDED_OK}      Getting MyProject
+
+09_Success Get Latest Version
+                      [Setup]            Mapping Working Dir with Workspace    ${GET_working_dir}${/}09    ${GET_workspace}_09
+                      OK                 ${_TFS_UTIL_PATH}                     ${GET_working_dir}${/}09    ${_TFS_BASE_ITEM}\\MyProject    T                       No     Yes          No       Yes          0              ${ENDED_OK}      Getting MyProject
+
+*** Keywords ***
+Get Template
+    [Arguments]    ${OK_NOK}    ${TFS_UTIL_PATH}    ${TFS_WORKING_DIR}    ${TFS_ITEM}    ${TFS_VERSION}    ${TFS_ALL}
+    ...    ${TFS_OVERWRITE}    ${TFS_FORCE}    ${TFS_RECURSIVE}    ${returnCode}    ${returnStatus}    ${message}
+    [Documentation]    This template is used for test GET with needed arguments
+    Init Action    ${ACTION_GET}
+    Action Set    ${PRT_GET_TFS_UTIL_PATH}    ${TFS_UTIL_PATH}
+    Action Set    ${PRT_GET_TFS_WORKING_DIR}    ${TFS_WORKING_DIR}
+    Action Set    ${PRT_GET_TFS_ITEM}    ${TFS_ITEM}
+    Action Set    ${PRT_GET_TFS_VERSION}    ${TFS_VERSION}
+    Action Set    ${PRT_GET_TFS_ALL}    ${TFS_ALL}
+    Action Set    ${PRT_GET_TFS_OVERWRITE}    ${TFS_OVERWRITE}
+    Action Set    ${PRT_GET_TFS_FORCE}    ${TFS_FORCE}
+    Action Set    ${PRT_GET_TFS_RECURSIVE}    ${TFS_RECURSIVE}
+    Action Set Timeout    300
+    Action Execute
+    Action Report Should Be Found
+    Run Keyword If    '${OK_NOK}'=='OK'    Action Return Code Should Be    ${returnCode}
+    Action Return Status Should Be    ${returnStatus}
+    Action Report Should Contain    ${header_logging}
+    Action Report Should Contain    ${param_logging}
+    Run Keyword If    '${OK_NOK}'=='OK'    Run Keyword If    '${OK_NOK}'=='OK'    Action Report Should Contain    ${execution_logging}
+    Action Report Should Contain    ${message}
+    Run Keyword If    '${OK_NOK}'=='OK'    Action Report Should Contain    ${footer_logging_OK}
+    Run Keyword If    '${OK_NOK}'=='NOK'    Action Report Should Contain    ${footer_logging_NOK}
+
+Setup_suite
+    [Documentation]    TODO: Write all steps need prepare before testing here
+    Log    Start testing for Get Template
+
+Teardown_suite
+    [Documentation]    TODO: Write all steps for cleanup after testing here
+    Log    Testing for Get Template end
+
+Mapping Working Dir with Workspace
+    [Arguments]    ${WorkingDir}    ${Workspace}
+    Log    Delete Workspace from last test
+    Delete Workspace    ${Workspace}
+    Log    Delete Working Dir from previous test
+    Delete Dir    ${WorkingDir}
+    Log    Finish remove data from previous test. Preparing test data...
+    Create Dir    ${WorkingDir}
+    Create Workspace    ${WorkingDir}    ${Workspace}

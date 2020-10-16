@@ -1,0 +1,11 @@
+*** Keywords ***
+Set Default Valid Promptset
+    [Arguments]    ${TFS_UTIL_PATH}    ${TFS_WORKING_DIR}    ${TFS_OLDITEM}    ${TFS_NEWITEM}    ${TFS_LOCK}    ${AGENT}
+    ...    ${LOGIN}
+    Action Set    ${PRT_MOVE_TFS_UTIL_PATH}    ${TFS_UTIL_PATH}
+    Action Set    ${PRT_MOVE_TFS_WORKING_DIR}    ${TFS_WORKING_DIR}
+    Action Set    ${PRT_MOVE_TFS_OLDITEM}    ${TFS_OLDITEM}
+    Action Set    ${PRT_MOVE_TFS_NEWITEM}    ${TFS_NEWITEM}
+    Action Set    ${PRT_MOVE_TFS_LOCK}    ${TFS_LOCK}
+    Action Set    ${PRT_MOVE_AGENT}    ${AGENT}
+    Action Set    ${PRT_MOVE_LOGIN}    ${LOGIN}

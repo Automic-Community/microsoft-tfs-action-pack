@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="ISO-8859-15" standalone="no"?><uc-export clientvers="11.0.0">
+<JOBI name="PCK.AUTOMIC_TFS.PRV.INCLUDE.ENSURE_UTILITY_PATH">
+<HEADER state="1">
+<Title/>
+<ArchiveKey1/>
+<ArchiveKey2/>
+<OH_SubType/>
+</HEADER>
+<SCRIPT mode="1" state="1">
+<MSCRI><![CDATA[:IF &UC4RB_TFS_UTIL_PATH# = ""
+:  SET &UC4RB_TFS_UTIL_PATH# = "C:\Program Files\Microsoft Visual Studio 9.0\Common7\IDE\Tf.exe"
+:ENDIF
+
+:SET &VAR_LC# = STR_LC(&UC4RB_TFS_UTIL_PATH#)
+:SET &CHECK# = STR_ENDS_WITH(&UC4RB_TFS_UTIL_PATH#, ".exe")
+:IF &CHECK# EQ "N"
+:  SET &UC4RB_TFS_UTIL_PATH# = STR_CAT(&UC4RB_TFS_UTIL_PATH#, ".exe")
+:ENDIF
+
+]]></MSCRI>
+</SCRIPT>
+<DOCU_Docu state="1" type="text">
+<DOC/>
+</DOCU_Docu>
+</JOBI>
+</uc-export>

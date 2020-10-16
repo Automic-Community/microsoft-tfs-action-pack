@@ -1,0 +1,235 @@
+*** Settings ***
+Documentation     This is high level keywords that will be used by local test cases
+Resource          messages.txt
+Resource          context.txt
+Library           com.automic.robot.itpa.ItpaLibrary
+
+*** Key Words ***
+Clean Up Directory
+    [Arguments]    ${directory}
+    Init Action    ${UTIL_ACTION_DELETE}
+    Action Set    ${UTIL_PRT_DELETE_DIR_FILE_RM_NAME}    ${directory}
+    Action Set    ${UTIL_PRT_DELETE_DIR_FILE_RM_FAIL}    NO
+    Action Execute
+    Init Action    ${UTIL_ACTION_CREATE_DIR}
+    Action Set    ${UTIL_PRT_CREATEDIR_DIR_FILE_CREATE_DIR}    ${directory}
+    Action Execute
+
+Init Action
+    [Arguments]    ${actionName}
+    Action Create    ${actionName}
+    Action Set    ${PROMPTSET_AGENT}    ${_AGENT}
+    Action Set    ${PROMPTSET_LOGIN}    ${_LOGIN}
+
+Action Report Should Contain
+    [Arguments]    ${text}
+    ${report} =    Action Get Report
+    Should Contain    ${report}    ${text}
+
+Action Report Should Be Found
+    ${report} =    Action Get Report
+    Should Not Be Empty    ${report}
+
+Action Report Should Not Be Found
+    ${report} =    Action Get Report
+    Should Be Empty    ${report}
+
+Action Return Code Should Be
+    [Arguments]    ${code}
+    ${returnCode}=    Action Get Variable    Return code
+    Should Be Equal    ${returnCode}    ${code}
+
+Action Return Code Should Not Equal
+    [Arguments]    ${code}
+    ${returnCode}=    Action Get Variable    Return code
+    Should Not Be Equal    ${returnCode}    ${code}
+
+Action Return Status Should Be
+    [Arguments]    ${status}
+    ${returnStatus}=    Action Get Variable    Status
+    Should Be Equal    ${returnStatus}    ${status}
+
+Action Return Variable Should Be
+    [Arguments]    ${variableValue}
+    ${out}=    Action Get Variable    ${variableName}
+    Should Be Equal    ${out}    ${variableValue}
+
+Action Return Variable Should Be Equal As Integers
+    [Arguments]    ${variableValue}
+    ${out}=    Action Get Variable    ${variableName}
+    Should Be Equal As Integers    ${out}    ${variableValue}
+
+Create Dir
+    [Arguments]    ${path}
+    Init Action    PCK.AUTOMIC_FILESYSTEM.PUB.ACTION.CREATE_DIR
+    Action Set    &UC4RB_DIR_FILE_CREATE_DIR#    ${path}
+    Action Execute
+
+Delete Dir
+    [Arguments]    ${path}
+    Init Action    PCK.AUTOMIC_FILESYSTEM.PUB.ACTION.DELETE
+    Action Set    &UC4RB_DIR_FILE_RM_NAME#    ${path}
+    Action Set    &UC4RB_DIR_FILE_RM_FAIL#    NO
+    Action Execute
+
+Create File
+    [Arguments]    ${file_path}
+    Init Action    PCK.AUTOMIC_FILESYSTEM.PUB.ACTION.CREATE_FILE
+    Action Set    &UC4RB_DIR_FILE_CREATE_FILE#    ${file_path}
+    Action Set    &UC4RB_DIR_FILE_FULL_PATH#    YES
+    Action Execute
+
+Pack
+    [Arguments]    ${source_file_path}    ${target_file_path}
+    Init Action    PCK.AUTOMIC_FILESYSTEM.PUB.ACTION.PACK
+    Action Set    &UC4RB_DIR_FILE_PACK_INPUT#    ${source_file_path}
+    Action Set    &UC4RB_DIR_FILE_PACK_NAME#    ${target_file_path}
+    Action Set    &UC4RB_ADD_ZIP#    NO
+    Action Execute
+
+Copy
+    [Arguments]    ${source_file_path}    ${target_file_path}
+    Init Action    PCK.AUTOMIC_FILESYSTEM.PUB.ACTION.COPY
+    Action Set    &UC4RB_DIR_FILE_CP_SOURCE#    ${source_file_path}
+    Action Set    &UC4RB_DIR_FILE_CP_TARGET#    ${target_file_path}
+    Action Set    &UC4RB_DIR_FILE_CP_OVERWRITE#    YES
+    Action Set    &UC4RB_COPY_EXCLUDE#    ${EMPTY}
+    Action Execute
+
+Execute Command
+    [Arguments]    ${command}
+    Init Action    PCK.AUTOMIC_WINDOWS.PUB.ACTION.RUN_COMMAND
+    Action Set    &UC4RB_COMMAND#    ${command}
+    Action Execute
+
+Add Item To TFS
+    [Arguments]    ${TFS_WORKING_DIR}    ${TFS_ADD_PATH}
+    Init Action    ${ACTION_ADD}
+    Action Set    ${PRT_ADD_TFS_UTIL_PATH}    ${_TFS_UTIL_PATH}
+    Action Set    ${PRT_ADD_TFS_WORKING_DIR}    ${TFS_WORKING_DIR}
+    Action Set    ${PRT_ADD_TFS_ADD_PATH}    ${TFS_ADD_PATH}
+    Action Set    ${PRT_ADD_TFS_RECURSIVE}    Yes
+    Action Set    ${PRT_ADD_TFS_LOCK}    NONE
+    Action Set Timeout    300
+    Action Execute
+    Action Report Should Be Found
+
+Create Branch
+    [Arguments]    ${TFS_WORKING_DIR}    ${TFS_OLDITEM}    ${TFS_NEWITEM}
+    Init Action    ${ACTION_BRANCH}
+    Action Set    ${PRT_BRANCH_TFS_UTIL_PATH}    ${_TFS_UTIL_PATH}
+    Action Set    ${PRT_BRANCH_TFS_WORKING_DIR}    ${TFS_WORKING_DIR}
+    Action Set    ${PRT_BRANCH_TFS_OLDITEM}    ${TFS_OLDITEM}
+    Action Set    ${PRT_BRANCH_TFS_NEWITEM}    ${TFS_NEWITEM}
+    Action Set    ${PRT_BRANCH_TFS_VERSION}    T
+    Action Set    ${PRT_BRANCH_TFS_LOCK}    NONE
+    Action Set    ${PRT_BRANCH_TFS_NOGET}    No
+    Action Set Timeout    300
+    Action Execute
+    Action Report Should Be Found
+
+Checkin Changes
+    [Arguments]    ${TFS_WORKING_DIR}    ${TFS_FILE}    ${TFS_COMMENT}
+    Init Action    ${ACTION_CHECKIN}
+    Action Set    ${PRT_CHECKIN_TFS_UTIL_PATH}    ${_TFS_UTIL_PATH}
+    Action Set    ${PRT_CHECKIN_TFS_WORKING_DIR}    ${TFS_WORKING_DIR}
+    Action Set    ${PRT_CHECKIN_TFS_AUTHOR}    ${_TFS_AUTHOR}
+    Action Set    ${PRT_CHECKIN_TFS_FILE}    ${TFS_FILE}
+    Action Set    ${PRT_CHECKIN_TFS_COMMENT}    ${TFS_COMMENT}
+    Action Set    ${PRT_CHECKIN_TFS_OVERRIDE}    Yes
+    Action Set    ${PRT_CHECKIN_TFS_REASON}    Checkin from AT keyword
+    Action Set    ${PRT_CHECKIN_TFS_RECURSIVE}    Yes
+    Action Set Timeout    300
+    Action Execute
+    Action Report Should Be Found
+
+Checkout to Edit
+    [Arguments]    ${TFS_WORKING_DIR}    ${TFS_ITEM}
+    Init Action    ${ACTION_CHECKOUT}
+    Action Set    ${PRT_CHECKOUT_TFS_UTIL_PATH}    ${_TFS_UTIL_PATH}
+    Action Set    ${PRT_CHECKOUT_TFS_WORKING_DIR}    ${TFS_WORKING_DIR}
+    Action Set    ${PRT_CHECKOUT_TFS_ITEM}    ${TFS_ITEM}
+    Action Set    ${PRT_CHECKOUT_TFS_RECURSIVE}    Yes
+    Action Set    ${PRT_CHECKOUT_TFS_LOCK}    NONE
+    Action Set Timeout    300
+    Action Execute
+    Action Report Should Be Found
+
+Create Workspace
+    [Arguments]    ${TFS_WORKING_DIR}    ${TFS_WS_NAME}
+    Init Action    ${ACTION_CREATEWS}
+    Action Set    ${PRT_CREATEWS_TFS_UTIL_PATH}    ${_TFS_UTIL_PATH}
+    Action Set    ${PRT_CREATEWS_TFS_WORKING_DIR}    ${TFS_WORKING_DIR}
+    Action Set    ${PRT_CREATEWS_TFS_NAME}    ${TFS_WS_NAME}
+    Action Set    ${PRT_CREATEWS_TFS_OWNER}    ${_TFS_AUTHOR}
+    Action Set    ${PRT_CREATEWS_TFS_SERVER}    ${_TFS_SERVER}
+    Action Set    ${PRT_CREATEWS_TFS_COMMENT}    Create Workspace from AT keyword
+    Action Set Timeout    300
+    Action Execute
+    Action Report Should Be Found
+
+Delete Item from TFS
+    [Arguments]    ${TFS_WORKING_DIR}    ${TFS_ITEM}
+    Init Action    ${ACTION_DELETE}
+    Action Set    ${PRT_DELETE_TFS_UTIL_PATH}    ${_TFS_UTIL_PATH}
+    Action Set    ${PRT_DELETE_TFS_WORKING_DIR}    ${TFS_WORKING_DIR}
+    Action Set    ${PRT_DELETE_TFS_ITEM}    ${TFS_ITEM}
+    Action Set    ${PRT_DELETE_TFS_RECURSIVE}    Yes
+    Action Set    ${PRT_DELETE_TFS_LOCK}    NONE
+    Action Set Timeout    300
+    Action Execute
+    Action Report Should Be Found
+
+Get Source
+    [Arguments]    ${TFS_WORKING_DIR}    ${TFS_ITEM}    ${TFS_VERSION}
+    Init Action    ${ACTION_GET}
+    Action Set    ${PRT_GET_TFS_UTIL_PATH}    ${_TFS_UTIL_PATH}
+    Action Set    ${PRT_GET_TFS_WORKING_DIR}    ${TFS_WORKING_DIR}
+    Action Set    ${PRT_GET_TFS_ITEM}    ${TFS_ITEM}
+    Action Set    ${PRT_GET_TFS_VERSION}    ${TFS_VERSION}
+    Action Set    ${PRT_GET_TFS_ALL}    No
+    Action Set    ${PRT_GET_TFS_OVERWRITE}    Yes
+    Action Set    ${PRT_GET_TFS_FORCE}    Yes
+    Action Set    ${PRT_GET_TFS_RECURSIVE}    Yes
+    Action Set Timeout    300
+    Action Execute
+    Action Report Should Be Found
+
+Merge Source
+    [Arguments]    ${TFS_WORKING_DIR}    ${TFS_SOURCE}    ${TFS_DESTINATION}
+    Init Action    ${ACTION_MERGE}
+    Action Set    ${PRT_MERGE_TFS_UTIL_PATH}    ${_TFS_UTIL_PATH}
+    Action Set    ${PRT_MERGE_TFS_WORKING_DIR}    ${TFS_WORKING_DIR}
+    Action Set    ${PRT_MERGE_TFS_VERSION}    T
+    Action Set    ${PRT_MERGE_TFS_SOURCE}    ${TFS_SOURCE}
+    Action Set    ${PRT_MERGE_TFS_DESTINATION}    ${TFS_DESTINATION}
+    Action Set    ${PRT_MERGE_TFS_RECURSIVE}    Yes
+    Action Set    ${PRT_MERGE_TFS_LOCK}    NONE
+    Action Set    ${PRT_MERGE_TFS_FORCE}    Yes
+    Action Set    ${PRT_MERGE_TFS_DISCARD}    No
+    Action Set    ${PRT_MERGE_TFS_BASELESS}    No
+    Action Set    ${PRT_MERGE_TFS_CANDIDATE}    No
+    Action Set Timeout    300
+    Action Execute
+    Action Report Should Be Found
+
+Move Item
+    [Arguments]    ${TFS_WORKING_DIR}    ${TFS_OLDITEM}    ${TFS_NEWITEM}
+    Init Action    ${ACTION_MOVE}
+    Action Set    ${PRT_MOVE_TFS_UTIL_PATH}    ${_TFS_UTIL_PATH}
+    Action Set    ${PRT_MOVE_TFS_WORKING_DIR}    ${TFS_WORKING_DIR}
+    Action Set    ${PRT_MOVE_TFS_OLDITEM}    ${TFS_OLDITEM}
+    Action Set    ${PRT_MOVE_TFS_NEWITEM}    ${TFS_NEWITEM}
+    Action Set    ${PRT_MOVE_TFS_LOCK}    NONE
+    Action Set Timeout    300
+    Action Execute
+    Action Report Should Be Found
+
+Delete Workspace
+    [Arguments]    ${workspace_name}
+    Execute Command    \"${_TFS_UTIL_PATH}\" workspace /delete ${workspace_name}
+
+Delete Branch
+    [Arguments]    ${TFS_WORKING_DIR}    ${TFS_ITEM}
+    Delete Item from TFS    ${TFS_WORKING_DIR}    ${TFS_ITEM}
+    Checkin Changes    ${TFS_WORKING_DIR}    ${TFS_ITEM}    Delete unused branch/item

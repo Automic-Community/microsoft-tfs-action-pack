@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="ISO-8859-15" standalone="no"?><uc-export clientvers="11.0.0">
+<VARA OVD_VRName="FREI" data_type="STATIC" name="PCK.AUTOMIC_TFS.PUB.PROMPT_EXTERNAL_MAP" replacementmode="2">
+<HEADER state="1">
+<Title/>
+<ArchiveKey1/>
+<ArchiveKey2/>
+<OH_SubType>STATIC</OH_SubType>
+</HEADER>
+<ATTR_VARA state="1">
+<Type>C|Text</Type>
+<lblSource>Static</lblSource>
+<source>STATIC</source>
+<VRName>FREI|Freely selected</VRName>
+<NotFoundErr>0</NotFoundErr>
+<NotFoundDef>1</NotFoundDef>
+<ShareN>0</ShareN>
+<ShareL>0</ShareL>
+<ShareR>0</ShareR>
+<MaxValue_C>1024</MaxValue_C>
+<CheckMax_C>0</CheckMax_C>
+<uppercase>0</uppercase>
+<sortColumn>0</sortColumn>
+<sortDirection>0</sortDirection>
+</ATTR_VARA>
+<VARA state="1">
+<Variables>
+<row Name="PCK.AUTOMIC_TFS.PUB.ACTION.ADD/AGENT#" Value="&amp;AGENT#" Value1="" Value2="" Value3="" Value4=""/>
+<row Name="PCK.AUTOMIC_TFS.PUB.ACTION.ADD/LOGIN#" Value="&amp;LOGIN#" Value1="" Value2="" Value3="" Value4=""/>
+<row Name="PCK.AUTOMIC_TFS.PUB.ACTION.ADD/UC4RB_TFS_ADD_PATH#" Value="EXT:/source/tfs/item" Value1="" Value2="" Value3="" Value4=""/>
+<row Name="PCK.AUTOMIC_TFS.PUB.ACTION.ADD/UC4RB_TFS_LOCK#" Value="NONE" Value1="" Value2="" Value3="" Value4=""/>
+<row Name="PCK.AUTOMIC_TFS.PUB.ACTION.ADD/UC4RB_TFS_RECURSIVE#" Value="EXT:/source/tfs/recursive" Value1="" Value2="" Value3="" Value4=""/>
+<row Name="PCK.AUTOMIC_TFS.PUB.ACTION.ADD/UC4RB_TFS_UTIL_PATH#" Value="EXT:/source/tfs/util_path" Value1="" Value2="" Value3="" Value4=""/>
+<row Name="PCK.AUTOMIC_TFS.PUB.ACTION.ADD/UC4RB_TFS_WORKING_DIR#" Value="EXT:/target/target_files_dirs" Value1="" Value2="" Value3="" Value4=""/>
+<row Name="PCK.AUTOMIC_TFS.PUB.ACTION.BRANCH/AGENT#" Value="&amp;AGENT#" Value1="" Value2="" Value3="" Value4=""/>
+<row Name="PCK.AUTOMIC_TFS.PUB.ACTION.BRANCH/LOGIN#" Value="&amp;LOGIN#" Value1="" Value2="" Value3="" Value4=""/>
+<row Name="PCK.AUTOMIC_TFS.PUB.ACTION.BRANCH/UC4RB_TFS_LOCK#" Value="NONE" Value1="" Value2="" Value3="" Value4=""/>
+<row Name="PCK.AUTOMIC_TFS.PUB.ACTION.BRANCH/UC4RB_TFS_NEWITEM#" Value="" Value1="" Value2="" Value3="" Value4=""/>
+<row Name="PCK.AUTOMIC_TFS.PUB.ACTION.BRANCH/UC4RB_TFS_NOGET#" Value="No" Value1="" Value2="" Value3="" Value4=""/>
+<row Name="PCK.AUTOMIC_TFS.PUB.ACTION.BRANCH/UC4RB_TFS_OLDITEM#" Value="EXT:/source/tfs/item" Value1="" Value2="" Value3="" Value4=""/>
+<row Name="PCK.AUTOMIC_TFS.PUB.ACTION.BRANCH/UC4RB_TFS_UTIL_PATH#" Value="EXT:/source/tfs/util_path" Value1="" Value2="" Value3="" Value4=""/>
+<row Name="PCK.AUTOMIC_TFS.PUB.ACTION.BRANCH/UC4RB_TFS_VERSION#" Value="EXT:/source/tfs/version" Value1="" Value2="" Value3="" Value4=""/>
+<row Name="PCK.AUTOMIC_TFS.PUB.ACTION.BRANCH/UC4RB_TFS_WORKING_DIR#" Value="EXT:/target/target_files_dirs" Value1="" Value2="" Value3="" Value4=""/>
+<row Name="PCK.AUTOMIC_TFS.PUB.ACTION.CHECKIN/AGENT#" Value="&amp;AGENT#" Value1="" Value2="" Value3="" Value4=""/>
+<row Name="PCK.AUTOMIC_TFS.PUB.ACTION.CHECKIN/LOGIN#" Value="&amp;LOGIN#" Value1="" Value2="" Value3="" Value4=""/>
+<row Name="PCK.AUTOMIC_TFS.PUB.ACTION.CHECKIN/UC4RB_TFS_AUTHOR#" Value="" Value1="" Value2="" Value3="" Value4=""/>
+<row Name="PCK.AUTOMIC_TFS.PUB.ACTION.CHECKIN/UC4RB_TFS_COMMENT#" Value="" Value1="" Value2="" Value3="" Value4=""/>
+<row Name="PCK.AUTOMIC_TFS.PUB.ACTION.CHECKIN/UC4RB_TFS_FILE#" Value="EXT:/source/tfs/item" Value1="" Value2="" Value3="" Value4=""/>
+<row Name="PCK.AUTOMIC_TFS.PUB.ACTION.CHECKIN/UC4RB_TFS_OVERRIDE#" Value="No" Value1="" Value2="" Value3="" Value4=""/>
+<row Name="PCK.AUTOMIC_TFS.PUB.ACTION.CHECKIN/UC4RB_TFS_REASON#" Value="" Value1="" Value2="" Value3="" Value4=""/>
+<row Name="PCK.AUTOMIC_TFS.PUB.ACTION.CHECKIN/UC4RB_TFS_RECURSIVE#" Value="EXT:/source/tfs/recursive" Value1="" Value2="" Value3="" Value4=""/>
+<row Name="PCK.AUTOMIC_TFS.PUB.ACTION.CHECKIN/UC4RB_TFS_UTIL_PATH#" Value="EXT:/source/tfs/util_path" Value1="" Value2="" Value3="" Value4=""/>
+<row Name="PCK.AUTOMIC_TFS.PUB.ACTION.CHECKIN/UC4RB_TFS_WORKING_DIR#" Value="EXT:/target/target_files_dirs" Value1="" Value2="" Value3="" Value4=""/>
+<row Name="PCK.AUTOMIC_TFS.PUB.ACTION.CHECKOUT/AGENT#" Value="&amp;AGENT#" Value1="" Value2="" Value3="" Value4=""/>
+<row Name="PCK.AUTOMIC_TFS.PUB.ACTION.CHECKOUT/LOGIN#" Value="&amp;LOGIN#" Value1="" Value2="" Value3="" Value4=""/>
+<row Name="PCK.AUTOMIC_TFS.PUB.ACTION.CHECKOUT/UC4RB_TFS_ITEM#" Value="EXT:/source/tfs/item" Value1="" Value2="" Value3="" Value4=""/>
+<row Name="PCK.AUTOMIC_TFS.PUB.ACTION.CHECKOUT/UC4RB_TFS_LOCK#" Value="NONE" Value1="" Value2="" Value3="" Value4=""/>
+<row Name="PCK.AUTOMIC_TFS.PUB.ACTION.CHECKOUT/UC4RB_TFS_RECURSIVE#" Value="EXT:/source/tfs/recursive" Value1="" Value2="" Value3="" Value4=""/>
+<row Name="PCK.AUTOMIC_TFS.PUB.ACTION.CHECKOUT/UC4RB_TFS_UTIL_PATH#" Value="EXT:/source/tfs/util_path" Value1="" Value2="" Value3="" Value4=""/>
+<row Name="PCK.AUTOMIC_TFS.PUB.ACTION.CHECKOUT/UC4RB_TFS_WORKING_DIR#" Value="EXT:/target/target_files_dirs" Value1="" Value2="" Value3="" Value4=""/>
+<row Name="PCK.AUTOMIC_TFS.PUB.ACTION.CREATE_WORKSPACE/AGENT#" Value="&amp;AGENT#" Value1="" Value2="" Value3="" Value4=""/>
+<row Name="PCK.AUTOMIC_TFS.PUB.ACTION.CREATE_WORKSPACE/LOGIN#" Value="&amp;LOGIN#" Value1="" Value2="" Value3="" Value4=""/>
+<row Name="PCK.AUTOMIC_TFS.PUB.ACTION.CREATE_WORKSPACE/UC4RB_TFS_COMMENT#" Value="" Value1="" Value2="" Value3="" Value4=""/>
+<row Name="PCK.AUTOMIC_TFS.PUB.ACTION.CREATE_WORKSPACE/UC4RB_TFS_SERVER_NAME#" Value="" Value1="" Value2="" Value3="" Value4=""/>
+<row Name="PCK.AUTOMIC_TFS.PUB.ACTION.CREATE_WORKSPACE/UC4RB_TFS_UTIL_PATH#" Value="EXT:/source/tfs/util_path" Value1="" Value2="" Value3="" Value4=""/>
+<row Name="PCK.AUTOMIC_TFS.PUB.ACTION.CREATE_WORKSPACE/UC4RB_TFS_WORKING_DIR#" Value="EXT:/target/target_files_dirs" Value1="" Value2="" Value3="" Value4=""/>
+<row Name="PCK.AUTOMIC_TFS.PUB.ACTION.CREATE_WORKSPACE/UC4RB_TFS_WORKSPACE_NAME#" Value="" Value1="" Value2="" Value3="" Value4=""/>
+<row Name="PCK.AUTOMIC_TFS.PUB.ACTION.CREATE_WORKSPACE/UC4RB_TFS_WORKSPACE_OWNER#" Value="" Value1="" Value2="" Value3="" Value4=""/>
+<row Name="PCK.AUTOMIC_TFS.PUB.ACTION.DELETE/AGENT#" Value="&amp;AGENT#" Value1="" Value2="" Value3="" Value4=""/>
+<row Name="PCK.AUTOMIC_TFS.PUB.ACTION.DELETE/LOGIN#" Value="&amp;LOGIN#" Value1="" Value2="" Value3="" Value4=""/>
+<row Name="PCK.AUTOMIC_TFS.PUB.ACTION.DELETE/UC4RB_TFS_ITEM#" Value="EXT:/source/tfs/item" Value1="" Value2="" Value3="" Value4=""/>
+<row Name="PCK.AUTOMIC_TFS.PUB.ACTION.DELETE/UC4RB_TFS_LOCK#" Value="NONE" Value1="" Value2="" Value3="" Value4=""/>
+<row Name="PCK.AUTOMIC_TFS.PUB.ACTION.DELETE/UC4RB_TFS_RECURSIVE#" Value="EXT:/source/tfs/recursive" Value1="" Value2="" Value3="" Value4=""/>
+<row Name="PCK.AUTOMIC_TFS.PUB.ACTION.DELETE/UC4RB_TFS_UTIL_PATH#" Value="EXT:/source/tfs/util_path" Value1="" Value2="" Value3="" Value4=""/>
+<row Name="PCK.AUTOMIC_TFS.PUB.ACTION.DELETE/UC4RB_TFS_WORKING_DIR#" Value="EXT:/target/target_files_dirs" Value1="" Value2="" Value3="" Value4=""/>
+<row Name="PCK.AUTOMIC_TFS.PUB.ACTION.GET/AGENT#" Value="&amp;AGENT#" Value1="" Value2="" Value3="" Value4=""/>
+<row Name="PCK.AUTOMIC_TFS.PUB.ACTION.GET/LOGIN#" Value="&amp;LOGIN#" Value1="" Value2="" Value3="" Value4=""/>
+<row Name="PCK.AUTOMIC_TFS.PUB.ACTION.GET/UC4RB_TFS_ALL#" Value="EXT:/source/tfs/retrieve_all" Value1="" Value2="" Value3="" Value4=""/>
+<row Name="PCK.AUTOMIC_TFS.PUB.ACTION.GET/UC4RB_TFS_FORCE#" Value="No" Value1="" Value2="" Value3="" Value4=""/>
+<row Name="PCK.AUTOMIC_TFS.PUB.ACTION.GET/UC4RB_TFS_ITEM#" Value="EXT:/source/tfs/item" Value1="" Value2="" Value3="" Value4=""/>
+<row Name="PCK.AUTOMIC_TFS.PUB.ACTION.GET/UC4RB_TFS_OVERWRITE#" Value="EXT:/target/overwrite_target" Value1="" Value2="" Value3="" Value4=""/>
+<row Name="PCK.AUTOMIC_TFS.PUB.ACTION.GET/UC4RB_TFS_RECURSIVE#" Value="EXT:/source/tfs/recursive" Value1="" Value2="" Value3="" Value4=""/>
+<row Name="PCK.AUTOMIC_TFS.PUB.ACTION.GET/UC4RB_TFS_UTIL_PATH#" Value="EXT:/source/tfs/util_path" Value1="" Value2="" Value3="" Value4=""/>
+<row Name="PCK.AUTOMIC_TFS.PUB.ACTION.GET/UC4RB_TFS_VERSION#" Value="EXT:/source/tfs/version" Value1="" Value2="" Value3="" Value4=""/>
+<row Name="PCK.AUTOMIC_TFS.PUB.ACTION.GET/UC4RB_TFS_WORKING_DIR#" Value="EXT:/target/target_files_dirs" Value1="" Value2="" Value3="" Value4=""/>
+<row Name="PCK.AUTOMIC_TFS.PUB.ACTION.MERGE/AGENT#" Value="&amp;AGENT#" Value1="" Value2="" Value3="" Value4=""/>
+<row Name="PCK.AUTOMIC_TFS.PUB.ACTION.MERGE/LOGIN#" Value="&amp;LOGIN#" Value1="" Value2="" Value3="" Value4=""/>
+<row Name="PCK.AUTOMIC_TFS.PUB.ACTION.MERGE/UC4RB_TFS_BASELESS#" Value="No" Value1="" Value2="" Value3="" Value4=""/>
+<row Name="PCK.AUTOMIC_TFS.PUB.ACTION.MERGE/UC4RB_TFS_CANDIDATE#" Value="No" Value1="" Value2="" Value3="" Value4=""/>
+<row Name="PCK.AUTOMIC_TFS.PUB.ACTION.MERGE/UC4RB_TFS_DESTINATION#" Value="" Value1="" Value2="" Value3="" Value4=""/>
+<row Name="PCK.AUTOMIC_TFS.PUB.ACTION.MERGE/UC4RB_TFS_DISCARD#" Value="No" Value1="" Value2="" Value3="" Value4=""/>
+<row Name="PCK.AUTOMIC_TFS.PUB.ACTION.MERGE/UC4RB_TFS_FORCE#" Value="Yes" Value1="" Value2="" Value3="" Value4=""/>
+<row Name="PCK.AUTOMIC_TFS.PUB.ACTION.MERGE/UC4RB_TFS_LOCK#" Value="NONE" Value1="" Value2="" Value3="" Value4=""/>
+<row Name="PCK.AUTOMIC_TFS.PUB.ACTION.MERGE/UC4RB_TFS_RECURSIVE#" Value="EXT:/source/tfs/recursive" Value1="" Value2="" Value3="" Value4=""/>
+<row Name="PCK.AUTOMIC_TFS.PUB.ACTION.MERGE/UC4RB_TFS_SOURCE#" Value="" Value1="" Value2="" Value3="" Value4=""/>
+<row Name="PCK.AUTOMIC_TFS.PUB.ACTION.MERGE/UC4RB_TFS_UTIL_PATH#" Value="EXT:/source/tfs/util_path" Value1="" Value2="" Value3="" Value4=""/>
+<row Name="PCK.AUTOMIC_TFS.PUB.ACTION.MERGE/UC4RB_TFS_VERSION#" Value="EXT:/source/tfs/version" Value1="" Value2="" Value3="" Value4=""/>
+<row Name="PCK.AUTOMIC_TFS.PUB.ACTION.MERGE/UC4RB_TFS_WORKING_DIR#" Value="EXT:/target/target_files_dirs" Value1="" Value2="" Value3="" Value4=""/>
+<row Name="PCK.AUTOMIC_TFS.PUB.ACTION.MOVE/AGENT#" Value="&amp;AGENT#" Value1="" Value2="" Value3="" Value4=""/>
+<row Name="PCK.AUTOMIC_TFS.PUB.ACTION.MOVE/LOGIN#" Value="&amp;LOGIN#" Value1="" Value2="" Value3="" Value4=""/>
+<row Name="PCK.AUTOMIC_TFS.PUB.ACTION.MOVE/UC4RB_TFS_LOCK#" Value="NONE" Value1="" Value2="" Value3="" Value4=""/>
+<row Name="PCK.AUTOMIC_TFS.PUB.ACTION.MOVE/UC4RB_TFS_NEWITEM#" Value="" Value1="" Value2="" Value3="" Value4=""/>
+<row Name="PCK.AUTOMIC_TFS.PUB.ACTION.MOVE/UC4RB_TFS_OLDITEM#" Value="" Value1="" Value2="" Value3="" Value4=""/>
+<row Name="PCK.AUTOMIC_TFS.PUB.ACTION.MOVE/UC4RB_TFS_UTIL_PATH#" Value="EXT:/source/tfs/util_path" Value1="" Value2="" Value3="" Value4=""/>
+<row Name="PCK.AUTOMIC_TFS.PUB.ACTION.MOVE/UC4RB_TFS_WORKING_DIR#" Value="EXT:/target/target_files_dirs" Value1="" Value2="" Value3="" Value4=""/>
+</Variables>
+</VARA>
+<DOCU_Docu state="1" type="text">
+<DOC/>
+</DOCU_Docu>
+</VARA>
+</uc-export>

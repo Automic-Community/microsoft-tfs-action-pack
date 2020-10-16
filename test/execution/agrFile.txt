@@ -1,0 +1,12 @@
+--doc This is test suite of #_action_short_name_#
+# This is a comment
+Init_Environments.txt
+testcases/CHECKIN
+testcases/MERGE
+testcases/MOVE
+testcases/CREATE WORKSPACE
+testcases/BRANCH
+testcases/CHECKOUT
+testcases/DELETE
+testcases/ADD
+testcases/GET
