@@ -1,4 +1,0 @@
---doc This is test suite of #_action_short_name_#
-# This is a comment
-Init_Environments.txt
-testcases/CHECKOUT

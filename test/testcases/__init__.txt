@@ -1,2 +1,0 @@
-*** Settings ***
-Force Tags        PCK.AUTOMIC_TFS
